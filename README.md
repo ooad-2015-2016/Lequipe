@@ -1,7 +1,8 @@
 Lequipe
-Èlanovi tima:
 
-  1. Emir Baruèija
-  2. Amra Mujèinoviæ
-  3. Berina Muhoviæ
-  4. Tarik Ahmetoviæ
+Clanovi tima:
+
+  1. Emir Barucija
+  2. Amra Mujcinovic
+  3. Berina Muhovic
+  4. Tarik Ahmetovic
