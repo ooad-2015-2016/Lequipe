@@ -26,23 +26,23 @@ ________________________________________________________________________________
 
 
 
-_______________________________________________________________________________________________________________________________________________
+___________________________________________________________________________________________________________________________________
 
                                                   **OPIS TEME**
-_______________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________
 
 
 
 
-MyMovieCollection je aplikacija koja æe omoguæiti korisniku da na neki naèin vodi sopstveni dnevnik filmova,
-bilo da se radi o filmovima koji su pregledani ili o filmovima koje korisnik želi da pregleda. To znaèi da ovaj sistem
-ima korisnu namjenu za korisnike koji su ljubitelji filma i kojima je, u svrhu toga, potrebno da vode evidenciju o filmovima. 
-Shodno tome, svrha sistema je oèigledna, a ogleda se u tome da æe korisnici moæi da, pomoæu dobro modeliranog sistema, 
-oznaèe filmove koje su pregledali, ali i da ocijene sam film, glasanjem (vote) ili izražavanjem sopstvenog mišljenja putem opcije za komentare.
-Neki od moguæih problema koji se mogu javiti je da osobe (ljubitelji filma) zaborave koje su filmove pregledali ili da im je važno da ocijene
-i ponude svoje mišljenje o filmovima. Takoðer, korisnici æe moæi da ispunjavaju svoju "listu èekanja" filmova koje žele pregledati, a pritome i voditi 
-"dnevnik" radi preporuke drugim osobama. Pored toga, potrebno im je omoguæiti prikaz filmova koji su trenutno popularni ili pretragu željenih.
-Iz tog razloga, MyMovieCollection predstavlja rješenje moguæih problema za korisnike, koji žele kupiti/unajmiti sistem.
+MyMovieCollection je aplikacija koja æe omoguæiti korisniku da na neki naèin vodi sopstveni dnevnik filmova, bilo da se radi o
+filmovima koji su pregledani ili o filmovima koje korisnik želi da pregleda. To znaèi da ovaj sistem ima korisnu namjenu za 
+korisnike koji su ljubitelji filma i kojima je, u svrhu toga, potrebno da vode evidenciju o filmovima.Shodno tome, svrha sistema
+je oèigledna, a ogleda se u tome da æe korisnici moæi da, pomoæu dobro modeliranog sistema, oznaèe filmove koje su pregledali,
+ali i da ocijene sam film, glasanjem (vote) ili izražavanjem sopstvenog mišljenja putem opcije za komentare. Neki od moguæih problema
+koji se mogu javiti je da osobe (ljubitelji filma) zaborave koje su filmove pregledali ili da im je važno da ocijene i ponude svoje 
+mišljenje o filmovima. Takoðer, korisnici æe moæi da ispunjavaju svoju "listu èekanja" filmova koje žele pregledati, a pritome i voditi
+"dnevnik" radi preporuke drugim osobama. Pored toga, potrebno im je omoguæiti prikaz filmova koji su trenutno popularni ili pretragu 
+željenih. Iz tog razloga, MyMovieCollection predstavlja rješenje moguæih problema za korisnike, koji žele kupiti/unajmiti sistem.
 
 
 
@@ -86,7 +86,8 @@ ________________________________________________________________________________
 - Dodavanje fimova na listu odgledanih filmova
 
         Kada korisnik ocijeni film, on se automatski dodaje u listu pregledanih filmova.
-        Meðutim, korisnik je u moguænosti da sam doda neki film, u svoju listu pregledanih filmova, bez da mora ostavljati komentar ili ocjenjivati taj film. 
+        Meðutim, korisnik je u moguænosti da sam doda neki film, u svoju listu pregledanih filmova, bez da mora ostavljati komentar ili ocjenjivati
+        taj film. 
 
 - Odabir filmova za pregled - "Lista èekanja"
 
@@ -107,10 +108,10 @@ ________________________________________________________________________________
         
 
 
-_______________________________________________________________________________________________________________________________________________
+_______________________________________________________________________________________________________________________________________
 
                                                                   **FUNKCIONALNOST**
-_______________________________________________________________________________________________________________________________________________
+________________________________________________________________________________________________________________________________________
 
 
 - Moguænost registracije novog korisnika.
@@ -147,16 +148,17 @@ ________________________________________________________________________________
 
 
 
-_______________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________
 
                                                       **AKTERI**
-_______________________________________________________________________________________________________________________________________________
 
 
 
----> ADMINISTRATORI SISTEMA <---
+
+ - ADMINISTRATORI SISTEMA 
         
-           - Administratori sistema su kreatori sistema, odnosno osobe koje su glavne odgovorne i zadužene za modeliranje i implementaciju sistema.
+           - Administratori sistema su kreatori sistema, odnosno osobe koje su glavne odgovorne i zadužene za modeliranje i implementaciju 
+             sistema.
            - Imaju moguænost pristupa aplikaciji i, pri tome, privilegije koje svaki administrator ima, a to su: 
                                 ~ Kontrola korisnika koji se registruju na sistem, kao i onih koji su veæ prijavljeni na sistem.
                                 ~ Imaju privilegiju da korisniku dopuste korištenje aplikacije i da im dodijele odgovarajuæi ID.
@@ -165,19 +167,20 @@ ________________________________________________________________________________
                                 ~ Moguænost posjedovanja posebnog interfejsa za admine, a sa druge strane posebnog interfejsa za korisnike.
                                 ~ Kontrola eliminacije uvredljivog ili destruktivnog sadržaja - sigurnost.  
 
----> KORISNIK APLIKACIJE "MyMovieCollection" <---
+ - KORISNIK APLIKACIJE "MyMovieCollection" 
  
             - Korisnik aplikacije su one osobe koje koriste sve moguænosti i potrebne funkcionalnosti aplikacije.
             - Imaju sopstveni account za pristup aplikaciji.
-            - Glavna interakcija i pokretanje procesa nalaze se u ulozi ovog aktera - korisnika aplikacije (aplikacija je i namijenjena iskljuèivo
+            - Glavna interakcija i pokretanje procesa nalaze se u ulozi ovog aktera - korisnika aplikacije (aplikacija je i namijenjena
+               iskljuèivo
               u svrhu održavanja kolekcije filmova za korisnike).       
 
----> POVEZIVANJE NA BAZU PODATAKA <---
+ - POVEZIVANJE NA BAZU PODATAKA 
             
               - Korištenje baze filmova, povezivanje na internet.
               - Moguænost pretrage filmova radi pregleda aktuelnih filmova, moguænosti sortiranja filmova po ocjenama.
 
----> EKSTERNI UREÐAJ <---
+ - EKSTERNI UREÐAJ 
  
               - Cilj je upotpuniti funkcionalnost aplikacije korištenjem nekog od eksternih ureðaja. 
 
