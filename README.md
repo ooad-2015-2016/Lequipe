@@ -150,15 +150,15 @@ ________________________________________________________________________________
        za modeliranje i implementaciju sistema.
      - Imaju moguænost pristupa aplikaciji i, pri tome, privilegije koje svaki administrator ima, a
        to su: 
-                        ~ Kontrola korisnika koji se registruju na sistem, kao i onih koji su veæ 
-                          prijavljeni na sistem.
-                        ~ Imaju privilegiju da korisniku dopuste korištenje aplikacije i da im dodijele
-                          odgovarajuæi ID.
-                        ~ Upravljanje bazom podataka - korisnici, kolekcija filmova..
-                        ~ Upravljanje stanjem aktuelnih filmova, tj. ažuriranje.
-                        ~ Moguænost posjedovanja posebnog interfejsa za admine, a sa druge strane posebnog
-                          interfejsa za korisnike.
-                        ~ Kontrola eliminacije uvredljivog ili destruktivnog sadržaja - sigurnost.  
+          - Kontrola korisnika koji se registruju na sistem, kao i onih koji su veæ 
+             prijavljeni na sistem.
+          - Imaju privilegiju da korisniku dopuste korištenje aplikacije i da im dodijele
+            odgovarajuæi ID.
+          - Upravljanje bazom podataka - korisnici, kolekcija filmova..
+          - Upravljanje stanjem aktuelnih filmova, tj. ažuriranje.
+          - Moguænost posjedovanja posebnog interfejsa za admine, a sa druge strane posebnog
+            interfejsa za korisnike.
+          - Kontrola eliminacije uvredljivog ili destruktivnog sadržaja - sigurnost.  
 
  - KORISNIK APLIKACIJE "MyMovieCollection" 
  
