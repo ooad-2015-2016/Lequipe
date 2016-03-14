@@ -1,20 +1,20 @@
 
 
 
-                                                    _L'EQUIPE_
+                                           _L'EQUIPE_
 
 
 
 
                                                    
-                                                **Naziv teme - MyMovieCollection**
-                      (Tema: "Sistem za prikaz (odabir odgledanih filmova) (ili ostalog zabavnog sadrzaja)").
+                                   **Naziv teme - MyMovieCollection**
+              (Tema: "Sistem za prikaz (odabir odgledanih filmova) (ili ostalog zabavnog sadrzaja)").
 
 
 
 
 
-                                                   Èlanovi tima:
+                                         Èlanovi tima:
 
 1. Emir Baruèija
 2. Amra Mujèinoviæ
@@ -23,7 +23,7 @@
 
 
 
-                                                  **OPIS TEME**
+                                          **OPIS TEME**
 
 
 
@@ -43,7 +43,7 @@ mišljenje o filmovima. Takoðer, korisnici æe moæi da ispunjavaju svoju "listu èe
 
 
 
-                                              **PROCESI**
+                                        **PROCESI**
 
 
 
@@ -97,12 +97,12 @@ mišljenje o filmovima. Takoðer, korisnici æe moæi da ispunjavaju svoju "listu èe
 - Kolekcija filmova koji su odgledani sortirani po kategorijama i žanru.
 
        Svaka ocjena, svakog korisnika, se spašava u bazu podataka, te je svakom korisniku omoguæeno da vidi koji su to 
-        filmovi sa najboljim i najlošijim ocjenama, u svakoj kategoriji i žanru.
+       filmovi sa najboljim i najlošijim ocjenama, u svakoj kategoriji i žanru.
         
 
 
 ___________________________________________________________________________________________________________________
-                                                                  **FUNKCIONALNOST**
+                                            **FUNKCIONALNOST**
 ___________________________________________________________________________________________________________________
 
 
@@ -142,7 +142,7 @@ ________________________________________________________________________________
 
 _________________________________________________________________________________________________________
 
-                                                      **AKTERI**
+                                        **AKTERI**
 
 
 
