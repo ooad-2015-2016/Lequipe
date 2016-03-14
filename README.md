@@ -1,38 +1,35 @@
 
 
-_______________________________________________________________________________________________________________________________________________
-                                                           
-                                                                 ####** L'EQUIPE**
-_______________________________________________________________________________________________________________________________________________
 
+                                                    **L'EQUIPE**
 
 
 
 
 ______________________________________________________________________________________________________________________________________________
 
-                                                     ### ** Naziv teme - MyMovieCollection **
-                                (Tema: "Sistem za prikaz (odabir odgledanih filmova) (ili ostalog zabavnog sadrzaja)").
+                                                   Naziv teme - MyMovieCollection
+                           (Tema: "Sistem za prikaz (odabir odgledanih filmova) (ili ostalog zabavnog sadrzaja)").
 _______________________________________________________________________________________________________________________________________________
 
 
 
 _______________________________________________________________________________________________________________________________________________
 
-                                                               #** Èlanovi tima: **
+                                                   Èlanovi tima:
 _______________________________________________________________________________________________________________________________________________
 
 
-1. Emir Baruèija,
-2. Amra Mujèinoviæ,
-3. Berina Muhoviæ,
+1. Emir Baruèija
+2. Amra Mujèinoviæ
+3. Berina Muhoviæ
 4. Tarik Ahmetoviæ
 
 
 
 _______________________________________________________________________________________________________________________________________________
 
-                                                                   **OPIS TEME**
+                                                  **OPIS TEME**
 _______________________________________________________________________________________________________________________________________________
 
 
@@ -54,7 +51,7 @@ Iz tog razloga, MyMovieCollection predstavlja rješenje moguæih problema za koris
 
 _______________________________________________________________________________________________________________________________________________
 
-                                                                   **PROCESI**
+                                              **PROCESI**
 _______________________________________________________________________________________________________________________________________________
 
 
@@ -95,18 +92,19 @@ ________________________________________________________________________________
 - Odabir filmova za pregled - "Lista èekanja"
 
         Opcija koja nudi korisniku da doda filmove u vlastitu listu èekanja.
-        Kada korisnik pregleda film iz liste èekanja, može da ga, sa ili bez ocjenjivanja, prebaci u listu odgledanih filmova (i, po želji, ostavi komentar).
+        Kada korisnik pregleda film iz liste èekanja, može da ga, sa ili bez ocjenjivanja, prebaci u listu odgledanih 
+        filmova (i, po želji, ostavi komentar).
 
 - Top lista: BestMovies, WorstMovies
 
         Moguæe je praviti razlièite liste filmova, meðu kojima su liste najboljih, i najgorih filmova.
-        Takoðe, korisnik pored ovih, može napraviti i druge liste, poput liste najboljih filmova snimljenih po istinitim dogaðajima, 
-        liste filmova u kojima glumi odreðeni glumac/glumica i sl.
+        Takoðe, korisnik pored ovih, može napraviti i druge liste, poput liste najboljih filmova snimljenih 
+        po istinitim dogaðajima, liste filmova u kojima glumi odreðeni glumac/glumica i sl.
 
 - Kolekcija filmova koji su odgledani sortirani po kategorijama i žanru.
 
-        Svaka ocjena, svakog korisnika, se spašava u bazu podataka, te je svakom korisniku omoguæeno da vidi koji su to filmovi sa najboljim i najlošijim ocjenama, 
-        u svakoj kategoriji i žanru.
+        Svaka ocjena, svakog korisnika, se spašava u bazu podataka, te je svakom korisniku omoguæeno da vidi koji su to 
+        filmovi sa najboljim i najlošijim ocjenama, u svakoj kategoriji i žanru.
         
 
 
@@ -152,7 +150,7 @@ ________________________________________________________________________________
 
 _______________________________________________________________________________________________________________________________________________
 
-                                                                     **AKTERI**
+                                                      **AKTERI**
 _______________________________________________________________________________________________________________________________________________
 
 
