@@ -1,7 +1,7 @@
 
 
 
-                                                    ###**L'EQUIPE**
+                                                    _L'EQUIPE_
 
 
 
@@ -9,14 +9,14 @@
                                                    
                                                 **Naziv teme - MyMovieCollection**
                            (Tema: "Sistem za prikaz (odabir odgledanih filmova) (ili ostalog zabavnog sadrzaja)").
-_______________________________________________________________________________________________________________________________________________
+
+_________________________________________________________________________________________________________________________________
 
 
 
-_______________________________________________________________________________________________________________________________________________
 
                                                    Èlanovi tima:
-_______________________________________________________________________________________________________________________________________________
+__________________________________________________________________________________________________________________________________
 
 
 1. Emir Baruèija
@@ -48,10 +48,10 @@ mišljenje o filmovima. Takoðer, korisnici æe moæi da ispunjavaju svoju "listu èe
 
 
 
-_______________________________________________________________________________________________________________________________________________
+___________________________________________________________________________________________________________________________
 
                                               **PROCESI**
-_______________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________
 
 
 
@@ -70,8 +70,8 @@ ________________________________________________________________________________
 
 - Odjava/LogOut iz sistema
        
-        Korisnici sistema se mogu odjaviti nakon korištenja aplikacije, prilikom èega se æe svi podaci i aktivnosti prilikom upotrebe biti saèuvani
-        i zabilježeni.
+        Korisnici sistema se mogu odjaviti nakon korištenja aplikacije, prilikom èega se æe svi podaci i aktivnosti prilikom upotrebe biti 
+        saèuvani i zabilježeni.
 
 - Pregled popularnih/aktuelnih filmova za trenutni mjesec 
 
@@ -80,14 +80,14 @@ ________________________________________________________________________________
 
 - Pretraga filmova po nazivu - dodatne informacije o filmu koji se pretražuje, ocjenjivanje filma i komentari na film.
 
-        Korisnik može pomoæu search box-a da pronaðe željeni film, da pogleda informacije o njemu (žanr, glumci, trajanje i sl), te da ga ocijeni, 
-        i ostavi svoj komentar (èime se on automatski dodaje u korisnikovu listu pregledanih filmova).
+        Korisnik može pomoæu search box-a da pronaðe željeni film, da pogleda informacije o njemu (žanr, glumci, trajanje i sl), te da ga 
+        ocijeni, i ostavi svoj komentar (èime se on automatski dodaje u korisnikovu listu pregledanih filmova).
 
 - Dodavanje fimova na listu odgledanih filmova
 
         Kada korisnik ocijeni film, on se automatski dodaje u listu pregledanih filmova.
-        Meðutim, korisnik je u moguænosti da sam doda neki film, u svoju listu pregledanih filmova, bez da mora ostavljati komentar ili ocjenjivati
-        taj film. 
+        Meðutim, korisnik je u moguænosti da sam doda neki film, u svoju listu pregledanih filmova, bez da mora ostavljati komentar ili
+        ocjenjivati taj film. 
 
 - Odabir filmova za pregled - "Lista èekanja"
 
@@ -108,10 +108,9 @@ ________________________________________________________________________________
         
 
 
-_______________________________________________________________________________________________________________________________________
-
+___________________________________________________________________________________________________________________
                                                                   **FUNKCIONALNOST**
-________________________________________________________________________________________________________________________________________
+___________________________________________________________________________________________________________________
 
 
 - Moguænost registracije novog korisnika.
@@ -148,7 +147,7 @@ ________________________________________________________________________________
 
 
 
-____________________________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________
 
                                                       **AKTERI**
 
@@ -157,23 +156,26 @@ ________________________________________________________________________________
 
  - ADMINISTRATORI SISTEMA 
         
-           - Administratori sistema su kreatori sistema, odnosno osobe koje su glavne odgovorne i zadužene za modeliranje i implementaciju 
-             sistema.
-           - Imaju moguænost pristupa aplikaciji i, pri tome, privilegije koje svaki administrator ima, a to su: 
-                                ~ Kontrola korisnika koji se registruju na sistem, kao i onih koji su veæ prijavljeni na sistem.
-                                ~ Imaju privilegiju da korisniku dopuste korištenje aplikacije i da im dodijele odgovarajuæi ID.
+           - Administratori sistema su kreatori sistema, odnosno osobe koje su glavne odgovorne i zadužene 
+             za modeliranje i implementaciju sistema.
+           - Imaju moguænost pristupa aplikaciji i, pri tome, privilegije koje svaki administrator ima, a
+             to su: 
+                                ~ Kontrola korisnika koji se registruju na sistem, kao i onih koji su veæ 
+                                  prijavljeni na sistem.
+                                ~ Imaju privilegiju da korisniku dopuste korištenje aplikacije i da im dodijele
+                                  odgovarajuæi ID.
                                 ~ Upravljanje bazom podataka - korisnici, kolekcija filmova..
                                 ~ Upravljanje stanjem aktuelnih filmova, tj. ažuriranje.
-                                ~ Moguænost posjedovanja posebnog interfejsa za admine, a sa druge strane posebnog interfejsa za korisnike.
+                                ~ Moguænost posjedovanja posebnog interfejsa za admine, a sa druge strane posebnog
+                                  interfejsa za korisnike.
                                 ~ Kontrola eliminacije uvredljivog ili destruktivnog sadržaja - sigurnost.  
 
  - KORISNIK APLIKACIJE "MyMovieCollection" 
  
             - Korisnik aplikacije su one osobe koje koriste sve moguænosti i potrebne funkcionalnosti aplikacije.
             - Imaju sopstveni account za pristup aplikaciji.
-            - Glavna interakcija i pokretanje procesa nalaze se u ulozi ovog aktera - korisnika aplikacije (aplikacija je i namijenjena
-               iskljuèivo
-              u svrhu održavanja kolekcije filmova za korisnike).       
+            - Glavna interakcija i pokretanje procesa nalaze se u ulozi ovog aktera - korisnika aplikacije
+             (aplikacija je i namijenjena iskljuèivo u svrhu održavanja kolekcije filmova za korisnike).       
 
  - POVEZIVANJE NA BAZU PODATAKA 
             
