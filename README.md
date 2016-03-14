@@ -1,29 +1,22 @@
 
+                                            
+####**Naziv teme: MyMovieCollection**
+(Tema: "Sistem za prikaz (odabir odgledanih filmova) (ili ostalog zabavnog sadrzaja)").
+_____________________________________________________________________________________________________________________________________
 
 
- ### _L'EQUIPE_
+###**L'EQUIPE**
 
-
-
-
-                                                   
-###**Naziv teme - MyMovieCollection**
-              (Tema: "Sistem za prikaz (odabir odgledanih filmova) (ili ostalog zabavnog sadrzaja)").
-
-
-
-
-
-                                         Èlanovi tima:
+#**Èlanovi tima:**
 
 1. Emir Baruèija
 2. Amra Mujèinoviæ
 3. Berina Muhoviæ
 4. Tarik Ahmetoviæ
 
+____________________________________________________________________________________________________________________________________
 
-
-                                          **OPIS TEME**
+##**OPIS TEME**
 
 
 
@@ -39,11 +32,11 @@ mišljenje o filmovima. Takoðer, korisnici æe moæi da ispunjavaju svoju "listu èe
 željenih. Iz tog razloga, MyMovieCollection predstavlja rješenje moguæih problema za korisnike, koji žele kupiti/unajmiti sistem.
 
 
+______________________________________________________________________________________________________________________________________
 
 
 
-
-                                        **PROCESI**
+##**PROCESI**
 
 
 
@@ -102,7 +95,7 @@ mišljenje o filmovima. Takoðer, korisnici æe moæi da ispunjavaju svoju "listu èe
 
 
 ___________________________________________________________________________________________________________________
-                                            **FUNKCIONALNOST**
+##**FUNKCIONALNOST**
 ___________________________________________________________________________________________________________________
 
 
@@ -142,7 +135,7 @@ ________________________________________________________________________________
 
 _________________________________________________________________________________________________________
 
-                                        **AKTERI**
+##**AKTERI**
 
 
 
