@@ -1,13 +1,13 @@
 
 
 
-                                           _L'EQUIPE_
+ ### _L'EQUIPE_
 
 
 
 
                                                    
-                                   **Naziv teme - MyMovieCollection**
+###**Naziv teme - MyMovieCollection**
               (Tema: "Sistem za prikaz (odabir odgledanih filmova) (ili ostalog zabavnog sadrzaja)").
 
 
