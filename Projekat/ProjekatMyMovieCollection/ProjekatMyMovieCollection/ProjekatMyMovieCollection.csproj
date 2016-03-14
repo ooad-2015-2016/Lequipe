@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{D63041D7-DA43-45B0-87B6-F8A697F599A8}</ProjectGuid>
+    <ProjectGuid>{72A47E9E-B07E-4C7A-9A83-7868736805C0}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ProjekatMyMovieCollection</RootNamespace>

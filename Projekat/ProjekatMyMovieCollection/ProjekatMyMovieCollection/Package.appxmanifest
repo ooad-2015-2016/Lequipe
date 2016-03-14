@@ -7,11 +7,11 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="2972a7d6-324f-45be-9437-5f6945ad3e0c"
+    Name="8bf640c3-9917-4d0e-91cd-16d0ee4d1718"
     Publisher="CN=Emir"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="2972a7d6-324f-45be-9437-5f6945ad3e0c" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="8bf640c3-9917-4d0e-91cd-16d0ee4d1718" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>ProjekatMyMovieCollection</DisplayName>
