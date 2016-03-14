@@ -8,16 +8,13 @@
 
                                                    
                                                 **Naziv teme - MyMovieCollection**
-                           (Tema: "Sistem za prikaz (odabir odgledanih filmova) (ili ostalog zabavnog sadrzaja)").
+                      (Tema: "Sistem za prikaz (odabir odgledanih filmova) (ili ostalog zabavnog sadrzaja)").
 
-_________________________________________________________________________________________________________________________________
 
 
 
 
                                                    Èlanovi tima:
-__________________________________________________________________________________________________________________________________
-
 
 1. Emir Baruèija
 2. Amra Mujèinoviæ
@@ -26,10 +23,7 @@ ________________________________________________________________________________
 
 
 
-___________________________________________________________________________________________________________________________________
-
                                                   **OPIS TEME**
-____________________________________________________________________________________________________________________________________
 
 
 
@@ -48,10 +42,9 @@ mišljenje o filmovima. Takoðer, korisnici æe moæi da ispunjavaju svoju "listu èe
 
 
 
-___________________________________________________________________________________________________________________________
 
                                               **PROCESI**
-____________________________________________________________________________________________________________________________
+
 
 
 
@@ -70,40 +63,40 @@ ________________________________________________________________________________
 
 - Odjava/LogOut iz sistema
        
-        Korisnici sistema se mogu odjaviti nakon korištenja aplikacije, prilikom èega se æe svi podaci i aktivnosti prilikom upotrebe biti 
-        saèuvani i zabilježeni.
+       Korisnici sistema se mogu odjaviti nakon korištenja aplikacije, prilikom èega se æe svi podaci i aktivnosti prilikom upotrebe 
+       biti saèuvani i zabilježeni.
 
 - Pregled popularnih/aktuelnih filmova za trenutni mjesec 
 
-        Odabirom odgovarajuæe opcije korisnik može pregledati aktuelne filmove i prilikom toga ih staviti na "listu èekanja".
+       Odabirom odgovarajuæe opcije korisnik može pregledati aktuelne filmove i prilikom toga ih staviti na "listu èekanja".
                   
 
 - Pretraga filmova po nazivu - dodatne informacije o filmu koji se pretražuje, ocjenjivanje filma i komentari na film.
 
-        Korisnik može pomoæu search box-a da pronaðe željeni film, da pogleda informacije o njemu (žanr, glumci, trajanje i sl), te da ga 
-        ocijeni, i ostavi svoj komentar (èime se on automatski dodaje u korisnikovu listu pregledanih filmova).
+       Korisnik može pomoæu search box-a da pronaðe željeni film, da pogleda informacije o njemu (žanr, glumci, trajanje i sl), te da
+       ga ocijeni, i ostavi svoj komentar (èime se on automatski dodaje u korisnikovu listu pregledanih filmova).
 
 - Dodavanje fimova na listu odgledanih filmova
 
-        Kada korisnik ocijeni film, on se automatski dodaje u listu pregledanih filmova.
-        Meðutim, korisnik je u moguænosti da sam doda neki film, u svoju listu pregledanih filmova, bez da mora ostavljati komentar ili
-        ocjenjivati taj film. 
+       Kada korisnik ocijeni film, on se automatski dodaje u listu pregledanih filmova.
+       Meðutim, korisnik je u moguænosti da sam doda neki film, u svoju listu pregledanih filmova, bez da mora ostavljati komentar 
+       ili ocjenjivati taj film. 
 
 - Odabir filmova za pregled - "Lista èekanja"
 
-        Opcija koja nudi korisniku da doda filmove u vlastitu listu èekanja.
-        Kada korisnik pregleda film iz liste èekanja, može da ga, sa ili bez ocjenjivanja, prebaci u listu odgledanih 
-        filmova (i, po želji, ostavi komentar).
+       Opcija koja nudi korisniku da doda filmove u vlastitu listu èekanja.
+       Kada korisnik pregleda film iz liste èekanja, može da ga, sa ili bez ocjenjivanja, prebaci u listu odgledanih 
+       filmova (i, po želji, ostavi komentar).
 
 - Top lista: BestMovies, WorstMovies
 
-        Moguæe je praviti razlièite liste filmova, meðu kojima su liste najboljih, i najgorih filmova.
-        Takoðe, korisnik pored ovih, može napraviti i druge liste, poput liste najboljih filmova snimljenih 
-        po istinitim dogaðajima, liste filmova u kojima glumi odreðeni glumac/glumica i sl.
+       Moguæe je praviti razlièite liste filmova, meðu kojima su liste najboljih, i najgorih filmova.
+       Takoðe, korisnik pored ovih, može napraviti i druge liste, poput liste najboljih filmova snimljenih 
+       po istinitim dogaðajima, liste filmova u kojima glumi odreðeni glumac/glumica i sl.
 
 - Kolekcija filmova koji su odgledani sortirani po kategorijama i žanru.
 
-        Svaka ocjena, svakog korisnika, se spašava u bazu podataka, te je svakom korisniku omoguæeno da vidi koji su to 
+       Svaka ocjena, svakog korisnika, se spašava u bazu podataka, te je svakom korisniku omoguæeno da vidi koji su to 
         filmovi sa najboljim i najlošijim ocjenama, u svakoj kategoriji i žanru.
         
 
