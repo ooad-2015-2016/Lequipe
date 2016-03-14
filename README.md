@@ -1,11 +1,11 @@
 
                                             
-##**Naziv teme: MyMovieCollection**
+#**Naziv teme: MyMovieCollection**
 (Tema: "Sistem za prikaz (odabir odgledanih filmova) (ili ostalog zabavnog sadrzaja)").
 _____________________________________________________________________________________________________________________________________
 
 
-###**L'EQUIPE**
+##**L'EQUIPE**
 
 #####**Èlanovi tima:**
 
@@ -16,7 +16,7 @@ ________________________________________________________________________________
 
 ____________________________________________________________________________________________________________________________________
 
-####**OPIS TEME**
+###**OPIS TEME**
 
 
 
@@ -36,7 +36,7 @@ ________________________________________________________________________________
 
 
 
-####**PROCESI**
+###**PROCESI**
 
 
 
@@ -96,7 +96,10 @@ ________________________________________________________________________________
 
 ___________________________________________________________________________________________________________________
 
-####**FUNKCIONALNOST**
+
+###**FUNKCIONALNOST**
+
+
 
 
 
@@ -134,42 +137,44 @@ ________________________________________________________________________________
 
 _________________________________________________________________________________________________________
 
-####**AKTERI**
+###**AKTERI**
+
+
 
 
 
 
  - ADMINISTRATORI SISTEMA 
         
-           - Administratori sistema su kreatori sistema, odnosno osobe koje su glavne odgovorne i zadužene 
-             za modeliranje i implementaciju sistema.
-           - Imaju moguænost pristupa aplikaciji i, pri tome, privilegije koje svaki administrator ima, a
-             to su: 
-                                ~ Kontrola korisnika koji se registruju na sistem, kao i onih koji su veæ 
-                                  prijavljeni na sistem.
-                                ~ Imaju privilegiju da korisniku dopuste korištenje aplikacije i da im dodijele
-                                  odgovarajuæi ID.
-                                ~ Upravljanje bazom podataka - korisnici, kolekcija filmova..
-                                ~ Upravljanje stanjem aktuelnih filmova, tj. ažuriranje.
-                                ~ Moguænost posjedovanja posebnog interfejsa za admine, a sa druge strane posebnog
-                                  interfejsa za korisnike.
-                                ~ Kontrola eliminacije uvredljivog ili destruktivnog sadržaja - sigurnost.  
+     - Administratori sistema su kreatori sistema, odnosno osobe koje su glavne odgovorne i zadužene 
+       za modeliranje i implementaciju sistema.
+     - Imaju moguænost pristupa aplikaciji i, pri tome, privilegije koje svaki administrator ima, a
+       to su: 
+                        ~ Kontrola korisnika koji se registruju na sistem, kao i onih koji su veæ 
+                          prijavljeni na sistem.
+                        ~ Imaju privilegiju da korisniku dopuste korištenje aplikacije i da im dodijele
+                          odgovarajuæi ID.
+                        ~ Upravljanje bazom podataka - korisnici, kolekcija filmova..
+                        ~ Upravljanje stanjem aktuelnih filmova, tj. ažuriranje.
+                        ~ Moguænost posjedovanja posebnog interfejsa za admine, a sa druge strane posebnog
+                          interfejsa za korisnike.
+                        ~ Kontrola eliminacije uvredljivog ili destruktivnog sadržaja - sigurnost.  
 
  - KORISNIK APLIKACIJE "MyMovieCollection" 
  
-            - Korisnik aplikacije su one osobe koje koriste sve moguænosti i potrebne funkcionalnosti aplikacije.
-            - Imaju sopstveni account za pristup aplikaciji.
-            - Glavna interakcija i pokretanje procesa nalaze se u ulozi ovog aktera - korisnika aplikacije
-             (aplikacija je i namijenjena iskljuèivo u svrhu održavanja kolekcije filmova za korisnike).       
+      - Korisnik aplikacije su one osobe koje koriste sve moguænosti i potrebne funkcionalnosti aplikacije.
+      - Imaju sopstveni account za pristup aplikaciji.
+      - Glavna interakcija i pokretanje procesa nalaze se u ulozi ovog aktera - korisnika aplikacije
+       (aplikacija je i namijenjena iskljuèivo u svrhu održavanja kolekcije filmova za korisnike).       
 
  - POVEZIVANJE NA BAZU PODATAKA 
             
-              - Korištenje baze filmova, povezivanje na internet.
-              - Moguænost pretrage filmova radi pregleda aktuelnih filmova, moguænosti sortiranja filmova po ocjenama.
+      - Korištenje baze filmova, povezivanje na internet.
+      - Moguænost pretrage filmova radi pregleda aktuelnih filmova, moguænosti sortiranja filmova po ocjenama.
 
  - EKSTERNI UREÐAJ 
  
-              - Cilj je upotpuniti funkcionalnost aplikacije korištenjem nekog od eksternih ureðaja. 
+      - Cilj je upotpuniti funkcionalnost aplikacije korištenjem nekog od eksternih ureðaja. 
 
 
 
