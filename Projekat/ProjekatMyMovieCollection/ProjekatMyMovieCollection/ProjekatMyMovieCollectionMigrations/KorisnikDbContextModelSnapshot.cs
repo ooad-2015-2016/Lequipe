@@ -14,6 +14,34 @@ namespace ProjekatMyMovieCollectionMigrations
             builder
                 .Annotation("ProductVersion", "7.0.0-beta6-13815");
 
+            builder.Entity("ProjekatMyMovieCollection.BazaPodataka.Models.Film", b =>
+                {
+                    b.Property<int>("filmId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("godina");
+
+                    b.Property<string>("naziv");
+
+                    b.Property<string>("opis");
+
+                    b.Property<double>("prosjecnaOcjena");
+
+                    b.Key("filmId");
+                });
+
+            builder.Entity("ProjekatMyMovieCollection.BazaPodataka.Models.Kolekcija", b =>
+                {
+                    b.Property<int>("kolekcijaId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("naziv");
+
+                    b.Property<string>("opis");
+
+                    b.Key("kolekcijaId");
+                });
+
             builder.Entity("ProjekatMyMovieCollection.BazaPodataka.Models.Korisnik", b =>
                 {
                     b.Property<int>("korisnikId")
@@ -37,6 +65,18 @@ namespace ProjekatMyMovieCollectionMigrations
                         .Annotation("Relational:ColumnType", "image");
 
                     b.Key("korisnikId");
+                });
+
+            builder.Entity("ProjekatMyMovieCollection.BazaPodataka.Models.Ocjena", b =>
+                {
+                    b.Property<int>("ocjenaId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("ocjena");
+
+                    b.Property<string>("opis");
+
+                    b.Key("ocjenaId");
                 });
         }
     }

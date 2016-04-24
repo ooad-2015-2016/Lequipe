@@ -13,8 +13,12 @@ namespace ProjekatMyMovieCollection.BazaPodataka.Models
     {
         
         public DbSet<Korisnik> Korisnici { get; set; }
+        public DbSet<Kolekcija> Kolekcije { get; set; }
+        public DbSet<Film> Filmovi { get; set; }
+        public DbSet<Ocjena> Ocjene { get; set; }
 
-        
+
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             string databaseFilePath = "Ooadbaza.db";

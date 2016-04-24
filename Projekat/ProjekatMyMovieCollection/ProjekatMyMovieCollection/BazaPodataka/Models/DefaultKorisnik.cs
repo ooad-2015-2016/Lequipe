@@ -27,6 +27,46 @@ namespace ProjekatMyMovieCollection.BazaPodataka.Models
                 );
                 context.SaveChanges();
             }
+
+            if (!context.Kolekcije.Any())
+            {
+                context.Kolekcije.AddRange(
+                    new Kolekcija()
+                    {
+                        naziv = "n",
+                        opis = "beze"
+                    }
+                        
+                );
+            }
+            context.SaveChanges();
+
+            if (!context.Filmovi.Any())
+            {
+                context.Filmovi.AddRange(
+                    new Film()
+                    {
+                        naziv = "n",
+                        opis = "beze",
+                        prosjecnaOcjena = 0
+
+                    }
+                );
+            }
+            context.SaveChanges();
+
+            if (!context.Ocjene.Any())
+            {
+                context.Ocjene.AddRange(
+                    new Ocjena()
+                    {
+                        opis = "extra",
+                        ocjena = 5
+                    }
+
+                );
+            }
+            context.SaveChanges();
         }
     }
 }

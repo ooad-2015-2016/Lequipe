@@ -7,11 +7,11 @@ using ProjekatMyMovieCollection.BazaPodataka.Models;
 namespace ProjekatMyMovieCollectionMigrations
 {
     [ContextType(typeof(KorisnikDbContext))]
-    partial class InitialMigration
+    partial class InitialMigration3
     {
         public override string Id
         {
-            get { return "20160424212802_InitialMigration"; }
+            get { return "20160424230848_InitialMigration3"; }
         }
 
         public override string ProductVersion
@@ -23,6 +23,34 @@ namespace ProjekatMyMovieCollectionMigrations
         {
             builder
                 .Annotation("ProductVersion", "7.0.0-beta6-13815");
+
+            builder.Entity("ProjekatMyMovieCollection.BazaPodataka.Models.Film", b =>
+                {
+                    b.Property<int>("filmId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<DateTime>("godina");
+
+                    b.Property<string>("naziv");
+
+                    b.Property<string>("opis");
+
+                    b.Property<double>("prosjecnaOcjena");
+
+                    b.Key("filmId");
+                });
+
+            builder.Entity("ProjekatMyMovieCollection.BazaPodataka.Models.Kolekcija", b =>
+                {
+                    b.Property<int>("kolekcijaId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<string>("naziv");
+
+                    b.Property<string>("opis");
+
+                    b.Key("kolekcijaId");
+                });
 
             builder.Entity("ProjekatMyMovieCollection.BazaPodataka.Models.Korisnik", b =>
                 {
@@ -47,6 +75,18 @@ namespace ProjekatMyMovieCollectionMigrations
                         .Annotation("Relational:ColumnType", "image");
 
                     b.Key("korisnikId");
+                });
+
+            builder.Entity("ProjekatMyMovieCollection.BazaPodataka.Models.Ocjena", b =>
+                {
+                    b.Property<int>("ocjenaId")
+                        .ValueGeneratedOnAdd();
+
+                    b.Property<int>("ocjena");
+
+                    b.Property<string>("opis");
+
+                    b.Key("ocjenaId");
                 });
         }
     }
