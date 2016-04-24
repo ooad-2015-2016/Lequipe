@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="8bf640c3-9917-4d0e-91cd-16d0ee4d1718"
-    Publisher="CN=Emir"
+    Name="624c5786-7348-41fb-852c-e4ecf1a5aeba"
+    Publisher="CN=model"
     Version="1.0.0.0" />
 
-  <mp:PhoneIdentity PhoneProductId="8bf640c3-9917-4d0e-91cd-16d0ee4d1718" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="624c5786-7348-41fb-852c-e4ecf1a5aeba" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
     <DisplayName>ProjekatMyMovieCollection</DisplayName>
-    <PublisherDisplayName>Emir</PublisherDisplayName>
+    <PublisherDisplayName>model</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 

@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{72A47E9E-B07E-4C7A-9A83-7868736805C0}</ProjectGuid>
+    <ProjectGuid>{B3ABABAF-177B-4251-9148-EEA5A577EA1E}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ProjekatMyMovieCollection</RootNamespace>
@@ -98,9 +98,17 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BazaPodataka\Models\DefaultKorisnik.cs" />
+    <Compile Include="BazaPodataka\Models\Korisnik.cs" />
+    <Compile Include="BazaPodataka\Models\KorisnikDbContext.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\20160424212802_InitialMigration.cs" />
+    <Compile Include="Migrations\20160424212802_InitialMigration.designer.cs">
+      <DependentUpon>20160424212802_InitialMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\KorisnikDbContextModelSnapshot.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
