@@ -1,9 +1,10 @@
 
 
-____________________________________________________________________________________________________________________
+_________________________________________________________________________________________________________________________________
 
-                                     SOLID PRINCIPI - Principi dobrog dizajna
-____________________________________________________________________________________________________________________
+                                             SOLID PRINCIPI - Principi dobrog dizajna
+_________________________________________________________________________________________________________________________________
+
 
 
 1.) Princip pojedinaène odgovornosti
@@ -15,6 +16,8 @@ na dijagramu su zasebne u smislu da svaka obavlja odgovarajuæi posao koji je sam
 svojstven(npr. klasa Ocjena veže se za klasu Film, ali ona je odvojena i obavlja sve 
 moguæe poslove koji se tièu ocjenjivanja filmova). Time se zakljuèuje da princip 
 pojedinaène odgovornosti u ovom sluèaju nije narušen.
+
+
 
 2.) Otvoreno zatvoreni princip
 
@@ -40,6 +43,7 @@ ugrubo, može se uvidjeti da je svaki podtip filma zamjenjiv sa svojim osnovnim t
 pa je Liskov princip zamjene u tom sluèaju ispunjen.
 
 
+
 4.) Princip inverzije ovisnosti
 
 DIP princip nam ukazuje da ne treba ovisiti od konkretnih klasa, taènije treba se poštovati pravilo
@@ -51,6 +55,8 @@ i Film. Izmjene filmova, u njihovoj internoj strukturi, neæe direktno utjecati n
 "ne zanima" da li su se npr. ocjene filmova, naziv, žanr mijenjali. Jedino je "zanima" stanje filmova, odnosno kolekcija. 
 Ali klasa Kolekcija zavisi od klase Film i podataka o filmovima, pa u biti tu postoji ovisnost, koja je definitivno opravdana, 
 jer je te klase nemoguæe razdvojiti. Uz taj izuzetak, zakljuèuje se da DijagramKlasa MMC ispunjava princip inverzije ovisnosti.
+
+
 
 5.) Princip izoliranja interfejsa
 
