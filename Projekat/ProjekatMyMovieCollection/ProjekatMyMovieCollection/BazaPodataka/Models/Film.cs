@@ -14,7 +14,7 @@ namespace ProjekatMyMovieCollection.BazaPodataka.Models
         public string naziv { get; set; }
         public double prosjecnaOcjena { get; set; }
         public string opis { get; set; }
-        public DateTime godina { get; set; }
+        public DateTime godinaFilma { get; set; }
 
     }
 }

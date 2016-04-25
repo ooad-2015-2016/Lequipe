@@ -12,6 +12,6 @@ namespace ProjekatMyMovieCollection.BazaPodataka.Models
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ocjenaId { get; set; }
         public string opis { get; set; }
-        public int ocjena { get; set; }
+        public int ocjenaFilma { get; set; }
     }
 }

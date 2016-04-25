@@ -14,7 +14,7 @@ namespace ProjekatMyMovieCollectionMigrations
                 columns: table => new
                 {
                     filmId = table.Column(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("Sqlite:Autoincrement", true),  // možda umjesto true poslat "true" ili "1"
                     godina = table.Column(type: "TEXT", nullable: false),
                     naziv = table.Column(type: "TEXT", nullable: true),
                     opis = table.Column(type: "TEXT", nullable: true),
@@ -29,7 +29,7 @@ namespace ProjekatMyMovieCollectionMigrations
                 columns: table => new
                 {
                     kolekcijaId = table.Column(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("Sqlite:Autoincrement", true),  // možda umjesto true poslat "true" ili "1"
                     naziv = table.Column(type: "TEXT", nullable: true),
                     opis = table.Column(type: "TEXT", nullable: true)
                 },
@@ -42,7 +42,7 @@ namespace ProjekatMyMovieCollectionMigrations
                 columns: table => new
                 {
                     ocjenaId = table.Column(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                        .Annotation("Sqlite:Autoincrement", true),  // možda umjesto true poslat "true" ili "1"
                     ocjena = table.Column(type: "INTEGER", nullable: false),
                     opis = table.Column(type: "TEXT", nullable: true)
                 },
@@ -55,7 +55,7 @@ namespace ProjekatMyMovieCollectionMigrations
                 table: "Korisnik",
                 type: "INTEGER",
                 nullable: false)
-                .Annotation("Sqlite:Autoincrement", true);
+                .Annotation("Sqlite:Autoincrement", true);  // možda umjesto true poslat "true" ili "1"
         }
 
         public override void Down(MigrationBuilder migration)
@@ -68,7 +68,7 @@ namespace ProjekatMyMovieCollectionMigrations
                 table: "Korisnik",
                 type: "INTEGER",
                 nullable: false)
-                .Annotation("Sqlite:Autoincrement", true);
+                .Annotation("Sqlite:Autoincrement", true);  // možda umjesto true poslat "true" ili "1"
         }
     }
 }
