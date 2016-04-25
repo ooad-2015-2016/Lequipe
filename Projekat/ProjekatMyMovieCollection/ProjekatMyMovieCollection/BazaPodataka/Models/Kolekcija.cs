@@ -13,5 +13,7 @@ namespace ProjekatMyMovieCollection.BazaPodataka.Models
         public int kolekcijaId { get; set; }
         public string naziv { get; set; }
         public string opis { get; set; }
+        public List<Film> filmovi { get; set; }
+        public int korisnikId { get; set; }
     }
 }
