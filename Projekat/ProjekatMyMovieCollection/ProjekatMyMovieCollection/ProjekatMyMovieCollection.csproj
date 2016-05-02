@@ -98,12 +98,18 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BazaPodataka\Models\DefaultFilm.cs" />
+    <Compile Include="BazaPodataka\Models\DefaultKolekcija.cs" />
     <Compile Include="BazaPodataka\Models\DefaultKorisnik.cs" />
+    <Compile Include="BazaPodataka\Models\DefaultOcjena.cs" />
     <Compile Include="BazaPodataka\Models\Film.cs" />
+    <Compile Include="BazaPodataka\Models\FilmDbContext.cs" />
     <Compile Include="BazaPodataka\Models\Kolekcija.cs" />
+    <Compile Include="BazaPodataka\Models\KolekcijaDbContext.cs" />
     <Compile Include="BazaPodataka\Models\Korisnik.cs" />
     <Compile Include="BazaPodataka\Models\KorisnikDbContext.cs" />
     <Compile Include="BazaPodataka\Models\Ocjena.cs" />
+    <Compile Include="BazaPodataka\Models\OcjenaDbContext.cs" />
     <Compile Include="BazaPodataka\Views\KorisnikListView.xaml.cs" />
     <Compile Include="BazaPodataka\Views\PictureConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -145,6 +151,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
