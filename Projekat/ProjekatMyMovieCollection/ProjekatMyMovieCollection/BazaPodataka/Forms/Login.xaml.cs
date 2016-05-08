@@ -25,6 +25,27 @@ namespace ProjekatMyMovieCollection.BazaPodataka.Forms
         public Login()
         {
             this.InitializeComponent();
+            //inicijalizacija data source
+           // var inicijalizacija = new DataSourceMenuMD();
         }
-    }
+        //asinhrona metoda za provjeru prijave korisnika
+        private async void btnLogin_Click(object sender, RoutedEventArgs e)
+        {
+
+            var korisnickoIme = txtUsername.Text;
+            var sifra = txtPassword.Password;
+           // var korisnik = DataSourceMenuMD.ProvjeraKorisnika(korisnickoIme, sifra); -potrebno dodati??
+           /* if (korisnik != null && korisnik.KorisnikId > 0)
+            {
+                this.Frame.Navigate(typeof(MainPage), korisnik);
+            }
+            else
+            {
+                var dialog = new MessageDialog("Pogrešno korisničko ime/šifra!", "Neuspješna
+               prijava");
+               
+                await dialog.ShowAsync();
+            }
+        }*/
+    }
 }
