@@ -19,5 +19,6 @@ namespace ProjekatMyMovieCollection.BazaPodataka.Models
         public float ocjenaAp { get; set; }
         public DateTime datumRodjenja { get; set; }
         public DateTime datumRegistracije { get; set; }
+        //treba dodat listuKolekcija
     }
 }

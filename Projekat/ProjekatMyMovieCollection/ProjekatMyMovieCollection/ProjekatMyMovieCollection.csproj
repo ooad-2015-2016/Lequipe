@@ -104,6 +104,11 @@
     <Compile Include="BazaPodataka\Forms\ProbaUcimse.xaml.cs">
       <DependentUpon>ProbaUcimse.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BazaPodataka\Helper\DateConverter.cs" />
+    <Compile Include="BazaPodataka\Helper\INavigationService.cs" />
+    <Compile Include="BazaPodataka\Helper\LaterThanTodayPropertyAttribute.cs" />
+    <Compile Include="BazaPodataka\Helper\NavigationService.cs" />
+    <Compile Include="BazaPodataka\Helper\RelayCommand.cs" />
     <Compile Include="BazaPodataka\Models\DefaultFilm.cs" />
     <Compile Include="BazaPodataka\Models\DefaultKolekcija.cs" />
     <Compile Include="BazaPodataka\Models\DefaultKorisnik.cs" />
@@ -116,6 +121,9 @@
     <Compile Include="BazaPodataka\Models\KorisnikDbContext.cs" />
     <Compile Include="BazaPodataka\Models\Ocjena.cs" />
     <Compile Include="BazaPodataka\Models\OcjenaDbContext.cs" />
+    <Compile Include="BazaPodataka\ViewModels\FilmViewModel.cs" />
+    <Compile Include="BazaPodataka\ViewModels\KolekcijaViewModel.cs" />
+    <Compile Include="BazaPodataka\ViewModels\KorisnikViewModel.cs" />
     <Compile Include="BazaPodataka\Views\KorisnikListView.xaml.cs" />
     <Compile Include="BazaPodataka\Views\PictureConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -169,9 +177,7 @@
   <ItemGroup>
     <Reference Include="System, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="BazaPodataka\ViewModels\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

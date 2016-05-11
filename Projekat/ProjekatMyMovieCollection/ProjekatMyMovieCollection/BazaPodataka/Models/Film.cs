@@ -13,6 +13,8 @@ namespace ProjekatMyMovieCollection.BazaPodataka.Models
         public int filmId { get; set; }
         public string naziv { get; set; }
         public double prosjecnaOcjena { get; set; }
+        public int ocjena { get; set; } //od pojedinacnog korisnika- malo je nelogicno ?
+
         public string opis { get; set; }
         public DateTime godina { get; set; }
 
