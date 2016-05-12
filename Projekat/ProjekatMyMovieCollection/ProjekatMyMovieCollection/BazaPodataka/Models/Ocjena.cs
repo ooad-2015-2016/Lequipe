@@ -10,8 +10,9 @@ namespace ProjekatMyMovieCollection.BazaPodataka.Models
     class Ocjena
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int ocjenaId { get; set; }
-        public string opis { get; set; }
-        public int ocjena { get; set; }
+        public int FilmID { get; set; }
+        public int KorisnikID { get; set; } //ID korisnika koji je stavio datu ocjenu... --by berns
+        public string Opis { get; set; } //Nisam sigurna za šta će nam ovaj opis.. --by berns
+        public int Ocjena { get; set; }
     }
 }

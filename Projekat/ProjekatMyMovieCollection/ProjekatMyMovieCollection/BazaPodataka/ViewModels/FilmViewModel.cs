@@ -18,7 +18,11 @@ namespace ProjekatMyMovieCollection.BazaPodataka.ViewModels
         //nije mi jasno gdje dodati atribut kojim korisnik ocjenjuje neki film, jedino bi
         //mozda moglo u neku Kolekciju OCJENJENO (koja se stvara prvi put kad ocjeni i
         //koja se ne moze brisat niti mjenjat), pa da imamo listu filmova i listu ocjena,
-        //gdje su na istim indeksima ocjena i taj film
+        //gdje su na istim indeksima ocjena i taj film --by amra
+
+        //evo razrijesile smo, ne treba kolekcija, svaki film ima listu ocjena, svaka ocjena ID, i provjerimo
+        //samo jel za taj i taj ID filma i Korisnika ocjena u listi, ako nije, onda korisnik ima pravo da ocjenjuje u suprotnom moze da mijenja ocjenu..
+
 
         public ICommand Dodaj { get; set; }
         public ICommand Obrisi { get; set; }
