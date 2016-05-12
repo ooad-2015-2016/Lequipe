@@ -10,13 +10,14 @@ namespace ProjekatMyMovieCollection.BazaPodataka.ViewModels
 {
     class KolekcijaViewModel
     {
-        public KorisnikViewModel Parent { get; set; } //pocetna
+        public KorisnikViewModel Parent { get; set; } //pocetna 
         public Kolekcija Kolekcija { get; set; } //ovo se dodaje kasnije u Parent.listaFilmova
         public INavigationService NavigationService { get; set; } //za prelazak na druge forme
 
         //haman viška ili ipak ne?
         public string naziv { get; set; } //a zasto ce mi ovaj atribut kad imam atribut Kolekcija u koji cu smjestit naziv??
         public string opis { get; set; } //a zasto ce mi ovaj atribut kad imam atribut Kolekcija u koji cu smjestit opis??
+        //a pa cici ne treba ti, nema ni na MVVM dijagramu, PAJEL?! --byberns
 
 
         public ICommand DodajKolekciju { get; set; }
@@ -24,6 +25,8 @@ namespace ProjekatMyMovieCollection.BazaPodataka.ViewModels
         //mozda da napravimo staticke kolekcije, kad se napravi ne moze se mjenjat, al time ovo dvoje ispod gubi smisao
         public ICommand DodajFilm { get; set; } //kao opcija- nisam sigurna da li cemo ovo imat kao i ovo ispod
         public ICommand ObrisiFilm { get; set; }  //iz ovog razloga ce se u FilmViewModel kolekcija da bude parent, jer se iz nje poziva film
+
+
 
         public KolekcijaViewModel(KorisnikViewModel parent)
         {
@@ -37,6 +40,7 @@ namespace ProjekatMyMovieCollection.BazaPodataka.ViewModels
             ObrisiFilm = new RelayCommand<object>(ObrisiFilm, mozeLiSeObrisatiFilm);
 
             //mozda treba i sacuvaj izmjene u kolekciji hm... nakon dodavanja filma
+            //IMA SMISLA TO ... BYBERNS
             SacuvajIzmjene = new RelayCommand<object>(sacuvajIzmjene, zeliteLiSacuvatiIzmjene);
         }
 
@@ -50,7 +54,7 @@ namespace ProjekatMyMovieCollection.BazaPodataka.ViewModels
         {
             //glavna forma ce biti login odnosno korisnik kad se loguje
             //nakon toga ako zeli dodati kolekciju prelazi sa Navigated na KolekcijaViewModel
-            Parent.Korisnik.listaKolekcija.Add(Kolekcija); //listaKolekcija svaki korisnik je ima
+            Parent.Korisnik.ListaKolekcija.Add(Kolekcija); //listaKolekcija svaki korisnik je ima
             //go back koristi navigation service da se vrati nazad
             Parent.NavigationService.GoBack();
         }
