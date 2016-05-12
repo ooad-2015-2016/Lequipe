@@ -7,13 +7,16 @@ using System.Threading.Tasks;
 
 namespace ProjekatMyMovieCollection.BazaPodataka.Models
 {
+    //Klasa Kolekcija je klasa koja predstavlja kolekciju filmova za odgovarajuceg korisnika. Obzirom da svaki objekt klase Kolekcija
+    //ima svoj ID, time svaki korisnik ima jedinstvene kolekcije.. Za kolekciju se mora znati ko joj je vlasnik(KorisnikID)...
     class Kolekcija
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int kolekcijaId { get; set; }
-        public string naziv { get; set; }
-        public string opis { get; set; }
-        public List<Film> filmovi { get; set; }
-        public int korisnikId { get; set; }
+        public int KolekcijaId { get; set; }
+        public int KorisnikId { get; set; }
+        public string Naziv { get; set; }
+        public string Opis { get; set; }
+        public List<Film> Filmovi { get; set; }
+        
     }
 }

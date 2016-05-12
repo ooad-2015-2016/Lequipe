@@ -10,15 +10,15 @@ namespace ProjekatMyMovieCollection.BazaPodataka.Models
     class Korisnik
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int korisnikId { get; set; }
-        public string mail { get; set; }
-        public string ime { get; set; }
-        public string prezime { get; set; }
-        public byte[] slika { get; set; }
-        public string sifra { get; set; }
-        public float ocjenaAp { get; set; }
-        public DateTime datumRodjenja { get; set; }
-        public DateTime datumRegistracije { get; set; }
-        //treba dodat listuKolekcija
+        public int KorisnikId { get; set; }
+        public string Ime { get; set; }
+        public string Prezime { get; set; }
+        public string Mail { get; set; }
+        public DateTime DatumRodjenja { get; set; }
+        public byte[] Slika { get; set; }
+        public string Sifra { get; set; }
+        public float OcjenaAplikacije { get; set; }
+        public DateTime DatumRegistracije { get; set; }
+        public List<Kolekcija> ListaKolekcija { get; set; }
     }
 }

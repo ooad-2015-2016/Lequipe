@@ -10,13 +10,14 @@ namespace ProjekatMyMovieCollection.BazaPodataka.Models
     class Film
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int filmId { get; set; }
-        public string naziv { get; set; }
-        public double prosjecnaOcjena { get; set; }
-        public int ocjena { get; set; } //od pojedinacnog korisnika- malo je nelogicno ?
+        public int FilmId { get; set; }
+        public string Naziv { get; set; }
+        public double ProsjecnaOcjena { get; set; } //obrisali smo atribut ocjena, koji i ne treba, nema ga ni na dijagramu klasa...
+        public string Opis { get; set; }
+        public DateTime Godina { get; set; }
+        public List<Ocjena> Ocjene { get; set; } //Dodan atribut lista ocjena, nismo ga na dijagramu stavili
 
-        public string opis { get; set; }
-        public DateTime godina { get; set; }
+        //Metode vezane za filmove: Dodaj, Izbrisi, Izmijeni, Prikazi u ViewModel
 
     }
 }
