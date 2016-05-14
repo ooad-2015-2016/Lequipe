@@ -127,10 +127,22 @@
     <Compile Include="BazaPodataka\ViewModels\FilmViewModel.cs" />
     <Compile Include="BazaPodataka\ViewModels\KolekcijaViewModel.cs" />
     <Compile Include="BazaPodataka\ViewModels\KorisnikViewModel.cs" />
-    <Compile Include="BazaPodataka\Views\Registracija.xaml.cs">
-      <DependentUpon>Registracija.xaml</DependentUpon>
+    <Compile Include="BazaPodataka\Views\AdministratorViewModel.xaml.cs">
+      <DependentUpon>AdministratorViewModel.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BazaPodataka\Views\KorisnikListView.xaml.cs" />
+    <Compile Include="BazaPodataka\Views\FilmViewModel.xaml.cs">
+      <DependentUpon>FilmViewModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BazaPodataka\Views\KolekcijaViewModel.xaml.cs">
+      <DependentUpon>KolekcijaViewModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BazaPodataka\Views\KorisnikViewModel.xaml.cs">
+      <DependentUpon>KorisnikViewModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BazaPodataka\Views\RegistracijaLViewModel.xaml.cs">
+      <DependentUpon>RegistracijaLViewModel.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="BazaPodataka\Views\LoginViewModel.xaml.cs" />
     <Compile Include="BazaPodataka\Views\PictureConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -171,11 +183,27 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BazaPodataka\Views\Registracija.xaml">
+    <Page Include="BazaPodataka\Views\AdministratorViewModel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BazaPodataka\Views\KorisnikListView.xaml">
+    <Page Include="BazaPodataka\Views\FilmViewModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BazaPodataka\Views\KolekcijaViewModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BazaPodataka\Views\KorisnikViewModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BazaPodataka\Views\RegistracijaLViewModel.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BazaPodataka\Views\LoginViewModel.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
