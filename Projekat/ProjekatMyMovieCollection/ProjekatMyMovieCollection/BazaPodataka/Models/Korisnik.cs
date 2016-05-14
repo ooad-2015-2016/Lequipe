@@ -13,7 +13,9 @@ namespace ProjekatMyMovieCollection.BazaPodataka.Models
         public int KorisnikId { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
-        public string Mail { get; set; }
+        public string Mail { get; set; } //korisnicko ime bi nam trebalo...
+        public string Spol { get; set; }
+        public string Username { get; set; }
         public DateTime DatumRodjenja { get; set; }
         public byte[] Slika { get; set; }
         public string Sifra { get; set; }

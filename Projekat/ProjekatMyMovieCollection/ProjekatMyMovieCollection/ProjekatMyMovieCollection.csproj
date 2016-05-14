@@ -118,6 +118,7 @@
     <Compile Include="BazaPodataka\Models\FilmDbContext.cs" />
     <Compile Include="BazaPodataka\Models\Kolekcija.cs" />
     <Compile Include="BazaPodataka\Models\KolekcijaDbContext.cs" />
+    <Compile Include="BazaPodataka\Models\KOMENTARI.cs" />
     <Compile Include="BazaPodataka\Models\Korisnik.cs" />
     <Compile Include="BazaPodataka\Models\KorisnikDbContext.cs" />
     <Compile Include="BazaPodataka\Models\MyMovieCollection.cs" />
@@ -126,6 +127,9 @@
     <Compile Include="BazaPodataka\ViewModels\FilmViewModel.cs" />
     <Compile Include="BazaPodataka\ViewModels\KolekcijaViewModel.cs" />
     <Compile Include="BazaPodataka\ViewModels\KorisnikViewModel.cs" />
+    <Compile Include="BazaPodataka\Views\Registracija.xaml.cs">
+      <DependentUpon>Registracija.xaml</DependentUpon>
+    </Compile>
     <Compile Include="BazaPodataka\Views\KorisnikListView.xaml.cs" />
     <Compile Include="BazaPodataka\Views\PictureConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
@@ -164,6 +168,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="BazaPodataka\Forms\ProbaUcimse.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="BazaPodataka\Views\Registracija.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
