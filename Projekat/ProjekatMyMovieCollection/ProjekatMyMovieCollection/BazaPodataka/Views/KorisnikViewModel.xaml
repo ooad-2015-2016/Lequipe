@@ -7,7 +7,53 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-171,-119">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="373*"/>
+            <RowDefinition Height="25*"/>
+            <RowDefinition Height="18*"/>
+            <RowDefinition Height="302*"/>
+            <RowDefinition Height="41*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="15*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="52" Margin="43.667,47,0,0" TextWrapping="Wrap" Text="MyMovieCollection" VerticalAlignment="Top" Width="339" FontFamily="SketchFlow Print" FontSize="36" FontWeight="Bold" SelectionChanged="textBlock1_SelectionChanged" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="42" Margin="131.667,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="251" SelectionChanged="textBlock3_SelectionChanged" FontFamily="Segoe Script" FontSize="24" Grid.Column="1">
+        	<Run Text="Edit you"/>
+        	<Run Text="r"/>
+        	<Run Text=" profile"/>
+        </TextBlock>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="35" Margin="33,194,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="110" SelectionChanged="textBlock_SelectionChanged" RenderTransformOrigin="1.273,0.476" Grid.ColumnSpan="2" FontFamily="Segoe Script" FontSize="18">
+        	<Run Text="Ime:"/>
+        	<LineBreak/>
+        	<Run/>
+        </TextBlock>
+        <TextBlock x:Name="textBlock_Copy" HorizontalAlignment="Left" Height="35" Margin="33,234,0,0" TextWrapping="Wrap" Text="Prezime:" VerticalAlignment="Top" Width="110" Grid.ColumnSpan="2" FontFamily="Segoe Script" FontSize="18"/>
+        <TextBlock x:Name="textBlock_Copy1" HorizontalAlignment="Left" Height="35" Margin="33,274,0,0" TextWrapping="Wrap" Text="Datum rodjenja:" VerticalAlignment="Top" Width="110" Grid.ColumnSpan="2" FontFamily="Segoe Script" FontSize="18"/>
+        <TextBlock x:Name="textBlock_Copy2" HorizontalAlignment="Left" Height="35" Margin="33,309,0,0" TextWrapping="Wrap" Text="Email:" VerticalAlignment="Top" Width="110" SelectionChanged="textBlock_Copy2_SelectionChanged" Grid.ColumnSpan="2" FontFamily="Segoe Script" FontSize="18"/>
+        <TextBlock x:Name="textBlock_Copy3" HorizontalAlignment="Left" Height="35" Margin="43.667,64,0,0" TextWrapping="Wrap" Text="Username:" VerticalAlignment="Top" Width="110" SelectionChanged="textBlock_Copy3_SelectionChanged" Grid.Column="1" Grid.Row="3" FontFamily="Segoe Script" FontSize="18"/>
+        <TextBlock x:Name="textBlock_Copy4" HorizontalAlignment="Left" Height="35" Margin="272.667,118,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="110" Grid.Column="1" Grid.Row="3"/>
+        <TextBlock x:Name="textBlock_Copy5" HorizontalAlignment="Left" Height="35" Margin="43.667,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" Grid.Column="1" Grid.Row="3" FontFamily="Segoe Script" FontSize="18">
+        	<Run Text="Stari password:"/>
+        	<LineBreak/>
+        	<Run/>
+        </TextBlock>
+        <TextBlock x:Name="textBlock_Copy6" HorizontalAlignment="Left" Height="35" Margin="43.667,139,0,0" TextWrapping="Wrap" Text="Novi password:" VerticalAlignment="Top" Width="110" Grid.Column="1" Grid.Row="3" FontFamily="Segoe Script" FontSize="18"/>
+        <TextBlock x:Name="textBlock_Copy7" HorizontalAlignment="Left" Height="35" Margin="43.667,174,0,0" TextWrapping="Wrap" Text="Ponovite password:" VerticalAlignment="Top" Width="165" Grid.Column="1" Grid.Row="3" FontFamily="Segoe Script" FontSize="18"/>
+        <Button x:Name="button" Grid.ColumnSpan="2" Content="Promjena postavki korisničkog računa" HorizontalAlignment="Left" Height="51" Margin="0,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="531" Click="button_Click" Grid.RowSpan="2" FontFamily="Segoe Script" FontSize="20"/>
+        <RelativePanel HorizontalAlignment="Left" Height="145" Margin="9.667,64,0,0" Grid.Row="3" VerticalAlignment="Top" Width="478" Grid.Column="1">
+            <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Height="0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="262" Margin="216,0,-104,0"/>
+            <TextBox x:Name="textBox_Copy3" HorizontalAlignment="Left" Height="0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="262" Margin="216,37,-100,-37"/>
+            <TextBox x:Name="textBox_Copy4" HorizontalAlignment="Left" Height="0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="262" Margin="216,74,-227,-74"/>
+            <TextBox x:Name="textBox_Copy5" HorizontalAlignment="Left" Height="0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="262" Margin="216,111,-100,-111"/>
+        </RelativePanel>
+        <Button x:Name="button1" Grid.ColumnSpan="2" Content="Sačuvati izmjene" HorizontalAlignment="Left" Height="51" Grid.Row="3" VerticalAlignment="Top" Width="531" Margin="0,251,0,0" FontFamily="Segoe Script" FontSize="20"/>
+        <TextBox x:Name="textBox" Grid.Column="1" HorizontalAlignment="Left" Height="0" Margin="109.667,194,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="378" TextChanged="textBox_TextChanged"/>
+        <TextBox x:Name="textBox_Copy" Grid.Column="1" HorizontalAlignment="Left" Height="0" Margin="109.667,229,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="378"/>
+        <TextBox x:Name="textBox_Copy2" Grid.Column="1" HorizontalAlignment="Left" Height="0" Margin="109.667,309,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="378"/>
+        <DatePicker Grid.Column="1" HorizontalAlignment="Left" Height="35" Margin="109.667,269,0,0" VerticalAlignment="Top" Width="378"/>
 
     </Grid>
 </Page>

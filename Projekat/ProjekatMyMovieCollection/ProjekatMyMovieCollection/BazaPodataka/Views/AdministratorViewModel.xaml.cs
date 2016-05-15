@@ -26,5 +26,10 @@ namespace ProjekatMyMovieCollection.BazaPodataka.Views
         {
             this.InitializeComponent();
         }
+
+        private void textBlock3_SelectionChanged(System.Object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -7,7 +7,13 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,0,-389,0">
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="45" Margin="199,54,0,0" TextWrapping="Wrap" Text="MyMovieCollection" VerticalAlignment="Top" Width="339" FontFamily="SketchFlow Print" FontSize="36" FontWeight="Bold" SelectionChanged="textBlock1_SelectionChanged"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="42" Margin="352,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="251" SelectionChanged="textBlock3_SelectionChanged" FontFamily="Segoe Script" FontSize="24">
+        	<Run Text="Administratori"/>
+        	<LineBreak/>
+        	<Run/>
+        </TextBlock>
 
     </Grid>
 </Page>
