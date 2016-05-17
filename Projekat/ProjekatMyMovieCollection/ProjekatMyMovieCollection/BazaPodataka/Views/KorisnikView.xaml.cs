@@ -20,16 +20,13 @@ namespace ProjekatMyMovieCollection.BazaPodataka.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class AdministratorViewModel : Page
+    public sealed partial class KorisnikView : Page
     {
-        public AdministratorViewModel()
+        public KorisnikView()
         {
             this.InitializeComponent();
         }
 
-        private void textBlock3_SelectionChanged(System.Object sender, RoutedEventArgs e)
-        {
-
-        }
+        
     }
 }

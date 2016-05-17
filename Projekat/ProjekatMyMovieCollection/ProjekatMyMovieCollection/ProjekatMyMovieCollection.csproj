@@ -127,25 +127,25 @@
     <Compile Include="BazaPodataka\ViewModels\FilmViewModel.cs" />
     <Compile Include="BazaPodataka\ViewModels\KolekcijaViewModel.cs" />
     <Compile Include="BazaPodataka\ViewModels\KorisnikViewModel.cs" />
-    <Compile Include="BazaPodataka\Views\AdministratorViewModel.xaml.cs">
-      <DependentUpon>AdministratorViewModel.xaml</DependentUpon>
+    <Compile Include="BazaPodataka\Views\AdministratorView.xaml.cs">
+      <DependentUpon>AdministratorView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BazaPodataka\Views\FilmViewModel.xaml.cs">
-      <DependentUpon>FilmViewModel.xaml</DependentUpon>
+    <Compile Include="BazaPodataka\Views\FilmView.xaml.cs">
+      <DependentUpon>FilmView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BazaPodataka\Views\KolekcijaViewModel.xaml.cs">
-      <DependentUpon>KolekcijaViewModel.xaml</DependentUpon>
+    <Compile Include="BazaPodataka\Views\KolekcijaView.xaml.cs">
+      <DependentUpon>KolekcijaView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BazaPodataka\Views\KorisnikViewModel.xaml.cs">
-      <DependentUpon>KorisnikViewModel.xaml</DependentUpon>
+    <Compile Include="BazaPodataka\Views\KorisnikView.xaml.cs">
+      <DependentUpon>KorisnikView.xaml</DependentUpon>
     </Compile>
     <Compile Include="BazaPodataka\Views\Pocetna.xaml.cs">
       <DependentUpon>Pocetna.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BazaPodataka\Views\RegistracijaLViewModel.xaml.cs">
-      <DependentUpon>RegistracijaLViewModel.xaml</DependentUpon>
+    <Compile Include="BazaPodataka\Views\RegistracijaView.xaml.cs">
+      <DependentUpon>RegistracijaView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="BazaPodataka\Views\LoginViewModel.xaml.cs" />
+    <Compile Include="BazaPodataka\Views\LoginView.xaml.cs" />
     <Compile Include="BazaPodataka\Views\PictureConverter.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -186,19 +186,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BazaPodataka\Views\AdministratorViewModel.xaml">
+    <Page Include="BazaPodataka\Views\AdministratorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BazaPodataka\Views\FilmViewModel.xaml">
+    <Page Include="BazaPodataka\Views\FilmView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BazaPodataka\Views\KolekcijaViewModel.xaml">
+    <Page Include="BazaPodataka\Views\KolekcijaView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BazaPodataka\Views\KorisnikViewModel.xaml">
+    <Page Include="BazaPodataka\Views\KorisnikView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -206,11 +206,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BazaPodataka\Views\RegistracijaLViewModel.xaml">
+    <Page Include="BazaPodataka\Views\RegistracijaView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="BazaPodataka\Views\LoginViewModel.xaml">
+    <Page Include="BazaPodataka\Views\LoginView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

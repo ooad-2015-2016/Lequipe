@@ -20,16 +20,13 @@ namespace ProjekatMyMovieCollection.BazaPodataka.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
-    public sealed partial class Pocetna : Page
+    public sealed partial class AdministratorView : Page
     {
-        public Pocetna()
+        public AdministratorView()
         {
             this.InitializeComponent();
         }
 
-        private void UrediProfil(System.Object sender, RoutedEventArgs e)
-        {
-            contentFrame.Navigate(typeof(KorisnikView));
-        }
+        
     }
 }
