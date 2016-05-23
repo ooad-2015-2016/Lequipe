@@ -1,0 +1,41 @@
+﻿<Page
+    x:Class="MyMovieCollection.MyMovieCollection.Views.LoginView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyMovieCollection.MyMovieCollection.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Margin="0,-124,-479,-458">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black"/>
+                <GradientStop Color="#FFE6E7E8" Offset="0.54"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="95*"/>
+            <ColumnDefinition Width="127*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock x:Name="TextBlock" HorizontalAlignment="Left" Height="144" Margin="95.116,71.519,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="690.548" Grid.ColumnSpan="2" FontSize="72" FontFamily="SketchFlow Print" FontWeight="Bold" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Foreground="#FF9F28DA">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="4.018" SkewY="-3.724" TranslateX="3.712" TranslateY="-22.162"/>
+            </TextBlock.RenderTransform>
+        	<Run Text="        "/>
+        	<Run Text="MyMovieCollection"/>
+        </TextBlock>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="58" Margin="255.174,309.82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="324.324" FontFamily="Segoe Script" FontSize="48" RenderTransformOrigin="0.5,0.5" UseLayoutRounding="False" d:LayoutRounding="Auto" Grid.ColumnSpan="2" Foreground="#FFE288C5">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="-0.116"/>
+            </TextBlock.RenderTransform>
+        	<Run Text="PRIJAVA"/>
+        </TextBlock>
+        <PasswordBox x:Name="passwordBox" PlaceholderText="Šifra" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="108" Margin="157,677,0,0" VerticalAlignment="Top" Width="566" FontSize="48" FontFamily="Segoe Script" Background="#FF8412A5"/>
+        <TextBox x:Name="textBox" PlaceholderText="Korisničko ime" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="106" Margin="157,470,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="566" FontSize="36" FontFamily="Segoe Script" Background="#FF992723"/>
+        <Button x:Name="button" Grid.ColumnSpan="2" Content="SIGN IN" HorizontalAlignment="Left" Height="114" Margin="236,891,0,0" VerticalAlignment="Top" Width="368" FontFamily="Segoe Script" FontSize="36" Background="#33070108"/>
+        <Button x:Name="button1" Content="Sign Up&#xD;&#xA;&#xD;&#xA;" Grid.Column="1" HorizontalAlignment="Left" Height="62" Margin="10,1073,0,0" VerticalAlignment="Top" Width="235" FontFamily="Segoe Script" FontSize="42" Background="#33E7E4E7"/>
+        <TextBlock x:Name="textBlock1" Height="62" Margin="241,1073,470,0" TextWrapping="Wrap" Text="or" VerticalAlignment="Top" FontSize="40" FontFamily="Segoe Script" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Page>
