@@ -1,1 +1,1 @@
-C:\Users\model\Documents\Visual Studio 2015\Projects\MyMovieCollection\MyMovieCollection\MyMovieCollection.csproj;x86
+C:\Users\Emir\Desktop\Lequipe\Projekat\MyMovieCollection\MyMovieCollection\MyMovieCollection.csproj;x86

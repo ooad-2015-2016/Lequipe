@@ -13,8 +13,8 @@ namespace MyMovieCollectionMigrations
                 name: "Film",
                 columns: table => new
                 {
-                    FilmId = table.Column(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                    FilmId = table.Column(type: "INTEGER", nullable: false),
+                     //   .Annotation("Sqlite:Autoincrement", true),
                     Godina = table.Column(type: "TEXT", nullable: false),
                     KolekcijaId = table.Column(type: "INTEGER", nullable: false),
                     KorisnikId = table.Column(type: "INTEGER", nullable: false),
@@ -31,8 +31,8 @@ namespace MyMovieCollectionMigrations
                 name: "Kolekcija",
                 columns: table => new
                 {
-                    KolekcijaId = table.Column(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                    KolekcijaId = table.Column(type: "INTEGER", nullable: false),
+                    //    .Annotation("Sqlite:Autoincrement", true),
                     KorisnikId = table.Column(type: "INTEGER", nullable: false),
                     Naziv = table.Column(type: "TEXT", nullable: true),
                     Opis = table.Column(type: "TEXT", nullable: true),
@@ -46,8 +46,8 @@ namespace MyMovieCollectionMigrations
                 name: "Korisnik",
                 columns: table => new
                 {
-                    KorisnikId = table.Column(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                    KorisnikId = table.Column(type: "INTEGER", nullable: false),
+                      //  .Annotation("Sqlite:Autoincrement", true),
                     DalijeAdmin = table.Column(type: "INTEGER", nullable: false),
                     DatumRegistracije = table.Column(type: "TEXT", nullable: false),
                     DatumRodjenja = table.Column(type: "TEXT", nullable: false),
@@ -68,8 +68,8 @@ namespace MyMovieCollectionMigrations
                 name: "Ocjena",
                 columns: table => new
                 {
-                    OcjenaID = table.Column(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
+                    OcjenaID = table.Column(type: "INTEGER", nullable: false),
+                      //  .Annotation("Sqlite:Autoincrement", true),
                     FilmID = table.Column(type: "INTEGER", nullable: false),
                     KolekcijaID = table.Column(type: "INTEGER", nullable: false),
                     KorisnikID = table.Column(type: "INTEGER", nullable: false),
