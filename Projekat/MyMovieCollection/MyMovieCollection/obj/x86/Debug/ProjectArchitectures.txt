@@ -1,1 +1,1 @@
-C:\Users\Emir\Desktop\Lequipe\Projekat\MyMovieCollection\MyMovieCollection\MyMovieCollection.csproj;x86
+C:\Users\model\Desktop\ispravno\MyMovieCollection\MyMovieCollection\MyMovieCollection.csproj;x86

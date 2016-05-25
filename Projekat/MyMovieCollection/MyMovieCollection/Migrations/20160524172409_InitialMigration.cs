@@ -14,7 +14,7 @@ namespace MyMovieCollectionMigrations
                 columns: table => new
                 {
                     FilmId = table.Column(type: "INTEGER", nullable: false),
-                     //   .Annotation("Sqlite:Autoincrement", true),
+                        //.Annotation("Sqlite:Autoincrement", true),
                     Godina = table.Column(type: "TEXT", nullable: false),
                     KolekcijaId = table.Column(type: "INTEGER", nullable: false),
                     KorisnikId = table.Column(type: "INTEGER", nullable: false),
@@ -32,7 +32,7 @@ namespace MyMovieCollectionMigrations
                 columns: table => new
                 {
                     KolekcijaId = table.Column(type: "INTEGER", nullable: false),
-                    //    .Annotation("Sqlite:Autoincrement", true),
+                      //  .Annotation("Sqlite:Autoincrement", true),
                     KorisnikId = table.Column(type: "INTEGER", nullable: false),
                     Naziv = table.Column(type: "TEXT", nullable: true),
                     Opis = table.Column(type: "TEXT", nullable: true),
@@ -47,7 +47,7 @@ namespace MyMovieCollectionMigrations
                 columns: table => new
                 {
                     KorisnikId = table.Column(type: "INTEGER", nullable: false),
-                      //  .Annotation("Sqlite:Autoincrement", true),
+                       // .Annotation("Sqlite:Autoincrement", true),
                     DalijeAdmin = table.Column(type: "INTEGER", nullable: false),
                     DatumRegistracije = table.Column(type: "TEXT", nullable: false),
                     DatumRodjenja = table.Column(type: "TEXT", nullable: false),
@@ -69,7 +69,7 @@ namespace MyMovieCollectionMigrations
                 columns: table => new
                 {
                     OcjenaID = table.Column(type: "INTEGER", nullable: false),
-                      //  .Annotation("Sqlite:Autoincrement", true),
+                        //.Annotation("Sqlite:Autoincrement", true),
                     FilmID = table.Column(type: "INTEGER", nullable: false),
                     KolekcijaID = table.Column(type: "INTEGER", nullable: false),
                     KorisnikID = table.Column(type: "INTEGER", nullable: false),

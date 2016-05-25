@@ -117,9 +117,13 @@
     <Compile Include="MyMovieCollection\Models\Korisnik.cs" />
     <Compile Include="MyMovieCollection\Models\MovieCollectionDbContext.cs" />
     <Compile Include="MyMovieCollection\Models\Ocjena.cs" />
+    <Compile Include="MyMovieCollection\ViewModels\AdministratorViewModel.cs" />
     <Compile Include="MyMovieCollection\ViewModels\FilmViewModel.cs" />
     <Compile Include="MyMovieCollection\ViewModels\KolekcijaViewModel.cs" />
     <Compile Include="MyMovieCollection\ViewModels\KorisnikViewModel.cs" />
+    <Compile Include="MyMovieCollection\ViewModels\LoginViewModel.cs" />
+    <Compile Include="MyMovieCollection\ViewModels\PocetnaViewModel.cs" />
+    <Compile Include="MyMovieCollection\ViewModels\RegistracijaViewModel.cs" />
     <Compile Include="MyMovieCollection\Views\AdministratorView.xaml.cs">
       <DependentUpon>AdministratorView.xaml</DependentUpon>
     </Compile>
