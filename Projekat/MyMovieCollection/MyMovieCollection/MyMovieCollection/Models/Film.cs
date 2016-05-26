@@ -19,5 +19,13 @@ namespace MyMovieCollection.MyMovieCollection.Models
         public byte[] slika { get; set; }
         public int KorisnikId { get; set; }
         public int KolekcijaId { get; set; }
+
+        public Film (int filmId, string naziv, double ProsjecnaOcjena, string opis, DateTime godina, byte[] slika, int korisnikId, int kolekcijaId)
+        {
+            FilmId = filmId;
+            Naziv = naziv;
+            
+
+        }
     }
 }

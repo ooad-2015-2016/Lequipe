@@ -48,6 +48,7 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
 
         private void prijaviSe(object parametar)
         {
+           // KorisnickoIme_txb = Korisnik_txb.Text.ToString();
             using (var db = new MovieCollectionDbContext())
             {
                 korisnik = db.Korisnici.Where(x => x.Username == KorisnickoIme_txb && x.Sifra == Sifra_txb).FirstOrDefault();

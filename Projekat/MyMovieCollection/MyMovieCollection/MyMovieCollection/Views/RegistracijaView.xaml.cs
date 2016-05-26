@@ -1,4 +1,6 @@
-﻿using System;
+﻿using MyMovieCollection.MyMovieCollection.Models;
+using MyMovieCollection.MyMovieCollection.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,9 +29,32 @@ namespace MyMovieCollection.MyMovieCollection.Views
             this.InitializeComponent();
         }
 
-        private void textBlock2_Copy3_SelectionChanged(object sender, RoutedEventArgs e)
-        {
 
+        //implementirati validaciju
+        private void button_RegistrujSe(object sender, RoutedEventArgs e)
+        {
+            string spol;
+            if (spolMuskoReg.IsChecked == true)
+                spol = "Musko";
+            else
+                spol = "Zensko";
+            Korisnik registrovaniKorisnik = new Korisnik()
+            {
+                Ime = imeReg.Text,
+                Prezime = prezimeReg.Text,
+                Mail = mailReg.Text,
+                Spol = spol,
+                Username = usernameReg.Text,
+              //  DatumRodjenja = datumReg.DateTime, zab kako se preuzima datum
+                Sifra = passwordReg.Text,
+                DatumRegistracije = DateTime.Now,
+                DalijeAdmin = false                
+            };
+
+
+            //podaci sa korisnicima se salju u fiju u RegistracijaViewModel kako bi se dodali u listuKorisnika?
+           //RegistracijaViewModel regVM = new RegistracijaViewModel();
+           //regVM.dodajKorisnika(registrovaniKorisnik);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace MyMovieCollection.MyMovieCollection.Models
         public int KorisnikId { get; set; }
         public string Ime { get; set; }
         public string Prezime { get; set; }
-        public string Mail { get; set; } //korisnicko ime bi nam trebalo...
+        public string Mail { get; set; } 
         public string Spol { get; set; }
         public string Username { get; set; }
         public DateTime DatumRodjenja { get; set; }
