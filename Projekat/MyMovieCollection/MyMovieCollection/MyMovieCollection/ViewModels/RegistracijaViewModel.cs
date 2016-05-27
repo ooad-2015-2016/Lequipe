@@ -14,7 +14,7 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
 
         }
 
-        public RegistracijaViewModel(LoginViewModel parameter)
+        public RegistracijaViewModel(KolekcijeViewModel parameter)
         {
 
         }

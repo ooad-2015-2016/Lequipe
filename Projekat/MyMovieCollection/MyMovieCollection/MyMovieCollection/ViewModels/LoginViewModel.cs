@@ -11,7 +11,7 @@ using System.Windows.Input;
 
 namespace MyMovieCollection.MyMovieCollection.ViewModels
 {
-    class LoginViewModel
+    class KolekcijeViewModel
     {
 
         public Korisnik korisnik { get; set; }
@@ -22,6 +22,8 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
         public INavigationService NavigationService { get; set; }
         public ICommand PrijaviSe { get; set; }
         public ICommand RegistrujSe { get; set; }
+        public bool nesto { get; set; }
+       
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -34,7 +36,7 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
         }
 
 
-        public LoginViewModel()
+        public KolekcijeViewModel()
         {
             NavigationService = new NavigationService();
             korisnik = new Korisnik();
@@ -44,6 +46,18 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
             PrijaviSe = new RelayCommand<object>(prijaviSe);
             RegistrujSe = new RelayCommand<object>(registrujSe);
             
+        }
+
+        public KolekcijeViewModel(PocetnaViewModel parametar)
+        {
+            NavigationService = new NavigationService();
+            korisnik = new Korisnik();
+            KorisnickoIme_txb = "";
+            Sifra_txb = "";
+
+            PrijaviSe = new RelayCommand<object>(prijaviSe);
+            RegistrujSe = new RelayCommand<object>(registrujSe);
+
         }
 
         private void prijaviSe(object parametar)

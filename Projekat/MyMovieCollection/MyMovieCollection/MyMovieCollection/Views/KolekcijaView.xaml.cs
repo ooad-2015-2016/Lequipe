@@ -25,6 +25,7 @@ namespace MyMovieCollection.MyMovieCollection.Views
         public KolekcijaView()
         {
             this.InitializeComponent();
+            DataContext = new MyMovieCollection.ViewModels.KolekcijeViewModel();
         }
 
         private void textBlock3_SelectionChanged(object sender, RoutedEventArgs e)

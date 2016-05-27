@@ -133,6 +133,9 @@
     <Compile Include="MyMovieCollection\Views\KolekcijaView.xaml.cs">
       <DependentUpon>KolekcijaView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MyMovieCollection\Views\KorisnikView.xaml.cs">
+      <DependentUpon>KorisnikView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MyMovieCollection\Views\LoginView.xaml.cs">
       <DependentUpon>LoginView.xaml</DependentUpon>
     </Compile>
@@ -179,6 +182,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyMovieCollection\Views\KolekcijaView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyMovieCollection\Views\KorisnikView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

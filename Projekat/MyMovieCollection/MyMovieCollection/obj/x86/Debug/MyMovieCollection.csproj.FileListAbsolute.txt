@@ -1002,3 +1002,8 @@ C:\Users\Berina\Desktop\Lequipe\Projekat\MyMovieCollection\MyMovieCollection\obj
 C:\Users\Berina\Desktop\Lequipe\Projekat\MyMovieCollection\MyMovieCollection\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Berina\Desktop\Lequipe\Projekat\MyMovieCollection\MyMovieCollection\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Berina\Desktop\Lequipe\Projekat\MyMovieCollection\MyMovieCollection\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollection\MyMovieCollection\obj\x86\Debug\MyMovieCollection\Views\KorisnikView.g.i.cs
+C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollection\MyMovieCollection\obj\x86\Debug\MyMovieCollection\Views\KorisnikView.g.cs
+C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollection\MyMovieCollection\obj\x86\Debug\MyMovieCollection\Views\KorisnikView.xaml
+C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollection\MyMovieCollection\obj\x86\Debug\MyMovieCollection\Views\KorisnikView.xbf
+C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollection\MyMovieCollection\bin\x86\Debug\MyMovieCollection\Views\KorisnikView.xbf

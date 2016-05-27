@@ -25,6 +25,7 @@ namespace MyMovieCollection.MyMovieCollection.Views
         public Pocetna()
         {
             this.InitializeComponent();
+            DataContext = new MyMovieCollection.ViewModels.PocetnaViewModel();
         }
 
         private void textBlock1_SelectionChanged(object sender, RoutedEventArgs e)

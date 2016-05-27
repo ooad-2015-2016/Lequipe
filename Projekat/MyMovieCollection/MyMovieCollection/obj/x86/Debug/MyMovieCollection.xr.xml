@@ -1,5 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="RegistrujSe" />
+    <RootPropertyPathName Name="PrijaviSe" />
+    <RootPropertyPathName Name="IzbrisiKolekciju" />
+    <RootPropertyPathName Name="DodajKolekciju" />
+    <RootPropertyPathName Name="OdjaviSe" />
+    <RootPropertyPathName Name="UrediProfil" />
+    <RootPropertyPathName Name="DodajFilm" />
+    <RootPropertyPathName Name="MojeKolekcije" />
+  </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application">
       <RootProperty Name="RequestedTheme" />
@@ -13,16 +23,14 @@
       <RootProperty Name="ColumnDefinitions" />
       <RootProperty Name="Children" />
       <RootProperty Name="Margin" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="VerticalAlignment" />
       <RootMethod Name="GetColumnSpan" />
       <RootMethod Name="SetColumnSpan" />
       <RootMethod Name="GetColumn" />
       <RootMethod Name="SetColumn" />
-      <RootMethod Name="GetRow" />
-      <RootMethod Name="SetRow" />
       <RootMethod Name="GetRowSpan" />
       <RootMethod Name="SetRowSpan" />
+      <RootMethod Name="GetRow" />
+      <RootMethod Name="SetRow" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.LinearGradientBrush">
       <RootProperty Name="EndPoint" />
@@ -82,12 +90,15 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
       <RootProperty Name="TextWrapping" />
-      <RootProperty Name="Text" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Text" />
+      <RootProperty Name="BorderBrush" />
+      <RootProperty Name="SelectionHighlightColor" />
+      <RootProperty Name="Foreground" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -99,20 +110,29 @@
       <RootProperty Name="Height" />
       <RootProperty Name="Width" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Command" />
+      <RootProperty Name="RenderTransformOrigin" />
+      <RootProperty Name="UseLayoutRounding" />
+      <RootProperty Name="RenderTransform" />
+      <RootProperty Name="Foreground" />
       <RootProperty Name="FontWeight" />
       <RootEvent Name="Click" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding">
+      <RootProperty Name="Path" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
       <RootProperty Name="Rotation" />
+      <RootProperty Name="ScaleX" />
       <RootProperty Name="SkewY" />
       <RootProperty Name="TranslateX" />
       <RootProperty Name="TranslateY" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.Run">
       <RootProperty Name="Text" />
+      <RootProperty Name="FontSize" />
     </RootType>
     <RootType FullName="MyMovieCollection.MainPage" />
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
     <RootType FullName="Windows.UI.Xaml.Documents.LineBreak" />
     <RootType FullName="MyMovieCollection.MyMovieCollection.Views.AdministratorView" />
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
@@ -121,6 +141,7 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="Background" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="HorizontalAlignment" />
@@ -137,6 +158,8 @@
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
+      <RootProperty Name="RenderTransformOrigin" />
+      <RootProperty Name="RenderTransform" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="FontFamily" />
     </RootType>
@@ -152,13 +175,14 @@
     <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
-      <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
+      <RootProperty Name="Margin" />
       <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="MyMovieCollection.MyMovieCollection.Views.KolekcijaView" />
+    <RootType FullName="MyMovieCollection.MyMovieCollection.Views.KorisnikView" />
     <RootType FullName="MyMovieCollection.MyMovieCollection.Views.LoginView" />
     <RootType FullName="MyMovieCollection.MyMovieCollection.Views.Pocetna" />
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
