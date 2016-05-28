@@ -17,6 +17,7 @@ namespace MyMovieCollection.MyMovieCollection.Models
                 context.Korisnici.AddRange(
                     new Korisnik()
                     {
+                        KorisnikId = 1,
                         Ime = "n",
                         Prezime = "fdfd",
                         Mail = "etf@etf.unsa.ba",
@@ -36,6 +37,7 @@ namespace MyMovieCollection.MyMovieCollection.Models
                 context.Kolekcije.AddRange(
                     new Kolekcija()
                     {
+                        KolekcijaId=1,
                         Naziv = "ffd",
                         Opis = "FDF"
 

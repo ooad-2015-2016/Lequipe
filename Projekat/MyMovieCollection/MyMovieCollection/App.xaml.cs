@@ -38,7 +38,7 @@ namespace MyMovieCollection
 
             using (var db = new MovieCollectionDbContext())
             {
-               /* db.Database.ApplyMigrations();
+              /* db.Database.ApplyMigrations();
                 DefaultPodaci.Initialize(db);*/
             }
         }

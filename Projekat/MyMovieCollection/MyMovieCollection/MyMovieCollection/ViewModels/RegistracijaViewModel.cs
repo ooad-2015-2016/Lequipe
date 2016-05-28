@@ -79,24 +79,24 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
                 using (var db = new MovieCollectionDbContext())
                 {
                     //provjera da li postoji user s istim username-om
-                   korisnik = db.Korisnici.Where(x => x.Username == Username_txb).FirstOrDefault();
-                   // korisnik = DataSourceMyMovieCollection.ProvjeraUsername(Username_txb);
+                //   korisnik = db.Korisnici.Where(x => x.Username == Username_txb).FirstOrDefault();
+                    korisnik = DataSourceMyMovieCollection.ProvjeraUsername(Username_txb);
                     if (korisnik == null)
                     {
-                        /* int max = -1;
-                         foreach (Korisnik k in db.korisnici)
+                       /*  int max = -1;
+                         foreach (Korisnik k in db.Korisnici)
                          {
                              if (k.KorisnikId > max) max = k.KorisnikId;
                          }
-                         max++;*/
-
-                        int max = -1;
+                         max++;
+                        */
+                       int max = -1;
                         foreach (Korisnik k in DataSourceMyMovieCollection.DajSveKorisnike())
                         {
                             if (k.KorisnikId > max) max = k.KorisnikId;
                         }
                         max++; 
-
+                        
                         Korisnik noviKorisnik = new Korisnik(max);
 
                         noviKorisnik.Ime = Ime_txb;
@@ -110,8 +110,8 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
 
 
                         korisnik = noviKorisnik;
-                         db.Korisnici.Add(noviKorisnik);
-                         db.SaveChanges();
+                        // db.Korisnici.Add(noviKorisnik);
+                         //db.SaveChanges();
 
 
 
