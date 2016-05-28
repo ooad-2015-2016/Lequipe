@@ -1,5 +1,6 @@
 ﻿using MyMovieCollection.MyMovieCollection.Helper;
 using MyMovieCollection.MyMovieCollection.Models;
+using MyMovieCollection.MyMovieCollection.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -26,6 +27,7 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
         public int OcjenaFilma { get; set; }
         public ICommand Search { get; set; }
         public ICommand DodajFilm { get; set; }
+        public ICommand Nazad { get; set; }
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -45,6 +47,7 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
 
             Search = new RelayCommand<object>(search);
             DodajFilm = new RelayCommand<object>(dodajFilm);
+            Nazad = new RelayCommand<object>(nazad);
 
         }
 
@@ -85,6 +88,11 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
             }
 
             //obavjestenje da je uspjesno dodano
+        }
+
+        private void nazad(object parametar)
+        {
+            NavigationService.Navigate(typeof(Pocetna), new PocetnaViewModel(this));
         }
 
 

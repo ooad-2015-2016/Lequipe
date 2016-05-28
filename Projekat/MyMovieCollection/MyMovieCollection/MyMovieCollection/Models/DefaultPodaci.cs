@@ -48,13 +48,13 @@ namespace MyMovieCollection.MyMovieCollection.Models
             if (!context.Filmovi.Any())
             {
                 context.Filmovi.AddRange(
-                  /*  new Film()
+                 new Film()
                     {
                         Naziv = "film",
                         ProsjecnaOcjena = 0,
                         Opis = "fdfdf"
 
-                    }*/
+                    }
 
                 );
             }

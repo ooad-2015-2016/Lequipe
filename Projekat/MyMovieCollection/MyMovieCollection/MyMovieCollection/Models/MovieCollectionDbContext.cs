@@ -20,7 +20,7 @@ namespace MyMovieCollection.MyMovieCollection.Models
         protected override void OnConfiguring(DbContextOptionsBuilder optBuilder)
         {
 
-            string DBPath = "MovieCollectionBaza.db";
+            string DBPath = "Ooadbaza.db";
 
             try
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyMovieCollection.MyMovieCollection.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -25,14 +26,18 @@ namespace MyMovieCollection.MyMovieCollection.Views
         public Pocetna()
         {
             this.InitializeComponent();
-            DataContext = new MyMovieCollection.ViewModels.PocetnaViewModel();
+            // DataContext = new MyMovieCollection.ViewModels.PocetnaViewModel();
+            NavigationCacheMode = NavigationCacheMode.Required;
         }
 
         private void textBlock1_SelectionChanged(object sender, RoutedEventArgs e)
         {
 
         }
-
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            DataContext = (PocetnaViewModel)e.Parameter;
+        }
 
     }
 }

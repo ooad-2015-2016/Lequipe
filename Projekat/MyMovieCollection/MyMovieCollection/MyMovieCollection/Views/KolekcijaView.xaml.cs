@@ -25,7 +25,11 @@ namespace MyMovieCollection.MyMovieCollection.Views
         public KolekcijaView()
         {
             this.InitializeComponent();
-            DataContext = new MyMovieCollection.ViewModels.KolekcijeViewModel();
+            DataContext = new MyMovieCollection.ViewModels.KolekcijaViewModel();
+
+            textBlock2.Visibility = Visibility.Collapsed;
+            textBox.Visibility = Visibility.Collapsed;
+            button3.Visibility = Visibility.Collapsed;
         }
 
         private void textBlock3_SelectionChanged(object sender, RoutedEventArgs e)
@@ -36,6 +40,20 @@ namespace MyMovieCollection.MyMovieCollection.Views
         private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, RoutedEventArgs e)
+        {
+            textBlock2.Visibility = Visibility.Collapsed;
+            textBox.Visibility = Visibility.Collapsed;
+            button3.Visibility = Visibility.Collapsed;
+        }
+
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            textBlock2.Visibility = Visibility.Visible;
+            textBox.Visibility = Visibility.Visible;
+            button3.Visibility = Visibility.Visible;
         }
     }
 }

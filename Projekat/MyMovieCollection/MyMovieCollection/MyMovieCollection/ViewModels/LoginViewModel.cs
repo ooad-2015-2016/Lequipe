@@ -8,10 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.UI.Xaml.Controls;
 
 namespace MyMovieCollection.MyMovieCollection.ViewModels
 {
-    class KolekcijeViewModel
+    class LoginViewModel
     {
 
         public Korisnik korisnik { get; set; }
@@ -36,7 +37,7 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
         }
 
 
-        public KolekcijeViewModel()
+        public LoginViewModel()
         {
             NavigationService = new NavigationService();
             korisnik = new Korisnik();
@@ -48,7 +49,7 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
             
         }
 
-        public KolekcijeViewModel(PocetnaViewModel parametar)
+        public LoginViewModel(PocetnaViewModel parametar)
         {
             NavigationService = new NavigationService();
             korisnik = new Korisnik();
@@ -62,9 +63,13 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
 
         private void prijaviSe(object parametar)
         {
-           // KorisnickoIme_txb = Korisnik_txb.Text.ToString();
+            var UnosPassBox = parametar as PasswordBox;
+            Sifra_txb = UnosPassBox.Password;
+
+            
             using (var db = new MovieCollectionDbContext())
             {
+                if(KorisnickoIme_txb!=""  &&  Sifra_txb!="" )
                 korisnik = db.Korisnici.Where(x => x.Username == KorisnickoIme_txb && x.Sifra == Sifra_txb).FirstOrDefault();
 
                 if (korisnik == null)

@@ -107,6 +107,7 @@
       <DependentUpon>20160524172409_InitialMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\MovieCollectionDbContextModelSnapshot.cs" />
+    <Compile Include="MyMovieCollection\DataSource\DataSourceMyMovieCollection.cs" />
     <Compile Include="MyMovieCollection\Helper\DateConverter.cs" />
     <Compile Include="MyMovieCollection\Helper\INavigationService.cs" />
     <Compile Include="MyMovieCollection\Helper\LaterThanTodayPropertyAttribute.cs" />

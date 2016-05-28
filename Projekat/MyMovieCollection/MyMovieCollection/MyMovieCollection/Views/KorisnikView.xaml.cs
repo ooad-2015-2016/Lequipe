@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyMovieCollection.MyMovieCollection.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -24,7 +25,9 @@ namespace MyMovieCollection.MyMovieCollection.Views
     {
         public KorisnikView()
         {
+            
             this.InitializeComponent();
+            DataContext = new MyMovieCollection.ViewModels.KorisnikViewModel();
         }
     }
 }

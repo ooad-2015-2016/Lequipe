@@ -16,6 +16,12 @@ namespace MyMovieCollection.MyMovieCollection.Models
         public string Opis { get; set; }
         
         public byte[] slika { get; set; }
+        public Kolekcija()
+        { }
+        public Kolekcija(int id)
+        { KolekcijaId = id;
+            
+        }
 
     }
 }

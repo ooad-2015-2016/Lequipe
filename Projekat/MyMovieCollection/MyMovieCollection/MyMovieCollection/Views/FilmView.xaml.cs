@@ -25,6 +25,7 @@ namespace MyMovieCollection.MyMovieCollection.Views
         public FilmView()
         {
             this.InitializeComponent();
+            DataContext = new MyMovieCollection.ViewModels.FilmViewModel();
         }
 
         private void button1_Click(object sender, RoutedEventArgs e)

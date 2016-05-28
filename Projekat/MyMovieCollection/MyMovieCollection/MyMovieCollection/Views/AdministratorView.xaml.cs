@@ -25,6 +25,7 @@ namespace MyMovieCollection.MyMovieCollection.Views
         public AdministratorView()
         {
             this.InitializeComponent();
+            DataContext = new MyMovieCollection.ViewModels.AdministratorViewModel();
         }
 
         private void textBlock2_SelectionChanged(object sender, RoutedEventArgs e)

@@ -38,7 +38,7 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
 
         }
 
-        public PocetnaViewModel(KolekcijeViewModel parametar)
+        public PocetnaViewModel(LoginViewModel parametar)
         {
             Korisnik = parametar.korisnik;
             NavigationService = new NavigationService();
@@ -50,12 +50,73 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
 
         }
 
+        public PocetnaViewModel(RegistracijaViewModel parametar)
+        {
+            Korisnik = parametar.korisnik;
+            NavigationService = new NavigationService();
+
+            MojeKolekcije = new RelayCommand<object>(mojeKolekcije);
+            DodajFilm = new RelayCommand<object>(dodajFilm);
+            OdjaviSe = new RelayCommand<object>(odjaviSe);
+            UrediProfil = new RelayCommand<object>(urediProfil);
+
+        }
+
+        public PocetnaViewModel(FilmViewModel parametar)
+        {
+            Korisnik = parametar.Korisnik;
+            NavigationService = new NavigationService();
+
+            MojeKolekcije = new RelayCommand<object>(mojeKolekcije);
+            DodajFilm = new RelayCommand<object>(dodajFilm);
+            OdjaviSe = new RelayCommand<object>(odjaviSe);
+            UrediProfil = new RelayCommand<object>(urediProfil);
+
+        }
+
+        public PocetnaViewModel(KolekcijaViewModel parametar)
+        {
+            Korisnik = parametar.korisnik;
+            NavigationService = new NavigationService();
+
+            MojeKolekcije = new RelayCommand<object>(mojeKolekcije);
+            DodajFilm = new RelayCommand<object>(dodajFilm);
+            OdjaviSe = new RelayCommand<object>(odjaviSe);
+            UrediProfil = new RelayCommand<object>(urediProfil);
+
+        }
+
+        public PocetnaViewModel(KorisnikViewModel parametar)
+        {
+            Korisnik = parametar.korisnik;
+            NavigationService = new NavigationService();
+
+            MojeKolekcije = new RelayCommand<object>(mojeKolekcije);
+            DodajFilm = new RelayCommand<object>(dodajFilm);
+            OdjaviSe = new RelayCommand<object>(odjaviSe);
+            UrediProfil = new RelayCommand<object>(urediProfil);
+
+        }
+
+        public PocetnaViewModel(AdministratorViewModel parametar)
+        {
+            Korisnik = parametar.Korisnik;
+            NavigationService = new NavigationService();
+
+            MojeKolekcije = new RelayCommand<object>(mojeKolekcije);
+            DodajFilm = new RelayCommand<object>(dodajFilm);
+            OdjaviSe = new RelayCommand<object>(odjaviSe);
+            UrediProfil = new RelayCommand<object>(urediProfil);
+
+        }
+
+
         private void odjaviSe(object parametar)
         {
             // KorisnickoIme_txb = Korisnik_txb.Text.ToString();
 
            // MessageBox.Show("");
-            NavigationService.Navigate(typeof(MainPage), new KolekcijeViewModel(this));
+            NavigationService.Navigate(typeof(MainPage), new LoginViewModel(this));
             
         }
 
@@ -74,7 +135,7 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
         private void urediProfil(object parametar)
         {
 
-          // form profil  NavigationService.Navigate(typeof(KolekcijaView), new KolekcijaViewModel(this));
+          NavigationService.Navigate(typeof(KorisnikView), new KorisnikViewModel(this));
         }
     }
 }

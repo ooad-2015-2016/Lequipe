@@ -1,5 +1,6 @@
 ﻿using MyMovieCollection.MyMovieCollection.Helper;
 using MyMovieCollection.MyMovieCollection.Models;
+using MyMovieCollection.MyMovieCollection.Views;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,12 +17,14 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
         public Kolekcija kolekcija { get; set; }
 
         public string Naziv { get; set; }
-        
+
 
         public INavigationService NavigationService { get; set; }
         public ICommand DodajKolekciju { get; set; }
         public ICommand IzbrisiKolekciju { get; set; }
         public ICommand PrikaziKolekciju { get; set; } //event je na kliku na combobox
+        public ICommand Nazad { get; set; }
+
 
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -33,13 +36,26 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
                 PropertyChanged(this, new PropertyChangedEventArgs(info));
             }
         }
-
-        public KolekcijaViewModel (PocetnaViewModel parametar)
+        public KolekcijaViewModel()
         {
             NavigationService = new NavigationService();
             korisnik = new Korisnik();
-            Naziv= "";
+            Naziv = "";
            
+
+            DodajKolekciju = new RelayCommand<object>(dodajKolekciju);
+            IzbrisiKolekciju = new RelayCommand<object>(izbrisiKolekciju);
+            Nazad = new RelayCommand<object>(nazad);
+
+        }
+
+        public KolekcijaViewModel(PocetnaViewModel parametar)
+        {
+            NavigationService = new NavigationService();
+            korisnik = new Korisnik();
+            Naziv = "";
+            
+
             DodajKolekciju = new RelayCommand<object>(dodajKolekciju);
             IzbrisiKolekciju = new RelayCommand<object>(izbrisiKolekciju);
 
@@ -47,7 +63,6 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
 
         private void dodajKolekciju(object parametar)
         {
-           //potrebno je visible postavit dvije stvari Naziv i onaj textbox u koji se upisuje
         }
 
         private void izbrisiKolekciju(object parametar)
@@ -55,6 +70,12 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
             //MessageBox da li zeli izbrisati
 
         }
+
+        private void nazad(object parametar)
+        {
+            NavigationService.Navigate(typeof(Pocetna), new PocetnaViewModel(this));
+        }
+
 
 
     }

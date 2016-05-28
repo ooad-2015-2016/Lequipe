@@ -27,5 +27,12 @@ namespace MyMovieCollection.MyMovieCollection.Models
             
 
         }
+
+        public Film()
+        { }
+        public Film(int id)
+        {
+            FilmId = id;
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyMovieCollection.MyMovieCollection.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -29,7 +30,12 @@ namespace MyMovieCollection
            
         
             this.InitializeComponent();
-            DataContext = new MyMovieCollection.ViewModels.KolekcijeViewModel();
+            DataContext = new MyMovieCollection.ViewModels.LoginViewModel();
         }
+
+       /* protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            DataContext = (LoginViewModel)e.Parameter;
+        }*/
     }
 }

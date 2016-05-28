@@ -27,6 +27,7 @@ namespace MyMovieCollection.MyMovieCollection.Views
         public RegistracijaView()
         {
             this.InitializeComponent();
+            DataContext = new MyMovieCollection.ViewModels.RegistracijaViewModel();
         }
 
 
@@ -38,7 +39,7 @@ namespace MyMovieCollection.MyMovieCollection.Views
                 spol = "Musko";
             else
                 spol = "Zensko";
-            Korisnik registrovaniKorisnik = new Korisnik()
+           /* Korisnik registrovaniKorisnik = new Korisnik()
             {
                 Ime = imeReg.Text,
                 Prezime = prezimeReg.Text,
@@ -50,11 +51,16 @@ namespace MyMovieCollection.MyMovieCollection.Views
                 DatumRegistracije = DateTime.Now,
                 DalijeAdmin = false                
             };
-
+            */
 
             //podaci sa korisnicima se salju u fiju u RegistracijaViewModel kako bi se dodali u listuKorisnika?
            //RegistracijaViewModel regVM = new RegistracijaViewModel();
            //regVM.dodajKorisnika(registrovaniKorisnik);
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            DataContext = (RegistracijaViewModel)e.Parameter;
         }
     }
 }

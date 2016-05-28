@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Margin="0,10,-301,0">
+    <Grid Margin="10,10,-304,0">
         <Grid.Background>
             <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                 <GradientStop Color="#BF000000" Offset="0"/>
@@ -44,7 +44,7 @@
         <Button x:ConnectionId='4' x:Name="button" Content="Search&#xD;&#xA;" HorizontalAlignment="Left" Height="40" Margin="40.667,42.333,0,0" VerticalAlignment="Top" Width="142" FontFamily="Segoe Script" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="4" Grid.RowSpan="2"/>
         <ListBox x:ConnectionId='5' x:Name="listBox" HorizontalAlignment="Left" Height="222" Margin="52,45.666,0,0" VerticalAlignment="Top" Width="216" Grid.RowSpan="4" Background="#FFB68686" Grid.ColumnSpan="3" Grid.Row="2"/>
         <RelativePanel HorizontalAlignment="Left" Height="222" Margin="0,45.666,0,0" VerticalAlignment="Top" Width="283" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="4" Background="#FFE5E0E0" Grid.Column="3">
-            <TextBlock x:ConnectionId='14' x:Name="textBlock" HorizontalAlignment="Left" Height="213" Margin="87,10,-221.333,-203" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" FontFamily="Segoe Script">
+            <TextBlock x:ConnectionId='15' x:Name="textBlock" HorizontalAlignment="Left" Height="213" Margin="87,10,-221.333,-203" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" FontFamily="Segoe Script">
         		<Run Text="Detalji o filmu"/>
         		<LineBreak/>
         		<Run/>
@@ -56,11 +56,11 @@
         	<Run/>
         </TextBlock>
         <RelativePanel HorizontalAlignment="Left" Height="50" Margin="61.667,60.666,0,0" Grid.Row="5" VerticalAlignment="Top" Width="475" Grid.ColumnSpan="5" Background="#FFE83434" Grid.Column="1" Grid.RowSpan="2">
-            <RadioButton x:ConnectionId='9' x:Name="radioButton" Content="1&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,9,0,1" VerticalAlignment="Stretch" Width="33"/>
-            <RadioButton x:ConnectionId='10' x:Name="radioButton_Copy" Content="2&#xD;&#xA;" HorizontalAlignment="Left" Margin="130,9,-120,1" VerticalAlignment="Stretch" Width="81"/>
-            <RadioButton x:ConnectionId='11' x:Name="radioButton_Copy1" Content="3&#xD;&#xA;" HorizontalAlignment="Left" Margin="227,9,-217,1" VerticalAlignment="Stretch" Width="81"/>
-            <RadioButton x:ConnectionId='12' x:Name="radioButton_Copy2" Content="4&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="318,10,-188,0" VerticalAlignment="Stretch" Width="0"/>
-            <RadioButton x:ConnectionId='13' x:Name="radioButton_Copy3" Content="5&#xD;&#xA;&#xA;" HorizontalAlignment="Stretch" Margin="424,10,-69,9" VerticalAlignment="Stretch" Width="99"/>
+            <RadioButton x:ConnectionId='10' x:Name="radioButton" Content="1&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,9,0,1" VerticalAlignment="Stretch" Width="33"/>
+            <RadioButton x:ConnectionId='11' x:Name="radioButton_Copy" Content="2&#xD;&#xA;" HorizontalAlignment="Left" Margin="130,9,-120,1" VerticalAlignment="Stretch" Width="81"/>
+            <RadioButton x:ConnectionId='12' x:Name="radioButton_Copy1" Content="3&#xD;&#xA;" HorizontalAlignment="Left" Margin="227,9,-217,1" VerticalAlignment="Stretch" Width="81"/>
+            <RadioButton x:ConnectionId='13' x:Name="radioButton_Copy2" Content="4&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="318,10,-188,0" VerticalAlignment="Stretch" Width="0"/>
+            <RadioButton x:ConnectionId='14' x:Name="radioButton_Copy3" Content="5&#xD;&#xA;&#xA;" HorizontalAlignment="Stretch" Margin="424,10,-69,9" VerticalAlignment="Stretch" Width="99"/>
         </RelativePanel>
         <ComboBox x:ConnectionId='7' x:Name="comboBox" HorizontalAlignment="Right" Height="46" Margin="0,1,-219.667,0" Grid.Row="7" VerticalAlignment="Top" Width="272" RenderTransformOrigin="0.5,0.5">
             <ComboBox.RenderTransform>
@@ -72,6 +72,7 @@
                 <CompositeTransform Rotation="-0.305"/>
             </Button.RenderTransform>
         </Button>
+        <Button x:ConnectionId='9' x:Name="button2" Content="Nazad" HorizontalAlignment="Left" Height="64" Margin="0,4,0,0" VerticalAlignment="Top" Width="99" Background="#33B90808" Command="{Binding Path=Nazad}"/>
 
 
 

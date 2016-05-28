@@ -22,6 +22,21 @@ namespace MyMovieCollection.MyMovieCollection.Models
         public float OcjenaAplikacije { get; set; }
         public DateTime DatumRegistracije { get; set; }
         public bool DalijeAdmin { get; set; }
-       
+
+        public Korisnik()
+        { }
+
+        public Korisnik(int Id)
+        {
+            KorisnikId = Id;
+            Ime = " ";
+            Prezime = " ";
+            Mail = " ";
+            Spol = " ";
+            Username = " ";
+            Sifra = " ";
+            DatumRegistracije = DateTime.Now;
+
+        }
     }
 }
