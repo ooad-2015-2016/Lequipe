@@ -5,6 +5,10 @@
     <RootPropertyPathName Name="PrijaviSe" />
     <RootPropertyPathName Name="KorisnickoIme_txb" />
     <RootPropertyPathName Name="Nazad" />
+    <RootPropertyPathName Name="Naziv" />
+    <RootPropertyPathName Name="FilmoviNet" />
+    <RootPropertyPathName Name="OdabraniFilm" />
+    <RootPropertyPathName Name="Search" />
     <RootPropertyPathName Name="IzbrisiKolekciju" />
     <RootPropertyPathName Name="DodajKolekciju" />
     <RootPropertyPathName Name="SacuvajIzmjene" />
@@ -135,8 +139,8 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Path" />
       <RootProperty Name="ElementName" />
-      <RootProperty Name="UpdateSourceTrigger" />
       <RootProperty Name="Mode" />
+      <RootProperty Name="UpdateSourceTrigger" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
       <RootProperty Name="Rotation" />
@@ -161,7 +165,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Foreground" />
-      <RootProperty Name="Background" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="HorizontalAlignment" />
@@ -181,6 +184,18 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.LineBreak" />
     <RootType FullName="MyMovieCollection.MyMovieCollection.Views.AdministratorView" />
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="DisplayMemberPath" />
+      <RootProperty Name="SelectedValue" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Background" />
+      <RootEvent Name="SelectionChanged" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
@@ -203,15 +218,6 @@
       <RootProperty Name="IsChecked" />
     </RootType>
     <RootType FullName="MyMovieCollection.MyMovieCollection.Views.FilmView" />
-    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Background" />
-      <RootProperty Name="Margin" />
-      <RootEvent Name="SelectionChanged" />
-    </RootType>
     <RootType FullName="MyMovieCollection.MyMovieCollection.Views.KolekcijaView" />
     <RootType FullName="MyMovieCollection.MyMovieCollection.Views.KorisnikView" />
     <RootType FullName="MyMovieCollection.MyMovieCollection.Views.LoginView" />

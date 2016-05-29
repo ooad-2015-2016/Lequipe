@@ -1,13 +1,13 @@
 ﻿using MyMovieCollection.MyMovieCollection.Helper;
 using MyMovieCollection.MyMovieCollection.Models;
+using MyMovieCollection.MyMovieCollection.Services;
 using MyMovieCollection.MyMovieCollection.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
+using Windows.UI.Popups;
 
 namespace MyMovieCollection.MyMovieCollection.ViewModels
 {
@@ -19,9 +19,8 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
 
         public string   NazivFilma_txb { get; set; }
 
-        public ICollection<Film> FilmoviNet { get; set; }
-
-
+        public ObservableCollection<Film> FilmoviNet { get; set;  }
+    
         public INavigationService NavigationService { get; set; }
         public Kolekcija KolekcijaUKojuSeDodajeFilm { get; set; }
         public int OcjenaFilma { get; set; }
@@ -49,6 +48,10 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
             DodajFilm = new RelayCommand<object>(dodajFilm);
             Nazad = new RelayCommand<object>(nazad);
 
+            FilmoviNet = new ObservableCollection<Film>();
+            Film f = new Film();
+            f.Naziv = "Emirrrrrrr";
+            FilmoviNet.Add(f);
         }
 
         public FilmViewModel(PocetnaViewModel parametar)
@@ -61,19 +64,20 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
 
             Search = new RelayCommand<object>(search);
             DodajFilm = new RelayCommand<object>(dodajFilm);
-
         }
 
-        private void search(object parametar)
+        private async void search(object parametar)
         {
-            //svaki put kad se pritisne dugme izbrise se trenutna lista fimova od prthodne pretrage i listbox
             FilmoviNet.Clear();
-            //ASP.net
-            //search na netu film iz textbox-a
-            //zatim ide dodavanje u listu FilmoviNet
-            //
+            FilmoviService f = new FilmoviService();
+            await f.getFilmovi("amra");
+            foreach (Film fl in f.Filmovi)
+                FilmoviNet.Add(fl);
 
+            var dialog1 = new MessageDialog(FilmoviNet.Count.ToString());
+            await dialog1.ShowAsync();
         }
+
         private void dodajFilm(object parametar)
         {
             // ovdje bi program vec trebao da zna ko je korinik

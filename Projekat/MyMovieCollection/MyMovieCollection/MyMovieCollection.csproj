@@ -119,6 +119,7 @@
     <Compile Include="MyMovieCollection\Models\Korisnik.cs" />
     <Compile Include="MyMovieCollection\Models\MovieCollectionDbContext.cs" />
     <Compile Include="MyMovieCollection\Models\Ocjena.cs" />
+    <Compile Include="MyMovieCollection\Services\FilmoviService.cs" />
     <Compile Include="MyMovieCollection\ViewModels\AdministratorViewModel.cs" />
     <Compile Include="MyMovieCollection\ViewModels\FilmViewModel.cs" />
     <Compile Include="MyMovieCollection\ViewModels\KolekcijaViewModel.cs" />

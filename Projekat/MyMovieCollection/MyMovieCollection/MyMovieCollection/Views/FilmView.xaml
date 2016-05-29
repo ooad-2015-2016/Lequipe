@@ -41,8 +41,8 @@
         <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="69" Margin="61.667,10,0,0" TextWrapping="Wrap" Text="MyMovieCollection" VerticalAlignment="Top" Width="380" FontFamily="SketchFlow Print" FontSize="36" FontWeight="Bold" Grid.ColumnSpan="4" Grid.RowSpan="2" Foreground="#FFF5F1F1" Grid.Column="1"/>
         <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="53" Margin="40.333,53,0,0" TextWrapping="Wrap" Text="Filmovi" VerticalAlignment="Top" Width="136" FontFamily="Segoe Script" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="2" Foreground="#FFE42020"/>
         <TextBox x:Name="textBox" PlaceholderText = "Search" HorizontalAlignment="Left" Height="37" Margin="52,42.333,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="425" Grid.Row="1" Grid.ColumnSpan="5" Grid.RowSpan="2"/>
-        <Button x:Name="button" Content="Search&#xD;&#xA;" HorizontalAlignment="Left" Height="40" Margin="40.667,42.333,0,0" VerticalAlignment="Top" Width="142" FontFamily="Segoe Script" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="4" Grid.RowSpan="2"/>
-        <ListBox x:Name="listBox" HorizontalAlignment="Left" Height="222" Margin="52,45.666,0,0" VerticalAlignment="Top" Width="216" Grid.RowSpan="4" Background="#FFB68686" Grid.ColumnSpan="3" Grid.Row="2"/>
+        <Button x:Name="button" Command="{Binding Path=Search}" Content="Search&#xD;&#xA;" HorizontalAlignment="Left" Height="40" Margin="40.667,42.333,0,0" VerticalAlignment="Top" Width="142" FontFamily="Segoe Script" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="4" Grid.RowSpan="2"/>
+        <ListView x:Name="listView" ItemsSource="{Binding Path=FilmoviNet}" DisplayMemberPath="Naziv" SelectedValue="{Binding Path=OdabraniFilm, Mode=TwoWay}" HorizontalAlignment="Left" Height="222" Margin="52,45.666,0,0" VerticalAlignment="Top" Width="216" Grid.RowSpan="4" Background="#FFB68686" Grid.ColumnSpan="3" Grid.Row="2"/>
         <RelativePanel HorizontalAlignment="Left" Height="222" Margin="0,45.666,0,0" VerticalAlignment="Top" Width="283" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="4" Background="#FFE5E0E0" Grid.Column="3">
             <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="213" Margin="87,10,-221.333,-203" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" FontFamily="Segoe Script">
         		<Run Text="Detalji o filmu"/>
@@ -67,7 +67,7 @@
                 <CompositeTransform ScaleX="-1"/>
             </ComboBox.RenderTransform>
         </ComboBox>
-        <Button x:Name="button1" Content="Dodaj film" HorizontalAlignment="Left" Height="46.223" Margin="0.951,79.055,0,0" Grid.Row="6" VerticalAlignment="Top" Width="204.432" Click="button1_Click" FontFamily="Segoe Script" Background="#331F1616" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Column="4" UseLayoutRounding="False" d:LayoutRounding="Auto" Grid.RowSpan="2">
+        <Button x:Name="button1" Content="Dodaj film" HorizontalAlignment="Left" Height="46.223" Margin="0.951,79.055,0,0" Grid.Row="6" VerticalAlignment="Top" Width="204.432" FontFamily="Segoe Script" Background="#331F1616" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Column="4" UseLayoutRounding="False" d:LayoutRounding="Auto" Grid.RowSpan="2">
             <Button.RenderTransform>
                 <CompositeTransform Rotation="-0.305"/>
             </Button.RenderTransform>
