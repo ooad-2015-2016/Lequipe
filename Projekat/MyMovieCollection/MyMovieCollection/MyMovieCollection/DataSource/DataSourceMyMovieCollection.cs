@@ -1,6 +1,7 @@
 ﻿using MyMovieCollection.MyMovieCollection.Models;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -9,29 +10,35 @@ namespace MyMovieCollection.MyMovieCollection.DataSource
 {
     public class DataSourceMyMovieCollection
     {
-        private static List<Korisnik> korisnici = new List<Korisnik>()
+        private static ObservableCollection<Korisnik> korisnici = new ObservableCollection<Korisnik>()
         { new Korisnik(1) }; //posto mi je mrsko unosit sve, napravila sam konstruktor samo sa id-em
-        private static List<Film> filmovi = new List<Film>()
+        private static ObservableCollection<Film> filmovi = new ObservableCollection<Film>()
         { new Film(1)};
-        private static List<Kolekcija> kolekcije = new List<Kolekcija>();
-        private static List<Ocjena> ocjene = new List<Ocjena>();
+        private static ObservableCollection<Kolekcija> kolekcije = new ObservableCollection<Kolekcija>()
+        {
+            new Kolekcija(1,1, "Najdrazi filmovi"),
+            new Kolekcija(2,1, "Najbolji horori"),
+            new Kolekcija(3,2, "Emir mi preporucuje da pogledam"),
+             new Kolekcija(4,2, "Berina mi preporucuje da pregledam")
+        };
+        private static ObservableCollection<Ocjena> ocjene = new ObservableCollection<Ocjena>();
 
-        internal static IList<Korisnik> DajSveKorisnike()
+        internal static ObservableCollection<Korisnik> DajSveKorisnike()
         {
             return korisnici;
         }
 
-        internal static IList<Film> DajSveFilmove()
+        internal static ObservableCollection<Film> DajSveFilmove()
         {
             return filmovi;
         }
 
-        internal static IList<Kolekcija> DajSveKolekcije()
+        internal static ObservableCollection<Kolekcija> DajSveKolekcije()
         {
             return kolekcije;
         }
 
-        internal static IList<Ocjena> DajSveOcjene()
+        internal static ObservableCollection<Ocjena> DajSveOcjene()
         {
             return ocjene;
         }

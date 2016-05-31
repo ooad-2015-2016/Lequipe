@@ -4,6 +4,7 @@ using MyMovieCollection.MyMovieCollection.Models;
 using MyMovieCollection.MyMovieCollection.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -31,6 +32,15 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
         public INavigationService NavigationService { get; set; }
         public ICommand SacuvajIzmjene { get; set; }
         public ICommand Nazad { get; set; }
+
+
+        //        ___________________
+
+        public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
+        public ObservableCollection<Kolekcija> SveKolekcije = new ObservableCollection<Kolekcija>();
+        public ObservableCollection<Film> SviFilmovi = new ObservableCollection<Film>();
+       public ObservableCollection<Ocjena> SveOcjene = new ObservableCollection<Ocjena>();
+        //______________
 
 
 
@@ -62,7 +72,13 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
 
             SacuvajIzmjene = new RelayCommand<object>(sacuvajIzmjene);
             Nazad = new RelayCommand<object>(nazad);
-            
+
+            SviFilmovi = parametar.SviFilmovi;
+            SviKorisnici = parametar.SviKorisnici;
+            SveKolekcije = parametar.SveKolekcije;
+           
+            SveOcjene = parametar.SveOcjene;
+
 
         }
 
@@ -71,35 +87,43 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
         {
             //prvo provjeri jel dobro unesen stari password
 
-            if (Sifra_txb.Equals(DataSourceMyMovieCollection.DajSifruKorisnika(korisnik)))
+            if (Sifra_txb.Equals(korisnik.KorisnikId))
             {
                 //korisnik = db.Korisnici.Where(x => x.Username == KorisnickoIme_txb && x.Sifra == Sifra_txb).FirstOrDefault();
 
                 if (NovaSifra.Equals(PonovoNovaSifra) && NovaSifra != null)
                 {
-                    using (var db = new MovieCollectionDbContext())
-                    {
-                        korisnik.Sifra = NovaSifra;
-                        // db.Korisnici.Remove(db.Korisnici.Where(x => x.Username == KorisnickoIme_txb && x.Sifra == Sifra_txb).FirstOrDefault());
-                        // db.Korisnici.Add(korisnik);
-                        // db.SaveChanges();
-                        //Messagebox zelite li sacuvati izmjene...
-                        var dialog = new MessageDialog("Izmjene sacuvane!");
-                        await dialog.ShowAsync();
-                    }
+                    /*  using (var db = new MovieCollectionDbContext())
+                      {
+                          korisnik.Sifra = NovaSifra;
+                          // db.Korisnici.Remove(db.Korisnici.Where(x => x.Username == KorisnickoIme_txb && x.Sifra == Sifra_txb).FirstOrDefault());
+                          // db.Korisnici.Add(korisnik);
+                          // db.SaveChanges();
+                          //Messagebox zelite li sacuvati izmjene...
+                          var dialog = new MessageDialog("Izmjene sacuvane!");
+                          await dialog.ShowAsync();
+                      }*/
+                    korisnik.Sifra = NovaSifra;
+                    SviKorisnici.Remove(SviKorisnici.Where(x => x.KorisnikId == korisnik.KorisnikId).FirstOrDefault());
+                    SviKorisnici.Add(korisnik);
 
+                    var dialog = new MessageDialog("Izmjene sacuvane!");
+                    await dialog.ShowAsync();
 
                 }
                 else
                 {
-                    //unesite ispravne sifre....izuzetak
-                    
+                    var dialog = new MessageDialog("Šifre se ne podudaraju!");
+                    await dialog.ShowAsync();
+
 
                 }
             }
             else
             {
-                //unesite ispravnu staru sifru
+                var dialog = new MessageDialog("Niste unijeli ispravnu šifru.");
+                await dialog.ShowAsync();
+
             }
 
         }

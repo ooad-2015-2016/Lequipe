@@ -29,12 +29,12 @@ namespace MyMovieCollection.MyMovieCollection.Models
         public Korisnik(int Id)
         {
             KorisnikId = Id;
-            Ime = " ";
+            Ime = "a";
             Prezime = " ";
             Mail = " ";
             Spol = " ";
-            Username = " ";
-            Sifra = " ";
+            Username = "a";
+            Sifra = "a";
             DatumRegistracije = DateTime.Now;
 
         }

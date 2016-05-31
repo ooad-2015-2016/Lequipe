@@ -5,9 +5,15 @@
     xmlns:local="using:MyMovieCollection.MyMovieCollection.Views"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d">
+    mc:Ignorable="d" Width="1044.667">
 
-    <Grid Background="#FFE8F7D6">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
 
         <Grid.RowDefinitions>
             <RowDefinition Height="68*"/>
@@ -38,21 +44,17 @@
             <ColumnDefinition Width="*"/>
 
         </Grid.ColumnDefinitions>
-        <Button x:ConnectionId='1' x:Name="button" Content="Moje Kolekcije" HorizontalAlignment="Left" Margin="0,35,0,10" VerticalAlignment="Stretch" Width="360" Background="#33E86363" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="5" Grid.RowSpan="2" Grid.Row="1" Command="{Binding Path=MojeKolekcije}" />
-        <Button x:ConnectionId='2' x:Name="Pretraga_Filmova" Content="Pretraga filmova" HorizontalAlignment="Left" Height="85" Margin="0,19,0,0" VerticalAlignment="Top" Width="360" Background="#332022DF" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="5" Grid.Row="3" Grid.RowSpan="3" Command="{Binding Path=DodajFilm}" />
-        <Button x:ConnectionId='3' x:Name="Uredi_Profil" Content="Uredi svoj profil" HorizontalAlignment="Left" Height="87" VerticalAlignment="Top" Width="360" Background="#33CE1CC9" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="5" Grid.Row="6" Grid.RowSpan="2" Command="{Binding Path=UrediProfil}" />
-        <Button x:ConnectionId='4' x:Name="button_Copy4" Content="Odjavi se" HorizontalAlignment="Left" Height="88" Margin="0,38.333,0,0" VerticalAlignment="Top" Width="360" Background="#3335AE28" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="5" Grid.Row="7" Grid.RowSpan="3" Command="{Binding Path=OdjaviSe}" />
-        <TextBlock x:ConnectionId='5' x:Name="textBlock1" HorizontalAlignment="Left" Margin="0,28.667,0,39.667" TextWrapping="Wrap" Width="100" FontFamily="SketchFlow Print" FontSize="20" FontWeight="Bold"                                                Grid.ColumnSpan="2" Grid.Column="1" Grid.Row="7">
-        	<Run Text="MyMovieCollection"/>
-        	<LineBreak/>
-        	<Run/>
-        </TextBlock>
-        <TextBlock x:ConnectionId='6' x:Name="textBlock" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="60" TextWrapping="Wrap" VerticalAlignment="Top" Width="216"  FontFamily="Segoe Script" Foreground="#FF9E6464" Grid.Column="1" Margin="0,55,0,0" Grid.RowSpan="2">
+        <Button x:ConnectionId='1' x:Name="button" Content="Moje Kolekcije" HorizontalAlignment="Left" Margin="89,10,0,35" VerticalAlignment="Stretch" Width="360" Background="#33E86363" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="3" Grid.RowSpan="2" Grid.Row="2" Command="{Binding Path=MojeKolekcije}" Grid.Column="1"                      />
+        <Button x:ConnectionId='2' x:Name="Pretraga_Filmova" Content="Pretraga filmova" HorizontalAlignment="Left" Height="85" Margin="89,51,0,0" VerticalAlignment="Top" Width="360" Background="#332022DF" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="3" Grid.Row="3" Grid.RowSpan="3" Command="{Binding Path=DodajFilm}" Grid.Column="1" />
+        <Button x:ConnectionId='3' x:Name="Uredi_Profil" Content="Uredi svoj profil" HorizontalAlignment="Left" Height="87" VerticalAlignment="Top" Width="360" Background="#33CE1CC9" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="3" Grid.Row="6" Grid.RowSpan="2" Command="{Binding Path=UrediProfil}" Margin="89,31,0,0" Grid.Column="1" />
+        <Button x:ConnectionId='4' x:Name="button_Copy4" Content="Odjavi se" HorizontalAlignment="Left" Height="88" Margin="0,55.333,0,0" VerticalAlignment="Top" Width="360" Background="#3335AE28" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Grid.Row="7" Grid.RowSpan="4" Command="{Binding Path=OdjaviSe}" Grid.Column="3" />
+
+        <TextBlock x:ConnectionId='5' x:Name="textBlock" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="317"  FontFamily="Segoe Script" Foreground="#FFB62424" Grid.Column="2" Margin="144,10,0,0" Grid.Row="1" FontSize="24">
         	<Run Text="&#x9;"/>
-        	<Run FontSize="18" Text="Dobrodošli"/>
+        	<Run Text="Dobrodošli"/>
         </TextBlock>
-        <TextBlock x:ConnectionId='7' x:Name="textBlock2" Grid.ColumnSpan="5" HorizontalAlignment="Right" Height="60" Margin="0,10,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="340" Foreground="#FF75976A" FontFamily="Mistral" FontSize="30" Text="           MyMovieCollection" Grid.RowSpan="2"/>
-        <Button x:ConnectionId='8' x:Name="button1" Grid.ColumnSpan="5" Content="Admin Postavke" HorizontalAlignment="Left" Height="85" Margin="0,0.333,0,0" Grid.Row="10" Grid.RowSpan="7" VerticalAlignment="Top" Width="360" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Background="#330AE0FF" Visibility="Collapsed"/>
+        <TextBlock x:ConnectionId='6' x:Name="textBlock2" Grid.ColumnSpan="3" HorizontalAlignment="Right" Height="108" Margin="0,0,120,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="373" Foreground="#FFF8FBF7" FontFamily="Script MT Bold" FontSize="38" Text="           MyMovieCollection" Grid.RowSpan="2" Grid.Column="1" FontWeight="Bold"/>
+        <Button x:ConnectionId='7' x:Name="button1" Grid.ColumnSpan="5" Content="Admin Postavke" HorizontalAlignment="Left" Height="85" Margin="0,0.333,0,0" Grid.Row="10" Grid.RowSpan="7" VerticalAlignment="Top" Width="360" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Background="#330AE0FF" Visibility="Collapsed"/>
     </Grid>
 </Page>
 

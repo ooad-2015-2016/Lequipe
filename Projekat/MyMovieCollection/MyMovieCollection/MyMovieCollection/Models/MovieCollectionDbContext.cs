@@ -37,7 +37,9 @@ namespace MyMovieCollection.MyMovieCollection.Models
             modelBulider.Entity<Korisnik>().Property(p => p.slika).HasColumnType("picture");
             modelBulider.Entity<Kolekcija>().Property(p => p.slika).HasColumnType("picture");
             modelBulider.Entity<Film>().Property(p => p.slika).HasColumnType("picture");
-         
+
+           
+
 
         }
 

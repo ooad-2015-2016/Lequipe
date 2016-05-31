@@ -32,7 +32,7 @@
         	<Run Text="PRIJAVA"/>
         </TextBlock>
         <PasswordBox x:Name="passwordBox" PlaceholderText="Šifra" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="108" Margin="157,677,0,0" VerticalAlignment="Top" Width="566" FontSize="48" FontFamily="Segoe Script" Background="#FF8412A5"/>
-        <TextBox x:Name="textBox" PlaceholderText="Korisničko ime" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="106" Margin="157,470,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="566" FontSize="36" FontFamily="Segoe Script" Background="#FF992723"/>
+        <TextBox x:Name="textBox" Text="" PlaceholderText="Korisničko ime" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="106" Margin="157,470,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="566" FontSize="36" FontFamily="Segoe Script" Background="#FF992723"/>
         <Button x:Name="button" Grid.ColumnSpan="2" Content="SIGN IN" HorizontalAlignment="Left" Height="114" Margin="236,891,0,0" VerticalAlignment="Top" Width="368" FontFamily="Segoe Script" FontSize="36" Background="#33070108"/>
         <Button x:Name="button1" Content="Sign Up&#xD;&#xA;&#xD;&#xA;" Grid.Column="1" HorizontalAlignment="Left" Height="62" Margin="10,1073,0,0" VerticalAlignment="Top" Width="235" FontFamily="Segoe Script" FontSize="42" Background="#33E7E4E7"/>
         <TextBlock x:Name="textBlock1" Height="62" Margin="241,1073,470,0" TextWrapping="Wrap" Text="or" VerticalAlignment="Top" FontSize="40" FontFamily="Segoe Script" Grid.ColumnSpan="2"/>

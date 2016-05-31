@@ -26,7 +26,7 @@ namespace MyMovieCollection.MyMovieCollection.Views
         public LoginView()
         {
             this.InitializeComponent();
-            DataContext = new MyMovieCollection.ViewModels.PocetnaViewModel();
+            DataContext = new MyMovieCollection.ViewModels.LoginViewModel();
 
             NavigationCacheMode = NavigationCacheMode.Required;
         }

@@ -3,6 +3,7 @@ using MyMovieCollection.MyMovieCollection.Models;
 using MyMovieCollection.MyMovieCollection.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,17 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
         public ICommand DodajFilm { get; set; }
         public ICommand OdjaviSe { get; set; }
         public ICommand UrediProfil { get; set; }
+
+
+        //        ___________________
+
+        public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
+        public ObservableCollection<Kolekcija> SveKolekcije = new ObservableCollection<Kolekcija>();
+        public ObservableCollection<Film> SviFilmovi = new ObservableCollection<Film>();
+        public ObservableCollection<Ocjena> SveOcjene = new ObservableCollection<Ocjena>();
+        //______________
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -48,6 +60,13 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
             OdjaviSe = new RelayCommand<object>(odjaviSe);
             UrediProfil = new RelayCommand<object>(urediProfil);
 
+
+            SviFilmovi = parametar.SviFilmovi;
+            SviKorisnici = parametar.SviKorisnici;
+            SveKolekcije = parametar.SveKolekcije;
+            SviFilmovi = parametar.SviFilmovi;
+            SveOcjene = parametar.SveOcjene;
+
         }
 
         public PocetnaViewModel(RegistracijaViewModel parametar)
@@ -59,6 +78,13 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
             DodajFilm = new RelayCommand<object>(dodajFilm);
             OdjaviSe = new RelayCommand<object>(odjaviSe);
             UrediProfil = new RelayCommand<object>(urediProfil);
+
+
+            SviFilmovi = parametar.SviFilmovi;
+            SviKorisnici = parametar.SviKorisnici;
+            SveKolekcije = parametar.SveKolekcije;
+            SviFilmovi = parametar.SviFilmovi;
+            SveOcjene = parametar.SveOcjene;
 
         }
 
@@ -72,6 +98,12 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
             OdjaviSe = new RelayCommand<object>(odjaviSe);
             UrediProfil = new RelayCommand<object>(urediProfil);
 
+
+            SviFilmovi = parametar.SviFilmovi;
+            SviKorisnici = parametar.SviKorisnici;
+            SveKolekcije = parametar.SveKolekcije;
+            SviFilmovi = parametar.SviFilmovi;
+            SveOcjene = parametar.SveOcjene; 
         }
 
         public PocetnaViewModel(KolekcijaViewModel parametar)
@@ -84,17 +116,30 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
             OdjaviSe = new RelayCommand<object>(odjaviSe);
             UrediProfil = new RelayCommand<object>(urediProfil);
 
+            SviFilmovi = parametar.SviFilmovi;
+            SviKorisnici = parametar.SviKorisnici;
+            SveKolekcije = parametar.SveKolekcije;
+            SviFilmovi = parametar.SviFilmovi;
+            SveOcjene = parametar.SveOcjene;
+
         }
 
-        public PocetnaViewModel(KorisnikViewModel parametar)
+        public PocetnaViewModel(KorisnikViewModel parameter)
         {
-            Korisnik = parametar.korisnik;
+            Korisnik = parameter.korisnik;
             NavigationService = new NavigationService();
 
             MojeKolekcije = new RelayCommand<object>(mojeKolekcije);
             DodajFilm = new RelayCommand<object>(dodajFilm);
             OdjaviSe = new RelayCommand<object>(odjaviSe);
             UrediProfil = new RelayCommand<object>(urediProfil);
+
+
+            SviFilmovi = parameter.SviFilmovi;
+            SviKorisnici = parameter.SviKorisnici;
+            SveKolekcije = parameter.SveKolekcije;
+            SviFilmovi = parameter.SviFilmovi;
+            SveOcjene = parameter.SveOcjene;
 
         }
 

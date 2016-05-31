@@ -23,5 +23,11 @@ namespace MyMovieCollection.MyMovieCollection.Models
             
         }
 
+        public Kolekcija(int k, int K, string naziv)
+        {
+            KolekcijaId = k;
+            KorisnikId = K;
+            Naziv = naziv;
+        }
     }
 }

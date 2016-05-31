@@ -1,4 +1,5 @@
-﻿using MyMovieCollection.MyMovieCollection.ViewModels;
+﻿using MyMovieCollection.MyMovieCollection.Models;
+using MyMovieCollection.MyMovieCollection.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -21,6 +22,9 @@ namespace MyMovieCollection.MyMovieCollection.Views
     /// <summary>
     /// An empty page that can be used on its own or navigated to within a Frame.
     /// </summary>
+    /// 
+    
+
     public sealed partial class Pocetna : Page
     {
         public Pocetna()
@@ -39,5 +43,9 @@ namespace MyMovieCollection.MyMovieCollection.Views
             DataContext = (PocetnaViewModel)e.Parameter;
         }
 
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -33,9 +34,16 @@ namespace MyMovieCollection
             DataContext = new MyMovieCollection.ViewModels.LoginViewModel();
         }
 
-       /* protected override void OnNavigatedTo(NavigationEventArgs e)
+        /* protected override void OnNavigatedTo(NavigationEventArgs e)
+         {
+             DataContext = (LoginViewModel)e.Parameter;
+         }*/
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            DataContext = (LoginViewModel)e.Parameter;
-        }*/
+            var currentView = SystemNavigationManager.GetForCurrentView();
+            currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
+        }
+
     }
 }

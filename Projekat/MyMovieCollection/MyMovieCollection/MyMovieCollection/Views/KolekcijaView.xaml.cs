@@ -26,6 +26,8 @@ namespace MyMovieCollection.MyMovieCollection.Views
         {
             this.InitializeComponent();
             DataContext = new MyMovieCollection.ViewModels.KolekcijaViewModel();
+            NavigationCacheMode = NavigationCacheMode.Required;
+
 
             textBlock2.Visibility = Visibility.Collapsed;
             textBox.Visibility = Visibility.Collapsed;
@@ -54,6 +56,11 @@ namespace MyMovieCollection.MyMovieCollection.Views
             textBlock2.Visibility = Visibility.Visible;
             textBox.Visibility = Visibility.Visible;
             button3.Visibility = Visibility.Visible;
+        }
+
+        private void KolekcijeIS_Loaded(object sender, RoutedEventArgs e)
+        {
+           
         }
     }
 }

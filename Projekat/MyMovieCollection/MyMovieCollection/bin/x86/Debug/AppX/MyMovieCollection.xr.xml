@@ -3,12 +3,15 @@
   <Roots.PropertyPathNames>
     <RootPropertyPathName Name="RegistrujSe" />
     <RootPropertyPathName Name="PrijaviSe" />
-    <RootPropertyPathName Name="KorisnickoIme_txb" />
+    <RootPropertyPathName Name="Ime_txb" />
     <RootPropertyPathName Name="Nazad" />
     <RootPropertyPathName Name="Naziv" />
     <RootPropertyPathName Name="FilmoviNet" />
     <RootPropertyPathName Name="OdabraniFilm" />
     <RootPropertyPathName Name="Search" />
+    <RootPropertyPathName Name="OdabranaKolekcija" />
+    <RootPropertyPathName Name="SacuvajKolekciju" />
+    <RootPropertyPathName Name="Filmovi" />
     <RootPropertyPathName Name="IzbrisiKolekciju" />
     <RootPropertyPathName Name="DodajKolekciju" />
     <RootPropertyPathName Name="SacuvajIzmjene" />
@@ -23,7 +26,6 @@
     <RootPropertyPathName Name="MuskoJe" />
     <RootPropertyPathName Name="SifraPonovo_txb" />
     <RootPropertyPathName Name="Sifra_txb" />
-    <RootPropertyPathName Name="Ime_txb" />
     <RootPropertyPathName Name="Username_txb" />
     <RootPropertyPathName Name="Prezime_txb" />
   </Roots.PropertyPathNames>
@@ -35,6 +37,7 @@
       <RootProperty Name="Content" />
       <RootProperty Name="Width" />
       <RootProperty Name="Height" />
+      <RootProperty Name="Background" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Grid">
       <RootProperty Name="Background" />
@@ -104,6 +107,7 @@
       <RootProperty Name="Background" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
+      <RootProperty Name="Text" />
       <RootProperty Name="PlaceholderText" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
@@ -114,7 +118,6 @@
       <RootProperty Name="FontSize" />
       <RootProperty Name="FontFamily" />
       <RootProperty Name="Background" />
-      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
       <RootProperty Name="Content" />
@@ -139,8 +142,8 @@
     <RootType FullName="Windows.UI.Xaml.Data.Binding">
       <RootProperty Name="Path" />
       <RootProperty Name="ElementName" />
-      <RootProperty Name="Mode" />
       <RootProperty Name="UpdateSourceTrigger" />
+      <RootProperty Name="Mode" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
       <RootProperty Name="Rotation" />
@@ -165,6 +168,9 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="DisplayMemberPath" />
+      <RootProperty Name="SelectedValue" />
+      <RootProperty Name="Items" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="HorizontalAlignment" />
@@ -194,7 +200,8 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
-      <RootEvent Name="SelectionChanged" />
+      <RootProperty Name="IsItemClickEnabled" />
+      <RootProperty Name="ItemTemplate" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="HorizontalAlignment" />
@@ -204,8 +211,6 @@
       <RootProperty Name="Width" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootProperty Name="RenderTransform" />
-      <RootProperty Name="PlaceholderText" />
-      <RootProperty Name="FontFamily" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
       <RootProperty Name="Content" />
@@ -218,6 +223,19 @@
       <RootProperty Name="IsChecked" />
     </RootType>
     <RootType FullName="MyMovieCollection.MyMovieCollection.Views.FilmView" />
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
+      <RootProperty Name="Orientation" />
+      <RootProperty Name="Children" />
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+    </RootType>
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
     <RootType FullName="MyMovieCollection.MyMovieCollection.Views.KolekcijaView" />
     <RootType FullName="MyMovieCollection.MyMovieCollection.Views.KorisnikView" />
     <RootType FullName="MyMovieCollection.MyMovieCollection.Views.LoginView" />

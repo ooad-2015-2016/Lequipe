@@ -4,6 +4,7 @@ using MyMovieCollection.MyMovieCollection.Models;
 using MyMovieCollection.MyMovieCollection.Views;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
@@ -29,8 +30,15 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
         public ICommand RegistrujSe { get; set; }
         public ICommand MuskoJe { get; set; }
         public ICommand ZenskoJe { get; set; }
-       
 
+
+        //        ___________________
+
+        public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
+        public ObservableCollection<Kolekcija> SveKolekcije = new ObservableCollection<Kolekcija>();
+        public ObservableCollection<Film> SviFilmovi = new ObservableCollection<Film>();
+        public ObservableCollection<Ocjena> SveOcjene = new ObservableCollection<Ocjena>();
+        //______________
         public event PropertyChangedEventHandler PropertyChanged;
         public string Poruka { get; set; }
 
@@ -65,6 +73,12 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
             MuskoJe = new RelayCommand<object>(muskoJe);
             RegistrujSe = new RelayCommand<object>(registrujSe);
 
+            SviFilmovi = parameter.SviFilmovi;
+            SviKorisnici = parameter.SviKorisnici ;
+            SveKolekcije = parameter.SveKolekcije;
+            SviFilmovi = parameter.SviFilmovi;
+            SveOcjene = parameter.SveOcjene;
+
         }
 
         public async void registrujSe(object parametar)
@@ -91,7 +105,11 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
                          max++;
                         */
                        int max = -1;
-                        foreach (Korisnik k in DataSourceMyMovieCollection.DajSveKorisnike())
+
+                         List<Korisnik> korisnikci = SviKorisnici.ToList<Korisnik>();
+
+    
+                        foreach(Korisnik k in korisnikci)
                         {
                             if (k.KorisnikId > max) max = k.KorisnikId;
                         }
@@ -110,6 +128,9 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
 
 
                         korisnik = noviKorisnik;
+
+                        SviKorisnici.Add(noviKorisnik);  //dodaj novog korisnika
+
                         // db.Korisnici.Add(noviKorisnik);
                          //db.SaveChanges();
 
