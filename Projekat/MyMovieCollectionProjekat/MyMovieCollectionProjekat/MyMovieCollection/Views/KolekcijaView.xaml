@@ -78,7 +78,7 @@
         	<Run/>
         </TextBlock>
         <ListBox x:Name="listBox"  ItemContainerStyleSelector="{Binding Path=OznacenaKolekcijaListe}" ItemsSource="{Binding Path=MojeKolekcije}" DisplayMemberPath="Naziv" SelectedValue="{Binding Path=OdabranaKolekcija, Mode=TwoWay}" Grid.ColumnSpan="6" HorizontalAlignment="Left" Height="175" Margin="13,51,0,0" Grid.Row="1" Grid.RowSpan="3" VerticalAlignment="Top" Width="618" />
-        <ListBox x:Name="listBox1"   DisplayMemberPath="Naziv" SelectedValue="{Binding Path=OdabraniFilm, Mode=TwoWay}" Grid.ColumnSpan="6" HorizontalAlignment="Left" Height="258" Margin="13,44,0,0" Grid.Row="4" Grid.RowSpan="4" VerticalAlignment="Top" Width="618" Background="#FFF5F1F1" Foreground="#FFF5150A" SelectionChanged="listBox1_SelectionChanged">
+        <ListBox x:Name="listBox1"   DisplayMemberPath="Naziv" SelectedValue="{Binding Path=OdabraniFilm, Mode=TwoWay}" Grid.ColumnSpan="6" HorizontalAlignment="Left" Height="258" Margin="13,0,0,52" Grid.Row="4" Grid.RowSpan="4" VerticalAlignment="Bottom" Width="618" Background="#FFF5F1F1" Foreground="#FFF5150A" SelectionChanged="listBox1_SelectionChanged">
 
         </ListBox>
         <Button x:Name="button2" Command="{Binding PrikaziDetalje}" Content="&gt;&gt;" RenderTransformOrigin="10.538,3.906" Margin="95.891,47.84,0,81.091" Width="61.5" Height="48.069" Grid.Column="5" Grid.Row="5" Background="#FF473E3E" UseLayoutRounding="False" d:LayoutRounding="Auto" FontSize="28" Grid.ColumnSpan="2" Grid.RowSpan="2">

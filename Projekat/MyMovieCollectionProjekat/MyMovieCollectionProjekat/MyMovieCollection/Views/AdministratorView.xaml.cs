@@ -32,5 +32,10 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
         {
 
         }
+
+        private void textBlock1_SelectionChanged(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

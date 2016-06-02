@@ -45,7 +45,7 @@
                 <CompositeTransform ScaleY="-1" Rotation="-180.607"/>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock x:Name="textBlock_Copy5" Height="32" Margin="10,58.333,168.667,67" TextWrapping="Wrap" Width="165" Grid.Row="1" FontFamily="Segoe Script" FontSize="18" Grid.Column="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+        <TextBlock x:Name="textBlock_Copy5" Height="32" Margin="10,10,169,47" TextWrapping="Wrap" Width="165" Grid.Row="2" FontFamily="Segoe Script" FontSize="18" Grid.Column="1" Grid.ColumnSpan="2">
         	<Run Text="Stari password:"/>
         	<LineBreak/>
         	<Run/>

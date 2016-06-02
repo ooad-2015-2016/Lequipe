@@ -150,7 +150,6 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
         public PocetnaViewModel(AdministratorViewModel parametar)
         {
-            Korisnik = parametar.Korisnik;
             NavigationService = new NavigationService();
 
             MojeKolekcije = new RelayCommand<object>(mojeKolekcije);
