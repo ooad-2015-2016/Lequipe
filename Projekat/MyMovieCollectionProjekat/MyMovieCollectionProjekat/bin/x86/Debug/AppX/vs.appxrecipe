@@ -9,7 +9,7 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>d52ba3b9-25ec-4f06-8921-096b650b81c8</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\obj\x86\Debug\</IntermediateOutputPath>
     <RegisteredManifestChecksum>64A6D960DDE175458B63764B14E82439170109449B75C6E380051BD52779913F</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>d52ba3b9-25ec-4f06-8921-096b650b81c8_1.0.0.0_x86__cxf3332en37x4</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>d52ba3b9-25ec-4f06-8921-096b650b81c8_cxf3332en37x4!App</RegisteredUserModeAppID>
@@ -19,16 +19,16 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-06-01T00:34:59.966</Modified>
+      <Modified>2016-06-02T01:10:59.302</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\MyMovieCollectionProjekat.exe">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\MyMovieCollectionProjekat.exe">
       <PackagePath>entrypoint\MyMovieCollectionProjekat.exe</PackagePath>
-      <Modified>2016-06-01T00:34:58.682</Modified>
+      <Modified>2016-06-02T01:10:54.414</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\model\.nuget\packages\EntityFramework.Core\7.0.0-beta6\lib\dotnet\EntityFramework.Core.dll">
       <PackagePath>EntityFramework.Core.dll</PackagePath>
@@ -518,7 +518,7 @@
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
       <Modified>2015-07-22T21:11:12.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
       <Modified>2016-05-31T23:09:08.924</Modified>
     </AppxPackagedFile>
@@ -526,36 +526,36 @@
       <PackagePath>EntityFramework.Commands.xml</PackagePath>
       <Modified>2015-07-21T15:24:16.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
       <Modified>2015-07-20T17:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-20T17:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-20T17:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-20T17:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-20T17:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-20T17:06:24.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2015-07-20T17:06:24.000</Modified>
@@ -564,21 +564,21 @@
       <PackagePath>EntityFramework.Commands.dll</PackagePath>
       <Modified>2015-07-21T17:12:58.000</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\MyMovieCollectionProjekat.xr.xml">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\MyMovieCollectionProjekat.xr.xml">
       <PackagePath>MyMovieCollectionProjekat.xr.xml</PackagePath>
-      <Modified>2016-06-01T00:28:39.072</Modified>
+      <Modified>2016-06-02T01:10:50.215</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
       <Modified>2016-05-23T12:50:42.592</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-06-01T00:29:59.426</Modified>
+      <Modified>2016-06-02T01:10:57.566</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\Core\MyMovieCollectionProjekat.exe">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\Core\MyMovieCollectionProjekat.exe">
       <PackagePath>MyMovieCollectionProjekat.exe</PackagePath>
-      <Modified>2016-06-01T00:34:59.956</Modified>
+      <Modified>2016-06-02T01:10:59.276</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

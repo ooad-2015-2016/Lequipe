@@ -9,16 +9,16 @@
     <SolutionConfiguration>Debug|x86</SolutionConfiguration>
     <PackageArchitecture>x86</PackageArchitecture>
     <PackageIdentityName>d52ba3b9-25ec-4f06-8921-096b650b81c8</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\obj\x86\Debug\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\obj\x86\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\Core\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\MyMovieCollectionProjekat.exe">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\MyMovieCollectionProjekat.exe">
       <PackagePath>entrypoint\MyMovieCollectionProjekat.exe</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\model\.nuget\packages\EntityFramework.Core\7.0.0-beta6\lib\dotnet\EntityFramework.Core.dll">
@@ -387,52 +387,52 @@
     <AppxPackagedFile Include="C:\Users\model\.nuget\packages\System.Xml.XmlSerializer\4.0.10\lib\netcore50\System.Xml.XmlSerializer.dll">
       <PackagePath>System.Xml.XmlSerializer.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Properties\Default.rd.xml">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Properties\Default.rd.xml">
       <PackagePath>Properties\Default.rd.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\model\.nuget\packages\EntityFramework.Commands\7.0.0-beta6\lib\net45\EntityFramework.Commands.xml">
       <PackagePath>EntityFramework.Commands.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\LockScreenLogo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\LockScreenLogo.scale-200.png">
       <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\SplashScreen.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\SplashScreen.scale-200.png">
       <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\Square150x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\Square150x150Logo.scale-200.png">
       <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\Square44x44Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\Square44x44Logo.scale-200.png">
       <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
       <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\StoreLogo.png">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\StoreLogo.png">
       <PackagePath>Assets\StoreLogo.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\Wide310x150Logo.scale-200.png">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\Assets\Wide310x150Logo.scale-200.png">
       <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\model\.nuget\packages\EntityFramework.Commands\7.0.0-beta6\lib\net45\EntityFramework.Commands.dll">
       <PackagePath>EntityFramework.Commands.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\MyMovieCollectionProjekat.xr.xml">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\MyMovieCollectionProjekat.xr.xml">
       <PackagePath>MyMovieCollectionProjekat.xr.xml</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\resources.pri">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\model\Desktop\dfdf\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\Core\MyMovieCollectionProjekat.exe">
+    <AppxPackagedFile Include="C:\Users\model\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\Core\MyMovieCollectionProjekat.exe">
       <PackagePath>MyMovieCollectionProjekat.exe</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

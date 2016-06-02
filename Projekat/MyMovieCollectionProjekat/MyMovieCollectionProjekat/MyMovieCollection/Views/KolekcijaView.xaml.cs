@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyMovieCollectionProjekat.MyMovieCollection.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -22,6 +23,9 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
     /// </summary>
     public sealed partial class KolekcijaView : Page
     {
+
+        
+
         public KolekcijaView()
         {
             this.InitializeComponent();
@@ -59,6 +63,16 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
         }
 
         private void KolekcijeIS_Loaded(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void listBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

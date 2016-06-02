@@ -72,11 +72,11 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             SacuvajIzmjene = new RelayCommand<object>(sacuvajIzmjene);
             Nazad = new RelayCommand<object>(nazad);
 
-            SviFilmovi = parametar.SviFilmovi;
+            /*SviFilmovi = parametar.SviFilmovi;
             SviKorisnici = parametar.SviKorisnici;
             SveKolekcije = parametar.SveKolekcije;
 
-            SveOcjene = parametar.SveOcjene;
+            SveOcjene = parametar.SveOcjene;*/
 
 
         }

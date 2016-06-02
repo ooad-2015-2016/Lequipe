@@ -9,9 +9,12 @@
     <RootPropertyPathName Name="FilmoviNet" />
     <RootPropertyPathName Name="OdabraniFilm" />
     <RootPropertyPathName Name="Search" />
+    <RootPropertyPathName Name="PrikaziFilmove" />
+    <RootPropertyPathName Name="PrikaziDetalje" />
+    <RootPropertyPathName Name="OznacenaKolekcijaListe" />
+    <RootPropertyPathName Name="MojeKolekcije" />
     <RootPropertyPathName Name="OdabranaKolekcija" />
     <RootPropertyPathName Name="SacuvajKolekciju" />
-    <RootPropertyPathName Name="Filmovi" />
     <RootPropertyPathName Name="IzbrisiKolekciju" />
     <RootPropertyPathName Name="DodajKolekciju" />
     <RootPropertyPathName Name="SacuvajIzmjene" />
@@ -21,7 +24,6 @@
     <RootPropertyPathName Name="OdjaviSe" />
     <RootPropertyPathName Name="UrediProfil" />
     <RootPropertyPathName Name="DodajFilm" />
-    <RootPropertyPathName Name="MojeKolekcije" />
     <RootPropertyPathName Name="ZenskoJe" />
     <RootPropertyPathName Name="MuskoJe" />
     <RootPropertyPathName Name="SifraPonovo_txb" />
@@ -165,9 +167,12 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Foreground" />
+      <RootProperty Name="ItemContainerStyleSelector" />
+      <RootProperty Name="ItemsSource" />
       <RootProperty Name="DisplayMemberPath" />
       <RootProperty Name="SelectedValue" />
-      <RootProperty Name="Items" />
+      <RootProperty Name="Background" />
+      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RelativePanel">
       <RootProperty Name="HorizontalAlignment" />
@@ -197,8 +202,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
-      <RootProperty Name="IsItemClickEnabled" />
-      <RootProperty Name="ItemTemplate" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="HorizontalAlignment" />
@@ -220,20 +223,21 @@
       <RootProperty Name="IsChecked" />
     </RootType>
     <RootType FullName="MyMovieCollectionProjekat.MyMovieCollection.Views.FilmView" />
-    <RootType FullName="Windows.UI.Xaml.DataTemplate">
-      <RootProperty Name="Template" />
+    <RootType FullName="Windows.UI.Xaml.Controls.WebView">
+      <RootProperty Name="HorizontalAlignment" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Width" />
+      <RootProperty Name="Margin" />
     </RootType>
+    <RootType FullName="MyMovieCollectionProjekat.MyMovieCollection.Views.KolekcijaView" />
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
-      <RootProperty Name="Orientation" />
-      <RootProperty Name="Children" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
     </RootType>
-    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension" />
-    <RootType FullName="MyMovieCollectionProjekat.MyMovieCollection.Views.KolekcijaView" />
     <RootType FullName="MyMovieCollectionProjekat.MyMovieCollection.Views.KorisnikView" />
     <RootType FullName="MyMovieCollectionProjekat.MyMovieCollection.Views.LoginView" />
     <RootType FullName="MyMovieCollectionProjekat.MyMovieCollection.Views.Pocetna" />

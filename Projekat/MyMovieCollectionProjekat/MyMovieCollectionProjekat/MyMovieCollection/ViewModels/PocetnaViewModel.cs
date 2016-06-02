@@ -27,13 +27,13 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
         //        ___________________
 
-        public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
+      /*  public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
         public ObservableCollection<Kolekcija> SveKolekcije = new ObservableCollection<Kolekcija>();
         public ObservableCollection<Film> SviFilmovi = new ObservableCollection<Film>();
         public ObservableCollection<Ocjena> SveOcjene = new ObservableCollection<Ocjena>();
         //______________
 
-
+    */
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -61,11 +61,12 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             UrediProfil = new RelayCommand<object>(urediProfil);
 
 
-            SviFilmovi = parametar.SviFilmovi;
+           /* SviFilmovi = parametar.SviFilmovi;
             SviKorisnici = parametar.SviKorisnici;
             SveKolekcije = parametar.SveKolekcije;
             SviFilmovi = parametar.SviFilmovi;
             SveOcjene = parametar.SveOcjene;
+            */
 
         }
 
@@ -80,11 +81,12 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             UrediProfil = new RelayCommand<object>(urediProfil);
 
 
-            SviFilmovi = parametar.SviFilmovi;
+           /* SviFilmovi = parametar.SviFilmovi;
             SviKorisnici = parametar.SviKorisnici;
             SveKolekcije = parametar.SveKolekcije;
             SviFilmovi = parametar.SviFilmovi;
             SveOcjene = parametar.SveOcjene;
+            */
 
         }
 
@@ -99,11 +101,12 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             UrediProfil = new RelayCommand<object>(urediProfil);
 
 
-            SviFilmovi = parametar.SviFilmovi;
+           /* SviFilmovi = parametar.SviFilmovi;
             SviKorisnici = parametar.SviKorisnici;
             SveKolekcije = parametar.SveKolekcije;
             SviFilmovi = parametar.SviFilmovi;
             SveOcjene = parametar.SveOcjene;
+            */
         }
 
         public PocetnaViewModel(KolekcijaViewModel parametar)
@@ -116,11 +119,12 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             OdjaviSe = new RelayCommand<object>(odjaviSe);
             UrediProfil = new RelayCommand<object>(urediProfil);
 
-            SviFilmovi = parametar.SviFilmovi;
+           /* SviFilmovi = parametar.SviFilmovi;
             SviKorisnici = parametar.SviKorisnici;
             SveKolekcije = parametar.SveKolekcije;
             SviFilmovi = parametar.SviFilmovi;
             SveOcjene = parametar.SveOcjene;
+            */
 
         }
 
@@ -135,11 +139,12 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             UrediProfil = new RelayCommand<object>(urediProfil);
 
 
-            SviFilmovi = parameter.SviFilmovi;
+           /* SviFilmovi = parameter.SviFilmovi;
             SviKorisnici = parameter.SviKorisnici;
             SveKolekcije = parameter.SveKolekcije;
             SviFilmovi = parameter.SviFilmovi;
             SveOcjene = parameter.SveOcjene;
+            */
 
         }
 
@@ -158,9 +163,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
         private void odjaviSe(object parametar)
         {
-            // KorisnickoIme_txb = Korisnik_txb.Text.ToString();
-
-            // MessageBox.Show("");
+            Korisnik = null;
             NavigationService.Navigate(typeof(MainPage), new LoginViewModel(this));
 
         }

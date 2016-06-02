@@ -27,7 +27,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
         {
             this.InitializeComponent();
             // DataContext = new MyMovieCollection.ViewModels.PocetnaViewModel();
-            NavigationCacheMode = NavigationCacheMode.Required;
+          //  NavigationCacheMode = NavigationCacheMode.Required;
         }
 
         private void textBlock1_SelectionChanged(object sender, RoutedEventArgs e)

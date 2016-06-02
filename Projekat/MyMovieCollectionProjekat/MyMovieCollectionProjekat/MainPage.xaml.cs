@@ -28,7 +28,11 @@ namespace MyMovieCollectionProjekat
 
 
             this.InitializeComponent();
+            
+
             DataContext = new MyMovieCollection.ViewModels.LoginViewModel();
+            
+            NavigationCacheMode = NavigationCacheMode.Required;
         }
 
         /* protected override void OnNavigatedTo(NavigationEventArgs e)

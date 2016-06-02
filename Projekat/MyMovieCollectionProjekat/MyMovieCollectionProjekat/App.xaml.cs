@@ -33,7 +33,25 @@ namespace MyMovieCollectionProjekat
             this.InitializeComponent();
             this.Suspending += OnSuspending;
 
+            using (var db = new KolekcijaDbContext())
+            {
+                db.Database.ApplyMigrations();
+                DefaultPodaci.Initialize(db);
+            }
+
+            using (var db = new FilmDbContext())
+            {
+                db.Database.ApplyMigrations();
+                DefaultPodaci.Initialize(db);
+            }
+
             using (var db = new KorisnikDbContext())
+            {
+                db.Database.ApplyMigrations();
+                DefaultPodaci.Initialize(db);
+            }
+
+            using (var db = new OcjenaDbContext())
             {
                 db.Database.ApplyMigrations();
                 DefaultPodaci.Initialize(db);
@@ -50,7 +68,7 @@ namespace MyMovieCollectionProjekat
 #if DEBUG
             if (System.Diagnostics.Debugger.IsAttached)
             {
-                this.DebugSettings.EnableFrameRateCounter = true;
+                this.DebugSettings.EnableFrameRateCounter = false;
             }
 #endif
             Frame rootFrame = Window.Current.Content as Frame;

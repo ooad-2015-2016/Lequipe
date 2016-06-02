@@ -31,13 +31,14 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         public ICommand ZenskoJe { get; set; }
 
 
-        //        ___________________
+     /*   //        ___________________
 
         public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
         public ObservableCollection<Kolekcija> SveKolekcije = new ObservableCollection<Kolekcija>();
         public ObservableCollection<Film> SviFilmovi = new ObservableCollection<Film>();
         public ObservableCollection<Ocjena> SveOcjene = new ObservableCollection<Ocjena>();
-        //______________
+        //______________*/
+
         public event PropertyChangedEventHandler PropertyChanged;
         public string Poruka { get; set; }
 
@@ -72,11 +73,11 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             MuskoJe = new RelayCommand<object>(muskoJe);
             RegistrujSe = new RelayCommand<object>(registrujSe);
 
-            SviFilmovi = parameter.SviFilmovi;
+         /*   SviFilmovi = parameter.SviFilmovi;
             SviKorisnici = parameter.SviKorisnici;
             SveKolekcije = parameter.SveKolekcije;
             SviFilmovi = parameter.SviFilmovi;
-            SveOcjene = parameter.SveOcjene;
+            SveOcjene = parameter.SveOcjene;*/
 
         }
 
@@ -91,29 +92,18 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
                 using (var db = new KorisnikDbContext())
                 {
-                    //provjera da li postoji user s istim username-om
-                    //   korisnik = db.Korisnici.Where(x => x.Username == Username_txb).FirstOrDefault();
-                    korisnik = DataSourceMyMovieCollection.ProvjeraUsername(Username_txb);
+                    
+                       korisnik = db.Korisnici.Where(x => x.Username == Username_txb).FirstOrDefault();
+                   
                     if (korisnik == null)
                     {
-                        /*  int max = -1;
+                          int max = -1;
                           foreach (Korisnik k in db.Korisnici)
                           {
                               if (k.KorisnikId > max) max = k.KorisnikId;
                           }
                           max++;
-                         */
-                        int max = -1;
-
-                        List<Korisnik> korisnikci = SviKorisnici.ToList<Korisnik>();
-
-
-                        foreach (Korisnik k in korisnikci)
-                        {
-                            if (k.KorisnikId > max) max = k.KorisnikId;
-                        }
-                        max++;
-
+                         
                         Korisnik noviKorisnik = new Korisnik(max);
 
                         noviKorisnik.Ime = Ime_txb;
@@ -123,19 +113,9 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                         noviKorisnik.Mail = "";
                         noviKorisnik.Spol = Spol;
 
+                       db.Korisnici.Add(noviKorisnik);
+                       db.SaveChanges();
 
-
-
-                        korisnik = noviKorisnik;
-
-                        SviKorisnici.Add(noviKorisnik);  //dodaj novog korisnika
-
-                        // db.Korisnici.Add(noviKorisnik);
-                        //db.SaveChanges();
-
-
-
-                        //uspjesno ste registrovani
                         var dialog = new MessageDialog("Uspješno ste registrovani!");
                         await dialog.ShowAsync();
                         NavigationService.Navigate(typeof(Pocetna), new PocetnaViewModel(this));

@@ -16,7 +16,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 {
     class LoginViewModel
     {
-        //naše sve liste....__________________________________________
+       /* //naše sve liste....__________________________________________
 
         public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
         public ObservableCollection<Kolekcija> SveKolekcije = new ObservableCollection<Kolekcija>();
@@ -24,6 +24,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         public ObservableCollection<Ocjena> SveOcjene = new ObservableCollection<Ocjena>();
 
         //..._________________________________________________________
+        */
 
         public Korisnik korisnik { get; set; }
 
@@ -59,23 +60,6 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             PrijaviSe = new RelayCommand<object>(prijaviSe);
             RegistrujSe = new RelayCommand<object>(registrujSe);
 
-            
-            using (var db = new KorisnikDbContext())
-            {
-               /* SviKorisnici =  db.Korisnici.ToList();
-                SviFilmovi = db.Filmovi.ToList();
-                SveKolekcije = db.Kolekcije.ToList();
-                SveOcjene = db.Ocjene.ToList();
-                */
-            }
-           
-
-            //dok baza ne proradi....
-            SviKorisnici = DataSourceMyMovieCollection.DajSveKorisnike();
-            SviFilmovi = DataSourceMyMovieCollection.DajSveFilmove(); ;
-            SveKolekcije = DataSourceMyMovieCollection.DajSveKolekcije(); ;
-            SveOcjene = DataSourceMyMovieCollection.DajSveOcjene();
-
 
 
         }
@@ -83,7 +67,8 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         public LoginViewModel(PocetnaViewModel parametar)
         {
             NavigationService = new NavigationService();
-            korisnik = new Korisnik();
+            korisnik = parametar.Korisnik;
+
 
 
             PrijaviSe = new RelayCommand<object>(prijaviSe);
@@ -98,11 +83,6 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             var UnosPassBox = parametar as PasswordBox;
             Sifra_txb = UnosPassBox.Password;
 
-
-
-
-
-
             using (var db = new KorisnikDbContext())
             {
                 if (Ime_txb != "" && Sifra_txb != "")
@@ -112,9 +92,9 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                 {
                     var dialog1 = new MessageDialog("Neispravni podaci!");
                     await dialog1.ShowAsync();
-                    //Javiti korisniku da su pogresno uneseni podaci
-                    //VerifikacijaPoruka = "Kombinacija password/username je nepostojeća.";
-                    //NotifyPropertyChanged("VerifikacijaPoruka");
+                    
+                   // VerifikacijaPoruka = "Kombinacija password/username je nepostojeća.";
+                  //  NotifyPropertyChanged("VerifikacijaPoruka");
 
                 }
                 else
@@ -125,26 +105,6 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                     NavigationService.Navigate(typeof(Pocetna), new PocetnaViewModel(this));
                 }
 
-
-                //dok baza ne proradni...
-
-                // if (KorisnickoIme_txb != "" && Sifra_txb != "")
-                //      korisnik = SviKorisnici.Where(x => x.Username == KorisnickoIme_txb && x.Sifra == Sifra_txb).FirstOrDefault();
-
-                /* korisnik = SviKorisnici.Where(x => x.Username == Ime_txb && x.Sifra == Sifra_txb).FirstOrDefault();
-
-
-                 if (korisnik == null || (Ime_txb == "" || Sifra_txb == ""))
-                 {
-                     var dialog1 = new MessageDialog("Neispravni podaci!");
-                     await dialog1.ShowAsync();
-
-                 }
-                 else
-                 {
-
-                     NavigationService.Navigate(typeof(Pocetna), new PocetnaViewModel(this));
-                 }*/
 
             }
         }

@@ -32,10 +32,6 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
 
         }
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
-        {
-            var currentView = SystemNavigationManager.GetForCurrentView();
-            currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
-        }
+        
     }
 }

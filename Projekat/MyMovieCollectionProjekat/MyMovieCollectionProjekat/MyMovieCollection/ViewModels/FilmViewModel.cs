@@ -31,14 +31,14 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         public ICommand DodajFilm { get; set; }
         public ICommand Nazad { get; set; }
 
-        //        ___________________
+        /*//        ___________________
 
         public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
         public ObservableCollection<Kolekcija> SveKolekcije = new ObservableCollection<Kolekcija>();
         public ObservableCollection<Film> SviFilmovi = new ObservableCollection<Film>();
         public ObservableCollection<Ocjena> SveOcjene = new ObservableCollection<Ocjena>();
         //______________
-
+        */
 
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -78,11 +78,11 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             Search = new RelayCommand<object>(search);
             DodajFilm = new RelayCommand<object>(dodajFilm);
 
-            SviFilmovi = parametar.SviFilmovi;
+           /* SviFilmovi = parametar.SviFilmovi;
             SviKorisnici = parametar.SviKorisnici;
             SveKolekcije = parametar.SveKolekcije;
             SviFilmovi = parametar.SviFilmovi;
-            SveOcjene = parametar.SveOcjene;
+            SveOcjene = parametar.SveOcjene;*/
         }
 
         private async void search(object parametar)

@@ -27,6 +27,8 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
         {
             this.InitializeComponent();
             DataContext = new MyMovieCollection.ViewModels.RegistracijaViewModel();
+      
+ NavigationCacheMode = NavigationCacheMode.Required;
         }
 
 

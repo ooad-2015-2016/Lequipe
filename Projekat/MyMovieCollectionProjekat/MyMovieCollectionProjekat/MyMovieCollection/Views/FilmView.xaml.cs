@@ -25,7 +25,9 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
         public FilmView()
         {
             this.InitializeComponent();
+
             DataContext = new ViewModels.FilmViewModel();
+            NavigationCacheMode = NavigationCacheMode.Required;
         }
     }
 }
