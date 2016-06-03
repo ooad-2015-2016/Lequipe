@@ -1,1 +1,1 @@
-C:\Users\Berina\Desktop\ma glupsot\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat.csproj;x86
+C:\Users\Emir\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat.csproj;x86

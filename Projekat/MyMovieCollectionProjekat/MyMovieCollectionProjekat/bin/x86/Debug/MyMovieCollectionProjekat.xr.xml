@@ -14,9 +14,11 @@
     <RootPropertyPathName Name="PisiIme" />
     <RootPropertyPathName Name="Naziv" />
     <RootPropertyPathName Name="Nazad" />
-    <RootPropertyPathName Name="FilmoviNet" />
+    <RootPropertyPathName Name="DodajFilm" />
     <RootPropertyPathName Name="OdabraniFilm" />
+    <RootPropertyPathName Name="FilmoviNet" />
     <RootPropertyPathName Name="Search" />
+    <RootPropertyPathName Name="NazivFilma_txb" />
     <RootPropertyPathName Name="PrikaziFilmove" />
     <RootPropertyPathName Name="PrikaziDetalje" />
     <RootPropertyPathName Name="OznacenaKolekcijaListe" />
@@ -31,7 +33,6 @@
     <RootPropertyPathName Name="StaraSifra" />
     <RootPropertyPathName Name="OdjaviSe" />
     <RootPropertyPathName Name="UrediProfil" />
-    <RootPropertyPathName Name="DodajFilm" />
     <RootPropertyPathName Name="ZenskoJe" />
     <RootPropertyPathName Name="MuskoJe" />
     <RootPropertyPathName Name="SifraPonovo_txb" />
@@ -210,6 +211,10 @@
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+      <RootMethod Name="GetHorizontalScrollBarVisibility" />
+      <RootMethod Name="SetHorizontalScrollBarVisibility" />
+    </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
@@ -230,7 +235,7 @@
       <RootProperty Name="IsChecked" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.LineBreak" />
-    <RootType FullName="MyMovieCollectionProjekat.MyMovieCollection.Views.FilmView" />
+    <RootType FullName="MyMovieCollection.MyMovieCollection.Views.FilmView" />
     <RootType FullName="Windows.UI.Xaml.Controls.WebView">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />

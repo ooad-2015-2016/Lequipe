@@ -1,14 +1,11 @@
 ﻿using MyMovieCollectionProjekat.MyMovieCollection.Models;
 using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 using Windows.Data.Json;
-using Windows.UI.Popups;
 
-namespace MyMovieCollectionProjekat.MyMovieCollection.Services
+namespace MyMovieCollection.MyMovieCollection.Services
 {
     class FilmoviService
     {
@@ -50,7 +47,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Services
 
             for (int i = 1; i <= brojDesetina; i++)
             {
-                uriString = "http://www.omdbapi.com/?s=" + s + "&r = json" + "&page=" + i.ToString();
+                uriString = "http://www.omdbapi.com/?s=" + s + "&r=json" + "&page=" + i.ToString();
                 response = await httpClient.GetStringAsync(new Uri(uriString));
                 value = JsonValue.Parse(response).GetObject();
                 JsonArray temp = value.GetNamedArray("Search");
@@ -63,8 +60,6 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Services
 
 
             int a = jsonFilmovi.Count;
-            var dialog1 = new MessageDialog(a.ToString());
-            await dialog1.ShowAsync();
 
             for (uint i = 0; i < jsonFilmovi.Count; i++)
             {
@@ -86,14 +81,13 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Services
                 }
                 if (jsonFilmovi.GetObjectAt(i).TryGetValue("Year", out jsonValue))
                 {
-                    a = Int32.Parse(jsonValue.GetString());
-                    f.god = new DateTime(a, 1, 1);
+                    f.Godina = jsonValue.GetString();
                 }
-                if (value.TryGetValue("Plot", out jsonValue)) ;
+                if (value.TryGetValue("Plot", out jsonValue))
                 {
                     f.Opis = jsonValue.GetString();
                 }
-                if (value.TryGetValue("imdbRating", out jsonValue)) ;
+                if (value.TryGetValue("imdbRating", out jsonValue))
                 {
                     try
                     {
@@ -108,9 +102,6 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Services
 
 
                 Filmovi.Add(f);
-
-                dialog1 = new MessageDialog(f.Naziv + "   " + f.god.Year.ToString() + "   " + "   " + f.Opis + "     " + f.ProsjecnaOcjena.ToString());
-                await dialog1.ShowAsync();
             }
         }
     }

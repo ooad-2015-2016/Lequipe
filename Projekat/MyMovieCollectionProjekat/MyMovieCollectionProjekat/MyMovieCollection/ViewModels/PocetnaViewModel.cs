@@ -1,4 +1,6 @@
-﻿using MyMovieCollectionProjekat.MyMovieCollection.Helper;
+﻿using MyMovieCollection.MyMovieCollection.ViewModels;
+using MyMovieCollection.MyMovieCollection.Views;
+using MyMovieCollectionProjekat.MyMovieCollection.Helper;
 using MyMovieCollectionProjekat.MyMovieCollection.Models;
 using MyMovieCollectionProjekat.MyMovieCollection.Views;
 using System;

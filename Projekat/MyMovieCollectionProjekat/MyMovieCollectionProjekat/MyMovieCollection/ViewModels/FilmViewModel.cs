@@ -1,18 +1,15 @@
-﻿using MyMovieCollectionProjekat.MyMovieCollection.Helper;
+﻿using MyMovieCollection.MyMovieCollection.Services;
+using MyMovieCollectionProjekat.MyMovieCollection.Helper;
 using MyMovieCollectionProjekat.MyMovieCollection.Models;
-using MyMovieCollectionProjekat.MyMovieCollection.Services;
+using MyMovieCollectionProjekat.MyMovieCollection.ViewModels;
 using MyMovieCollectionProjekat.MyMovieCollection.Views;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.UI.Popups;
 
-namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
+namespace MyMovieCollection.MyMovieCollection.ViewModels
 {
     class FilmViewModel
     {
@@ -31,14 +28,14 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         public ICommand DodajFilm { get; set; }
         public ICommand Nazad { get; set; }
 
-        /*//        ___________________
+        //        ___________________
 
         public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
         public ObservableCollection<Kolekcija> SveKolekcije = new ObservableCollection<Kolekcija>();
         public ObservableCollection<Film> SviFilmovi = new ObservableCollection<Film>();
         public ObservableCollection<Ocjena> SveOcjene = new ObservableCollection<Ocjena>();
         //______________
-        */
+
 
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -62,9 +59,6 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             Nazad = new RelayCommand<object>(nazad);
 
             FilmoviNet = new ObservableCollection<Film>();
-            Film f = new Film();
-            f.Naziv = "Emirrrrrrr";
-            FilmoviNet.Add(f);
         }
 
         public FilmViewModel(PocetnaViewModel parametar)
@@ -78,37 +72,40 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             Search = new RelayCommand<object>(search);
             DodajFilm = new RelayCommand<object>(dodajFilm);
 
-           /* SviFilmovi = parametar.SviFilmovi;
+            /*
+            SviFilmovi = parametar.SviFilmovi;
             SviKorisnici = parametar.SviKorisnici;
             SveKolekcije = parametar.SveKolekcije;
             SviFilmovi = parametar.SviFilmovi;
-            SveOcjene = parametar.SveOcjene;*/
+            SveOcjene = parametar.SveOcjene;
+            */
         }
 
         private async void search(object parametar)
         {
             FilmoviNet.Clear();
             FilmoviService f = new FilmoviService();
-            await f.getFilmovi("amra");
+            await f.getFilmovi(NazivFilma_txb);
             foreach (Film fl in f.Filmovi)
                 FilmoviNet.Add(fl);
-
-            var dialog1 = new MessageDialog(FilmoviNet.Count.ToString());
-            await dialog1.ShowAsync();
         }
 
         private void dodajFilm(object parametar)
         {
+            var dialog = new MessageDialog(OdabraniFilm.Naziv);
+            dialog.ShowAsync();
+
             // ovdje bi program vec trebao da zna ko je korinik
             //potrebno je film iz listboxa koji je oznacen stavit u OdabraniFilm
             // OdabraniFilm=FilmoviNet.
             //  OdabraniFilm film= new Film( IDictionary, naziv,...., Korisnik.KorisnikId, KolekcijaUKojuSeDodajeFilm.KolekcijaId)
 
-          /*  using (var db = new MovieCollectionDbContext())
+            /*using (var db = new MovieCollectionDbContext())
             {
 
-                db.Filmovi.Add(OdabraniFilm);
-            }*/
+                //    db.Filmovi.Add(OdabraniFilm);
+            }
+            */
 
             //obavjestenje da je uspjesno dodano
         }
