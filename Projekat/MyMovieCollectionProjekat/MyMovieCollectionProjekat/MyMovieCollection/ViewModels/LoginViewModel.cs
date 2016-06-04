@@ -103,9 +103,11 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                     NotifyPropertyChanged("VerifikacijaPoruka");
                     //U ovom slucaju sve je OK, idemo na drugu formu
                     NavigationService.Navigate(typeof(Pocetna), new PocetnaViewModel(this));
+
+                    Ime_txb = "";
                 }
 
-
+                
             }
         }
 

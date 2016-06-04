@@ -8,7 +8,7 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     xmlns:data="using:MyMovieCollectionProjekat.MyMovieCollection.Models"
-    mc:Ignorable="d" Width="1276" Height="718" >
+    mc:Ignorable="d" Width="1276" Height="718.5" >
     <Page.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
             <GradientStop Color="Black" Offset="0"/>
@@ -50,11 +50,11 @@
             <ColumnDefinition Width="33*"/>
 
         </Grid.ColumnDefinitions>
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="60" Margin="105,10,0,0" TextWrapping="Wrap" Text="MyMovieCollection" VerticalAlignment="Top" Width="347" FontFamily="SketchFlow Print" FontSize="36" FontWeight="Bold" Grid.ColumnSpan="4" Grid.Column="3" Foreground="#FFFBFBFB"/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="60" Margin="72,18,0,0" TextWrapping="Wrap" Text="MyMovieCollection" VerticalAlignment="Top" Width="347" FontFamily="SketchFlow Print" FontSize="36" FontWeight="Bold" Grid.ColumnSpan="4" Grid.Column="3" Foreground="#FFFBFBFB"/>
 
         <Button x:Name="button" Command="{Binding Path=DodajKolekciju}" Content="Dodaj kolekciju&#xD;&#xA;" HorizontalAlignment="Left" Height="32" Margin="82.667,25.667,0,0" VerticalAlignment="Top" Width="175" FontFamily="Segoe Script" Grid.Row="2" Grid.ColumnSpan="4" Foreground="#FFC1AFAF" Click="button_Click" Grid.Column="6"/>
         <Button x:Name="button1" Content="Izbriši kolekciju&#xD;&#xA;" Command="{Binding Path=IzbrisiKolekciju}" HorizontalAlignment="Left" Height="32" Margin="82.667,46.333,0,0" VerticalAlignment="Top" Width="175" FontFamily="Segoe Script" Grid.ColumnSpan="4" Grid.Column="6" Grid.Row="1" Foreground="#FFE8E0E0"/>
-        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="29" Margin="13,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="5" Grid.Row="4">
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="29" Margin="13,5,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="187" FontFamily="Segoe Script" FontSize="14" Grid.ColumnSpan="2" Grid.Row="4">
         	<Run Text="Filmovi u kolekciji"/>
         	<LineBreak/>
         	<Run/>
@@ -65,8 +65,12 @@
 
         <TextBlock x:Name="textBlock3" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="61" Margin="10,59,0,0" TextWrapping="Wrap" Text="Moje kolekcije" VerticalAlignment="Top" Width="228" SelectionChanged="textBlock3_SelectionChanged" FontFamily="Segoe Script" FontSize="24" Grid.Column="6" Foreground="#FFAA3B3B" Grid.RowSpan="2"/>
         <RelativePanel Grid.ColumnSpan="5" Grid.Column="6" HorizontalAlignment="Left" Height="258" Margin="83,44,0,0" Grid.Row="4" Grid.RowSpan="4" VerticalAlignment="Top" Width="431" Background="#FFD4BCBC">
-            <WebView HorizontalAlignment="Left" Height="108" VerticalAlignment="Top" Width="184" Margin="237,140,-237,-190"/>
-            <TextBlock x:Name="textBlock5" Text="{Binding Path=Naziv, Mode=OneWay}" HorizontalAlignment="Left" Height="32" TextWrapping="Wrap"  VerticalAlignment="Top" Width="376" Margin="10,10,-324,-22"/>
+            <WebView HorizontalAlignment="Left" Height="146" VerticalAlignment="Top" Width="184" Margin="0,42,0,-130"/>
+            <TextBlock x:Name="nazivLabela"  HorizontalAlignment="Left" Height="32" TextWrapping="Wrap"  VerticalAlignment="Top" Width="376" Margin="10,10,-324,-22"/>
+            <TextBlock x:Name="opisLabela" HorizontalAlignment="Left" Height="141" TextWrapping="Wrap"  VerticalAlignment="Top" Width="218" RenderTransformOrigin="4.371,6.8" Margin="203,47,-359,-168"/>
+            <TextBlock x:Name="godinaLabela" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap"  VerticalAlignment="Top" Width="62" Margin="10,203,-10,-203"/>
+            <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap"  VerticalAlignment="Top" Width="62" Margin="342,212,-342,-212"/>
+            <TextBlock x:Name="ocjenaLabela" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="62" Margin="10,0,-10,-248"/>
         </RelativePanel>
         <TextBlock x:Name="textBlock2"  Grid.ColumnSpan="2" Grid.Column="6" HorizontalAlignment="Left" Margin="82.667,72.667,0,0" Grid.Row="2" TextWrapping="Wrap" Text="Naziv: " VerticalAlignment="Top" Height="30" Width="68" Grid.RowSpan="2"/>
         <TextBox x:Name="textBox" Text="{Binding Path=Naziv,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Grid.ColumnSpan="5" Grid.Column="6" HorizontalAlignment="Left" Margin="82.667,10,0,0" Grid.Row="3" TextWrapping="Wrap"  VerticalAlignment="Top" Width="287" Height="32" />
@@ -77,21 +81,22 @@
         	<LineBreak/>
         	<Run/>
         </TextBlock>
-        <ListBox x:Name="listBox"  ItemContainerStyleSelector="{Binding Path=OznacenaKolekcijaListe}" ItemsSource="{Binding Path=MojeKolekcije}" DisplayMemberPath="Naziv" SelectedValue="{Binding Path=OdabranaKolekcija, Mode=TwoWay}" Grid.ColumnSpan="6" HorizontalAlignment="Left" Height="175" Margin="13,51,0,0" Grid.Row="1" Grid.RowSpan="3" VerticalAlignment="Top" Width="618" />
-        <ListBox x:Name="listBox1"   DisplayMemberPath="Naziv" SelectedValue="{Binding Path=OdabraniFilm, Mode=TwoWay}" Grid.ColumnSpan="6" HorizontalAlignment="Left" Height="258" Margin="13,0,0,52" Grid.Row="4" Grid.RowSpan="4" VerticalAlignment="Bottom" Width="618" Background="#FFF5F1F1" Foreground="#FFF5150A" SelectionChanged="listBox1_SelectionChanged">
+        <ListBox x:Name="listBox"  ItemContainerStyleSelector="{Binding Path=OznacenaKolekcijaListe}" ItemsSource="{Binding Path=MojeKolekcije}" DisplayMemberPath="Naziv" SelectedValue="{Binding Path=OdabranaKolekcija, Mode=TwoWay}" Grid.ColumnSpan="6" HorizontalAlignment="Left" Height="175" Margin="10,46,0,0" Grid.Row="1" Grid.RowSpan="3" VerticalAlignment="Top" Width="618" SelectionChanged="listBox_SelectionChanged_1" />
+        <ListBox x:Name="listBox1" ItemsSource="{Binding Path=MojiFilmoviIzKolekcije}"  DisplayMemberPath="Naziv" SelectedValue="{Binding Path=OdabraniFilm, Mode=TwoWay}" Grid.ColumnSpan="6" HorizontalAlignment="Left" Height="230" Margin="13,0,0,85" Grid.Row="4" Grid.RowSpan="4" VerticalAlignment="Bottom" Width="618" Background="#FFF5F1F1" Foreground="#FFF5150A" SelectionChanged="listBox1_SelectionChanged">
 
         </ListBox>
-        <Button x:Name="button2" Command="{Binding PrikaziDetalje}" Content="&gt;&gt;" RenderTransformOrigin="10.538,3.906" Margin="95.891,47.84,0,81.091" Width="61.5" Height="48.069" Grid.Column="5" Grid.Row="5" Background="#FF473E3E" UseLayoutRounding="False" d:LayoutRounding="Auto" FontSize="28" Grid.ColumnSpan="2" Grid.RowSpan="2">
+        <Button x:Name="button2"  Content="&gt;&gt;" RenderTransformOrigin="10.538,3.906" Margin="92.867,49.329,0,82.603" Width="61.5" Height="45.068" Grid.Column="5" Grid.Row="5" Background="#FF473E3E" UseLayoutRounding="False" d:LayoutRounding="Auto" FontSize="28" Grid.ColumnSpan="2" Grid.RowSpan="2" Click="button2_Click">
             <Button.RenderTransform>
                 <CompositeTransform Rotation="0.418"/>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="button2_Copy" Command="{Binding PrikaziFilmove}" Content="&gt;&gt;" RenderTransformOrigin="10.538,3.906" Margin="-386.16,724.925,0,-680.772" Width="54.004" Height="43.847" Background="#FF473E3E" UseLayoutRounding="False" d:LayoutRounding="Auto" FontSize="28">
+        <Button x:Name="button2_Copy" Command="{Binding PrikaziFilmove}" Content="&gt;&gt;" RenderTransformOrigin="10.538,3.906" Margin="-506.839,787.12,0,-744.961" Width="61.536" Height="46.841" Background="#FF473E3E" UseLayoutRounding="False" d:LayoutRounding="Auto" FontSize="28">
             <Button.RenderTransform>
-                <CompositeTransform Rotation="88.992"/>
+                <CompositeTransform Rotation="89.768"/>
             </Button.RenderTransform>
         </Button>
         <TextBlock x:Name="textBlock4" Grid.Column="6" FontFamily="Segoe Script" HorizontalAlignment="Left" Margin="83,10,0,0" Grid.Row="4" TextWrapping="Wrap" Text="Više inforacija o filmu" VerticalAlignment="Top" Grid.ColumnSpan="3" Width="205"/>
+        <Button x:Name="izbrisi" Command="{Binding Path=IzbrisiFilm}" Content="Izbrisi film" Grid.Column="4" HorizontalAlignment="Left" Height="36" Margin="0,33,0,0" Grid.Row="7" VerticalAlignment="Top" Width="160" Click="izbrisi_Click" Grid.ColumnSpan="2"/>
 
 
 

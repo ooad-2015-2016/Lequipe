@@ -13,17 +13,17 @@
     <RootPropertyPathName Name="PisiPrezime" />
     <RootPropertyPathName Name="PisiIme" />
     <RootPropertyPathName Name="Naziv" />
-    <RootPropertyPathName Name="Nazad" />
-    <RootPropertyPathName Name="DodajFilm" />
-    <RootPropertyPathName Name="OdabraniFilm" />
-    <RootPropertyPathName Name="FilmoviNet" />
-    <RootPropertyPathName Name="Search" />
-    <RootPropertyPathName Name="NazivFilma_txb" />
-    <RootPropertyPathName Name="PrikaziFilmove" />
-    <RootPropertyPathName Name="PrikaziDetalje" />
-    <RootPropertyPathName Name="OznacenaKolekcijaListe" />
     <RootPropertyPathName Name="MojeKolekcije" />
     <RootPropertyPathName Name="OdabranaKolekcija" />
+    <RootPropertyPathName Name="DodajFilm" />
+    <RootPropertyPathName Name="FilmoviNet" />
+    <RootPropertyPathName Name="OdabraniFilm" />
+    <RootPropertyPathName Name="Search" />
+    <RootPropertyPathName Name="NazivFilma_txb" />
+    <RootPropertyPathName Name="IzbrisiFilm" />
+    <RootPropertyPathName Name="PrikaziFilmove" />
+    <RootPropertyPathName Name="MojiFilmoviIzKolekcije" />
+    <RootPropertyPathName Name="OznacenaKolekcijaListe" />
     <RootPropertyPathName Name="SacuvajKolekciju" />
     <RootPropertyPathName Name="IzbrisiKolekciju" />
     <RootPropertyPathName Name="DodajKolekciju" />
@@ -158,7 +158,6 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Media.CompositeTransform">
       <RootProperty Name="Rotation" />
-      <RootProperty Name="ScaleX" />
       <RootProperty Name="ScaleY" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.Run">
@@ -210,6 +209,7 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
+      <RootEvent Name="SelectionChanged" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootMethod Name="GetHorizontalScrollBarVisibility" />
@@ -217,12 +217,13 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ComboBox">
       <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Height" />
+      <RootProperty Name="ItemsSource" />
+      <RootProperty Name="DisplayMemberPath" />
+      <RootProperty Name="SelectedValue" />
       <RootProperty Name="Margin" />
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
-      <RootProperty Name="RenderTransformOrigin" />
-      <RootProperty Name="RenderTransform" />
+      <RootProperty Name="Height" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.RadioButton">
       <RootProperty Name="Content" />

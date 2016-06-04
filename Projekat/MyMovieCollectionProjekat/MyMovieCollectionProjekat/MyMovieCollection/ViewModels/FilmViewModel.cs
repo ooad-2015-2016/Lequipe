@@ -20,21 +20,23 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
         public string NazivFilma_txb { get; set; }
 
         public ObservableCollection<Film> FilmoviNet { get; set; }
+        public ObservableCollection<Kolekcija> MojeKolekcije { get; set; }
+        public Kolekcija OdabranaKolekcija { get; set; }
 
         public INavigationService NavigationService { get; set; }
         public Kolekcija KolekcijaUKojuSeDodajeFilm { get; set; }
         public int OcjenaFilma { get; set; }
         public ICommand Search { get; set; }
         public ICommand DodajFilm { get; set; }
-        public ICommand Nazad { get; set; }
+       
 
         //        ___________________
 
-        public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
+      /*  public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
         public ObservableCollection<Kolekcija> SveKolekcije = new ObservableCollection<Kolekcija>();
         public ObservableCollection<Film> SviFilmovi = new ObservableCollection<Film>();
         public ObservableCollection<Ocjena> SveOcjene = new ObservableCollection<Ocjena>();
-        //______________
+        //______________*/
 
 
 
@@ -51,19 +53,34 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
         public FilmViewModel()
         {
             NavigationService = new NavigationService();
+            Korisnik = new Korisnik();
 
             NazivFilma_txb = "";
 
             Search = new RelayCommand<object>(search);
             DodajFilm = new RelayCommand<object>(dodajFilm);
-            Nazad = new RelayCommand<object>(nazad);
+           
 
             FilmoviNet = new ObservableCollection<Film>();
+            MojeKolekcije = new ObservableCollection<Kolekcija>();
+
+           
+            using (var db = new KolekcijaDbContext())
+            {
+                foreach (Kolekcija k in db.Kolekcije)
+                {
+                    if (k.KorisnikId == Korisnik.KorisnikId)
+                        MojeKolekcije.Add(k);
+                }
+            }
         }
 
         public FilmViewModel(PocetnaViewModel parametar)
         {
             NavigationService = new NavigationService();
+            MojeKolekcije = new ObservableCollection<Kolekcija>();
+            FilmoviNet = new ObservableCollection<Film>();
+            Korisnik = new Korisnik();
 
             Korisnik = parametar.Korisnik;
 
@@ -72,13 +89,14 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
             Search = new RelayCommand<object>(search);
             DodajFilm = new RelayCommand<object>(dodajFilm);
 
-            /*
-            SviFilmovi = parametar.SviFilmovi;
-            SviKorisnici = parametar.SviKorisnici;
-            SveKolekcije = parametar.SveKolekcije;
-            SviFilmovi = parametar.SviFilmovi;
-            SveOcjene = parametar.SveOcjene;
-            */
+            using (var db = new KolekcijaDbContext())
+            {
+                foreach (Kolekcija k in db.Kolekcije)
+                {
+                    if (k.KorisnikId == Korisnik.KorisnikId)
+                        MojeKolekcije.Add(k);
+                }
+            }
         }
 
         private async void search(object parametar)
@@ -86,34 +104,49 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
             FilmoviNet.Clear();
             FilmoviService f = new FilmoviService();
             await f.getFilmovi(NazivFilma_txb);
+
+         
+
             foreach (Film fl in f.Filmovi)
                 FilmoviNet.Add(fl);
+            
         }
 
-        private void dodajFilm(object parametar)
+        private async void dodajFilm(object parametar)
         {
-            var dialog = new MessageDialog(OdabraniFilm.Naziv);
-            dialog.ShowAsync();
-
-            // ovdje bi program vec trebao da zna ko je korinik
-            //potrebno je film iz listboxa koji je oznacen stavit u OdabraniFilm
-            // OdabraniFilm=FilmoviNet.
-            //  OdabraniFilm film= new Film( IDictionary, naziv,...., Korisnik.KorisnikId, KolekcijaUKojuSeDodajeFilm.KolekcijaId)
-
-            /*using (var db = new MovieCollectionDbContext())
+            
+         if(OdabraniFilm!=null && OdabranaKolekcija!=null)
             {
+                using (var db = new FilmDbContext())
+                {
+                    int max = -1;
+                    foreach (Film k in db.Filmovi)
+                    {
+                        if (k.FilmId > max) max = k.FilmId;
+                    }
+                    max++;
 
-                //    db.Filmovi.Add(OdabraniFilm);
+                    Film novi = new Film(max);
+                    novi = OdabraniFilm;
+                    novi.FilmId = max;
+                    novi.KolekcijaId = OdabranaKolekcija.KolekcijaId;
+                    novi.KorisnikId = Korisnik.KorisnikId;
+
+                    db.Filmovi.Add(novi);
+                    db.SaveChanges();
+                }
+
+                var dialog = new MessageDialog("Film uspjesno sacuvan");
+                await dialog.ShowAsync();
+
             }
-            */
-
-            //obavjestenje da je uspjesno dodano
+            else
+            {
+                //prvo oznacite filmi/ili kolekciju
+            }
         }
 
-        private void nazad(object parametar)
-        {
-            NavigationService.Navigate(typeof(Pocetna), new PocetnaViewModel(this));
-        }
+        
 
 
     }

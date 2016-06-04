@@ -6,7 +6,7 @@
     xmlns:viewmodels="using:MyMovieCollection.MyMovieCollection.ViewModels"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Width="885.333" Height="645.333">
+    mc:Ignorable="d" Width="1297.31" Height="645.333">
 
     <Grid Margin="10,10,10,0">
         <Grid.Background>
@@ -39,51 +39,34 @@
 
         </Grid.ColumnDefinitions>
 
-        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="69" Margin="61.667,10,0,0" TextWrapping="Wrap" Text="MyMovieCollection" VerticalAlignment="Top" Width="380" FontFamily="SketchFlow Print" FontSize="36" FontWeight="Bold" Grid.ColumnSpan="4" Grid.RowSpan="2" Foreground="#FFF5F1F1" Grid.Column="1"/>
-        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="53" Margin="40.333,53,0,0" TextWrapping="Wrap" Text="Filmovi" VerticalAlignment="Top" Width="136" FontFamily="Segoe Script" FontSize="24" Grid.RowSpan="2" Grid.ColumnSpan="2" Grid.Column="2" Foreground="#FFE42020"/>
-        <TextBox x:Name="textBox" Text="{Binding Path=NazivFilma_txb,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" PlaceholderText = "Search" HorizontalAlignment="Left" Height="37" Margin="52,42.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="425" Grid.Row="1" Grid.ColumnSpan="5" Grid.RowSpan="2"/>
-        <Button x:Name="button" Command="{Binding Path=Search}" Content="Search&#xD;&#xA;" HorizontalAlignment="Left" Height="40" Margin="40.667,42.333,0,0" VerticalAlignment="Top" Width="142" FontFamily="Segoe Script" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="4" Grid.RowSpan="2"/>
-        <ListView x:Name="listView" ItemsSource="{Binding Path=FilmoviNet}" DisplayMemberPath="Naziv" SelectedValue="{Binding Path=OdabraniFilm, Mode=TwoWay}" HorizontalAlignment="Left" Height="222" Margin="52,45.666,0,0" VerticalAlignment="Top" Width="304" Grid.RowSpan="4" Background="#FFB68686" Grid.ColumnSpan="3" Grid.Row="2" ScrollViewer.HorizontalScrollBarVisibility="Auto"/>
-        <RelativePanel HorizontalAlignment="Left" Height="222" Margin="0.333,45.666,0,0" VerticalAlignment="Top" Width="327" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="4" Background="#FFE5E0E0" Grid.Column="3">
-            <TextBlock x:Name="textBlocka" HorizontalAlignment="Left" Height="213" Margin="87,0,-221.333,-193" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" FontFamily="Segoe Script">
-        		<Run Text="Detalji o filmu"/>
-        		<LineBreak/>
-        		<Run/>
+        <TextBlock x:Name="textBlock1" HorizontalAlignment="Left" Height="69" Margin="10,-1,0,0" TextWrapping="Wrap" Text="MyMovieCollection" VerticalAlignment="Top" Width="380" FontFamily="SketchFlow Print" FontSize="36" FontWeight="Bold" Grid.ColumnSpan="2" Foreground="#FFF5F1F1" Grid.Column="2"/>
+        <TextBlock x:Name="textBlock3" HorizontalAlignment="Left" Height="53" Margin="68,53,0,0" TextWrapping="Wrap" Text="Filmovi" VerticalAlignment="Top" Width="136" FontFamily="Segoe Script" FontSize="24" Grid.RowSpan="2" Grid.Column="3" Foreground="#FFE42020"/>
+        <TextBox x:Name="textBox" Text="{Binding Path=NazivFilma_txb,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" PlaceholderText = "Search" HorizontalAlignment="Left" Height="40" Margin="52,42,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="374" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button x:Name="button" Command="{Binding Path=Search}" Content="Search&#xD;&#xA;" HorizontalAlignment="Left" Height="40" Margin="71,42,0,0" VerticalAlignment="Top" Width="142" FontFamily="Segoe Script" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2"/>
+        <ListView x:Name="listView" ItemsSource="{Binding Path=FilmoviNet}" DisplayMemberPath="Naziv" SelectedValue="{Binding Path=OdabraniFilm, Mode=TwoWay}" HorizontalAlignment="Left" Height="222" Margin="52,46.333,0,0" VerticalAlignment="Top" Width="541" Grid.RowSpan="4" Background="#FFB68686" Grid.ColumnSpan="3" Grid.Row="2" ScrollViewer.HorizontalScrollBarVisibility="Auto" SelectionChanged="listView_SelectionChanged"/>
+        <RelativePanel HorizontalAlignment="Left" Height="222" Margin="0,47.333,0,0" VerticalAlignment="Top" Width="516" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="4" Background="#FFE5E0E0" Grid.Column="3">
+            <TextBlock x:Name="textBlockc"     HorizontalAlignment="Left" Height="37" Margin="100,50,-200,-87" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" FontFamily="Segoe Script"/>
+            <TextBlock x:Name="nazivLabela" HorizontalAlignment="Left" Height="19" Margin="10,8,-144,-8" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" FontFamily="Segoe Script" >
             </TextBlock>
-            <TextBlock x:Name="textBlockb" HorizontalAlignment="Left" Height="213" Margin="87,0,-221.333,-193" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" FontFamily="Segoe Script">
-        		<Run Text="Detalji o filmu"/>
-        		<LineBreak/>
-        		<Run/>
-            </TextBlock>
-            <TextBlock x:Name="textBlockc" Text="{Binding OdabraniFilm.Naziv}" HorizontalAlignment="Left" Height="113" Margin="100,50,-200.333,-166" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" FontFamily="Segoe Script"/>
-            <TextBlock x:Name="textBlockd" HorizontalAlignment="Left" Height="213" Margin="87,0,-221.333,-193" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" FontFamily="Segoe Script">
-        		<Run Text="Detalji o filmu"/>
-        		<LineBreak/>
-        		<Run/>
-            </TextBlock>
+            <TextBlock x:Name="opisLabela" HorizontalAlignment="Left" Height="180" TextWrapping="Wrap"  VerticalAlignment="Top" Width="216" Margin="10,32,-164,-192"/>
         </RelativePanel>
-        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="23" Margin="78,71.666,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" FontFamily="Segoe Script" FontSize="18" Grid.Row="5" RenderTransformOrigin="0.492,0.417" Grid.ColumnSpan="2" Grid.RowSpan="2">
+        <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="23" Margin="114,4.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" FontFamily="Segoe Script" FontSize="18" Grid.Row="6" RenderTransformOrigin="0.492,0.417" Grid.Column="2">
         	<Run Text="Ocjena:"/>
         	<LineBreak/>
         	<Run/>
         </TextBlock>
-        <RelativePanel HorizontalAlignment="Left" Height="50" Margin="61.667,60.666,0,0" Grid.Row="5" VerticalAlignment="Top" Width="475" Grid.ColumnSpan="5" Background="#FFE83434" Grid.Column="1" Grid.RowSpan="2">
+        <RelativePanel HorizontalAlignment="Left" Height="50" Margin="41,72.333,0,0" Grid.Row="5" VerticalAlignment="Top" Width="475" Grid.ColumnSpan="3" Background="#FFE83434" Grid.Column="3" Grid.RowSpan="2">
             <RadioButton x:Name="radioButton" Content="1&#xD;&#xA;" HorizontalAlignment="Left" Margin="10,9,0,1" VerticalAlignment="Stretch" Width="33"/>
             <RadioButton x:Name="radioButton_Copy" Content="2&#xD;&#xA;" HorizontalAlignment="Left" Margin="130,9,-120,1" VerticalAlignment="Stretch" Width="81"/>
             <RadioButton x:Name="radioButton_Copy1" Content="3&#xD;&#xA;" HorizontalAlignment="Left" Margin="227,9,-217,1" VerticalAlignment="Stretch" Width="81"/>
             <RadioButton x:Name="radioButton_Copy2" Content="4&#xD;&#xA;&#xA;" HorizontalAlignment="Left" Margin="318,10,-188,0" VerticalAlignment="Stretch" Width="0"/>
             <RadioButton x:Name="radioButton_Copy3" Content="5&#xD;&#xA;&#xA;" HorizontalAlignment="Stretch" Margin="424,10,-69,9" VerticalAlignment="Stretch" Width="99"/>
         </RelativePanel>
-        <ComboBox x:Name="comboBox" HorizontalAlignment="Right" Height="46" Margin="0,1,-219.667,0" Grid.Row="7" VerticalAlignment="Top" Width="272" RenderTransformOrigin="0.5,0.5">
-            <ComboBox.RenderTransform>
-                <CompositeTransform ScaleX="-1"/>
-            </ComboBox.RenderTransform>
-        </ComboBox>
-        <Button x:Name="button1" Command="{Binding Path=DodajFilm}" Content="Dodaj film" HorizontalAlignment="Left" Height="46.223" Margin="0.951,79.055,0,0" Grid.Row="6" VerticalAlignment="Top" Width="204.432" FontFamily="Segoe Script" Background="#331F1616" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Column="4" UseLayoutRounding="False" d:LayoutRounding="Auto" Grid.RowSpan="2">
+        <Button x:Name="button1" Command="{Binding Path=DodajFilm}" Content="Dodaj film" HorizontalAlignment="Left" Height="46.223" Margin="181.951,70.063,0,0" Grid.Row="6" VerticalAlignment="Top" Width="171.432" FontFamily="Segoe Script" Background="#331F1616" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" UseLayoutRounding="False" d:LayoutRounding="Auto" Grid.RowSpan="2">
             <Button.RenderTransform>
                 <CompositeTransform Rotation="-0.305"/>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="button2" Content="Nazad" HorizontalAlignment="Left" Height="64" Margin="0,4,0,0" VerticalAlignment="Top" Width="99" Background="#33B90808" Command="{Binding Path=Nazad}"/>
+        <ComboBox x:Name="comboBox" HorizontalAlignment="Left" ItemsSource="{Binding Path=MojeKolekcije}" DisplayMemberPath="Naziv" SelectedValue="{Binding Path=OdabranaKolekcija, Mode=TwoWay}" Margin="93,4.333,0,0" Grid.Row="6" VerticalAlignment="Top" Width="333" Grid.ColumnSpan="2" Height="39"/>
     </Grid>
 </Page>

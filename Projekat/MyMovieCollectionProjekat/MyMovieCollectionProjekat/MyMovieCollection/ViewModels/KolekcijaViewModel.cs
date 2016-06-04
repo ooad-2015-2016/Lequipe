@@ -35,18 +35,11 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         public ICommand SacuvajKolekciju { get; set; }
         public ICommand PrikaziDetalje { get; set; }
         public ICommand PrikaziFilmove { get; set; }
+        public ICommand IzbrisiFilm { get; set; }
 
 
 
-      /*  //        ___________________
-
-        public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
-        public ObservableCollection<Kolekcija> SveKolekcije = new ObservableCollection<Kolekcija>();
-        public ObservableCollection<Film> SviFilmovi = new ObservableCollection<Film>();
-        public ObservableCollection<Ocjena> SveOcjene = new ObservableCollection<Ocjena>();
-        //______________
-
-        */
+      
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -83,6 +76,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             SacuvajKolekciju = new RelayCommand<object>(sacuvajKolekciju);
             PrikaziDetalje = new RelayCommand<object>(prikaziDetalje);
             PrikaziFilmove = new RelayCommand<object>(prikaziFilmove);
+            IzbrisiFilm = new RelayCommand<object>(izbrisiFilm);
 
 
 
@@ -135,8 +129,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
                 kolekcija = new Kolekcija(max);
                 kolekcija.Naziv = Naziv;
-                var dialog12 = new MessageDialog(Naziv);
-                await dialog12.ShowAsync();
+                
 
                 kolekcija.KorisnikId = korisnik.KorisnikId;
 
@@ -148,8 +141,9 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             }
 
          
-            var dialog1 = new MessageDialog(MojeKolekcije.Count().ToString());
+            var dialog1 = new MessageDialog("Kolekcija sacuvana");
             await dialog1.ShowAsync();
+            Naziv = "";
 
 
         }
@@ -158,14 +152,26 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         {
             if (OdabranaKolekcija != null)// && OdabranaKolekcija.Naziv!="")
             {
+
+                using (var db = new FilmDbContext())
+                {
+                    for (int i = 0; i < MojiFilmoviIzKolekcije.Count; i++)
+                        db.Filmovi.Remove(db.Filmovi.Where(x => x.KolekcijaId == OdabranaKolekcija.KolekcijaId).FirstOrDefault());
+                    db.SaveChanges();
+                }
+                MojiFilmoviIzKolekcije.Clear();  
+
                 using (var db = new KolekcijaDbContext())
                 {
 
-                   // MojeKolekcije.Remove(db.Kolekcije.Where(x =>  x.KolekcijaId == OdabranaKolekcija.KolekcijaId).FirstOrDefault());
+                   
                     db.Kolekcije.Remove(db.Kolekcije.Where(x => x.KorisnikId == korisnik.KorisnikId && x.KolekcijaId == OdabranaKolekcija.KolekcijaId).FirstOrDefault());
+                  
                     db.SaveChanges();
 
                     MojeKolekcije.Clear();
+                   // MojiFilmoviIzKolekcije.Clear();
+                    
                     foreach (Kolekcija k in db.Kolekcije)
                     {
                         if (k.KorisnikId == korisnik.KorisnikId)
@@ -174,7 +180,8 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
                 }
 
-                    var dialog1 = new MessageDialog("Kolekcija uspješno obrisana.");
+                
+                var dialog1 = new MessageDialog("Kolekcija uspješno obrisana.");
                 await dialog1.ShowAsync();
             }
             else
@@ -185,9 +192,32 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
         }
 
-        private void nazad(object parametar)
+        private void izbrisiFilm(object parametar)
         {
-            NavigationService.Navigate(typeof(Pocetna), new PocetnaViewModel(this));
+            int kolekcijaID = OdabraniFilm.KolekcijaId;
+
+            if (OdabraniFilm != null)
+            {
+                using (var db = new FilmDbContext())
+                {
+                    db.Filmovi.Remove(db.Filmovi.Where(x => x.FilmId == OdabraniFilm.FilmId).FirstOrDefault());
+                    db.SaveChanges();
+                }
+
+                using (var db = new FilmDbContext())
+                { 
+                    MojiFilmoviIzKolekcije.Clear();
+                    foreach (Film k in db.Filmovi)
+                    {
+                        if (k.KolekcijaId == kolekcijaID)
+                            MojiFilmoviIzKolekcije.Add(k);
+                    }
+                }
+            }
+            else
+            {
+                //nije obrisano
+            }
         }
 
         private void prikaziDetalje(object parametar)
@@ -204,11 +234,13 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                 {
 
                     if(MojiFilmoviIzKolekcije.Count()!=0) MojiFilmoviIzKolekcije.Clear();
+
                     foreach (Film k in db.Filmovi)
                     {
                         if (k.KolekcijaId == OdabranaKolekcija.KolekcijaId)
                             MojiFilmoviIzKolekcije.Add(k);
                     }
+                    
 
                 }
             }

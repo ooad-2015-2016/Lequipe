@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyMovieCollectionProjekat.MyMovieCollection.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -27,11 +28,25 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
         {
 
             this.InitializeComponent();
+           
             DataContext = new MyMovieCollection.ViewModels.KorisnikViewModel();
             NavigationCacheMode = NavigationCacheMode.Required;
 
         }
 
-        
+        private void ThisPage_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+                e.Handled = true;
+            }
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            DataContext = (KorisnikViewModel)e.Parameter;
+        }
+
     }
 }

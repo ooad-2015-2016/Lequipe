@@ -61,6 +61,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         public KorisnikViewModel(PocetnaViewModel parametar)
         {
             NavigationService = new NavigationService();
+            korisnik = new Korisnik();
             korisnik = parametar.Korisnik;
             Ime_txb = parametar.Korisnik.Ime;
             Prezime_txb = parametar.Korisnik.Prezime;
@@ -86,36 +87,39 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         {
             //prvo provjeri jel dobro unesen stari password
 
-            if (Sifra_txb.Equals(korisnik.KorisnikId))
+            if (Sifra_txb.Equals(korisnik.Sifra))
             {
-                //korisnik = db.Korisnici.Where(x => x.Username == KorisnickoIme_txb && x.Sifra == Sifra_txb).FirstOrDefault();
-
-                if (NovaSifra.Equals(PonovoNovaSifra) && NovaSifra != null)
+                using (var db = new KorisnikDbContext())
                 {
-                    /*  using (var db = new MovieCollectionDbContext())
-                      {
-                          korisnik.Sifra = NovaSifra;
-                          // db.Korisnici.Remove(db.Korisnici.Where(x => x.Username == KorisnickoIme_txb && x.Sifra == Sifra_txb).FirstOrDefault());
-                          // db.Korisnici.Add(korisnik);
-                          // db.SaveChanges();
-                          //Messagebox zelite li sacuvati izmjene...
-                          var dialog = new MessageDialog("Izmjene sacuvane!");
-                          await dialog.ShowAsync();
-                      }*/
-                    korisnik.Sifra = NovaSifra;
-                    SviKorisnici.Remove(SviKorisnici.Where(x => x.KorisnikId == korisnik.KorisnikId).FirstOrDefault());
-                    SviKorisnici.Add(korisnik);
-
-                    var dialog = new MessageDialog("Izmjene sacuvane!");
-                    await dialog.ShowAsync();
-
-                }
-                else
-                {
-                    var dialog = new MessageDialog("Šifre se ne podudaraju!");
-                    await dialog.ShowAsync();
+                   
+                    if (NovaSifra != null && PonovoNovaSifra != null)
+                    {
+                        if (NovaSifra.Equals(PonovoNovaSifra))
+                        {
 
 
+                            korisnik.Sifra = NovaSifra;
+                            
+                            db.Korisnici.Remove(db.Korisnici.Where(x => x.KorisnikId == korisnik.KorisnikId && x.Sifra == Sifra_txb).FirstOrDefault());
+                            
+                            db.SaveChanges();
+
+                            db.Korisnici.Add(korisnik);
+                            db.SaveChanges();
+
+                            var dialog = new MessageDialog("Izmjene sacuvane!");
+                            await dialog.ShowAsync();
+                        }
+
+
+                        else
+                        {
+                            var dialog = new MessageDialog("Šifre se ne podudaraju!");
+                            await dialog.ShowAsync();
+
+
+                        }
+                    }
                 }
             }
             else

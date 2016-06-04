@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyMovieCollectionProjekat.MyMovieCollection.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -28,17 +29,14 @@ namespace MyMovieCollectionProjekat
 
 
             this.InitializeComponent();
-            
+           
 
             DataContext = new MyMovieCollection.ViewModels.LoginViewModel();
             
             NavigationCacheMode = NavigationCacheMode.Required;
         }
 
-        /* protected override void OnNavigatedTo(NavigationEventArgs e)
-         {
-             DataContext = (LoginViewModel)e.Parameter;
-         }*/
+         
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
@@ -46,5 +44,15 @@ namespace MyMovieCollectionProjekat
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
         }
 
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            
+
+        }
     }
 }

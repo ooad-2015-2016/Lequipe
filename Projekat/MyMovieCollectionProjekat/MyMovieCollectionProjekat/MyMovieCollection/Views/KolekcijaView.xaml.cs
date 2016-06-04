@@ -1,4 +1,5 @@
-﻿using MyMovieCollectionProjekat.MyMovieCollection.ViewModels;
+﻿using MyMovieCollectionProjekat.MyMovieCollection.Models;
+using MyMovieCollectionProjekat.MyMovieCollection.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -6,6 +7,8 @@ using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
+using Windows.UI.Core;
+using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Controls.Primitives;
@@ -23,12 +26,16 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
     /// </summary>
     public sealed partial class KolekcijaView : Page
     {
+       
+        private Film OdabraniFilm {get; set;}
+        private Kolekcija OdabranaKolekcija { get; set; }
 
-        
 
         public KolekcijaView()
         {
             this.InitializeComponent();
+            OdabraniFilm = new Film();
+
             DataContext = new MyMovieCollection.ViewModels.KolekcijaViewModel();
             NavigationCacheMode = NavigationCacheMode.Required;
 
@@ -36,6 +43,11 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
             textBlock2.Visibility = Visibility.Collapsed;
             textBox.Visibility = Visibility.Collapsed;
             button3.Visibility = Visibility.Collapsed;
+        }
+
+        protected override void OnNavigatedTo(NavigationEventArgs e)
+        {
+            
         }
 
         private void textBlock3_SelectionChanged(object sender, RoutedEventArgs e)
@@ -72,9 +84,48 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
 
         }
 
-        private void listBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        
+        private void ThisPage_BackRequested(object sender, BackRequestedEventArgs e)
         {
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+                e.Handled = true;
+            }
+        }
 
+        private void listBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
+        {
+            
+            
+        }
+
+        private void button2_Click(object sender, RoutedEventArgs e)
+        {
+          
+            OdabraniFilm = (Film) listBox1.SelectedItem;
+
+            if (OdabraniFilm != null)
+            {
+                Film novi = new Film();
+                using (var db = new FilmDbContext())
+                {
+                    novi = db.Filmovi.Where(x => x.FilmId == OdabraniFilm.FilmId).FirstOrDefault();
+                }
+                nazivLabela.Text = novi.Naziv;
+
+                opisLabela.Text = novi.Opis;
+
+                ocjenaLabela.Text = OdabraniFilm.ProsjecnaOcjena.ToString();
+                //godinaLabela.Text = OdabraniFilm.god;
+
+            }
+        }
+
+        private  void izbrisi_Click(object sender, RoutedEventArgs e)
+        {
+            opisLabela.Text = "";
+            nazivLabela.Text = "";
         }
     }
 }
