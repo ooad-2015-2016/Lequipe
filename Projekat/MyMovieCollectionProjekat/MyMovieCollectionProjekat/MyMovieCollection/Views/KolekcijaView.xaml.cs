@@ -27,7 +27,6 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
             DataContext = new MyMovieCollection.ViewModels.KolekcijaViewModel();
             NavigationCacheMode = NavigationCacheMode.Required;
 
-
             textBlock2.Visibility = Visibility.Collapsed;
             textBox.Visibility = Visibility.Collapsed;
             button3.Visibility = Visibility.Collapsed;

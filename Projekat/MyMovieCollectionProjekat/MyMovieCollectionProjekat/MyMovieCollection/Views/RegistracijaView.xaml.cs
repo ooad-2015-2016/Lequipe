@@ -1,4 +1,5 @@
 ﻿using MyMovieCollectionProjekat.MyMovieCollection.ViewModels;
+using Windows.UI.Core;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Navigation;
@@ -50,7 +51,16 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
-            DataContext = (RegistracijaViewModel)e.Parameter;
+            //DataContext = (RegistracijaViewModel)e.Parameter;
+        }
+
+        private void ThisPage_BackRequested(object sender, BackRequestedEventArgs e)
+        {
+            if (Frame.CanGoBack)
+            {
+                Frame.GoBack();
+                e.Handled = true;
+            }
         }
     }
 }

@@ -61,8 +61,9 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         public LoginViewModel(PocetnaViewModel parametar)
         {
             NavigationService = new NavigationService();
-            korisnik = parametar.Korisnik;
+            korisnik = new Korisnik();
 
+            Ime_txb = "";
 
             PrijaviSe = new RelayCommand<object>(prijaviSe);
             RegistrujSe = new RelayCommand<object>(registrujSe);
@@ -97,6 +98,8 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                     //U ovom slucaju sve je OK, idemo na drugu formu
                     NavigationService.Navigate(typeof(Pocetna), new PocetnaViewModel(this));
 
+                    var dialog1 = new MessageDialog(korisnik.KorisnikId.ToString());
+                    await dialog1.ShowAsync();
                     Ime_txb = "";
                 }
 

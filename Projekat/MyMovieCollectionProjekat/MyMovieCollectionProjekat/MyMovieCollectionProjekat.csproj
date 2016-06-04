@@ -125,6 +125,7 @@
     <Compile Include="MyMovieCollection\Helper\LaterThanTodayPropertyAttribute.cs" />
     <Compile Include="MyMovieCollection\Helper\NavigationService.cs" />
     <Compile Include="MyMovieCollection\Helper\RelayCommand.cs" />
+    <Compile Include="MyMovieCollection\Helper\Rfid.cs" />
     <Compile Include="MyMovieCollection\Models\DefaultPodaci.cs" />
     <Compile Include="MyMovieCollection\Models\Film.cs" />
     <Compile Include="MyMovieCollection\Models\FilmDbContext.cs" />

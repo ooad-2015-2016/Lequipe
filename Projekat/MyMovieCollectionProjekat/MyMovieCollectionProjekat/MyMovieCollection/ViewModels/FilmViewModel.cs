@@ -100,14 +100,20 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
 
         private async void search(object parametar)
         {
-            FilmoviNet.Clear();
-            FilmoviService f = new FilmoviService();
-            await f.getFilmovi(NazivFilma_txb);
+            try
+            {
+                FilmoviNet.Clear();
+                FilmoviService f = new FilmoviService();
+                await f.getFilmovi(NazivFilma_txb);
 
+                foreach(Film fl in f.Filmovi)
+                FilmoviNet.Add(fl);
+            }
+            catch(Exception e)
+                { }
          
 
-            foreach (Film fl in f.Filmovi)
-                FilmoviNet.Add(fl);
+            
             
         }
 

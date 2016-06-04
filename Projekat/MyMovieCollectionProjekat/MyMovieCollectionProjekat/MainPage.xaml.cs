@@ -14,17 +14,20 @@ namespace MyMovieCollectionProjekat
         public MainPage()
         {
             this.InitializeComponent();
+
+            Korisnik_txb.Text = "";
+            txtPassword.Password = "";
            
             DataContext = new MyMovieCollection.ViewModels.LoginViewModel();
             
-            NavigationCacheMode = NavigationCacheMode.Required;
+           // NavigationCacheMode = NavigationCacheMode.Required;
         }
 
 
-        protected override void OnNavigatedTo(NavigationEventArgs e)
+       /* protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             var currentView = SystemNavigationManager.GetForCurrentView();
             currentView.AppViewBackButtonVisibility = AppViewBackButtonVisibility.Collapsed;
-        }
+        }*/
     }
 }

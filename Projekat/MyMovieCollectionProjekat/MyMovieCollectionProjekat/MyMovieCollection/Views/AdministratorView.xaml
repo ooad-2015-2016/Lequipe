@@ -65,17 +65,17 @@
             </TextBlock>
             <TextBlock x:Name="prezimeKorisnik" Text="Ime i prezime:" HorizontalAlignment="Left" Height="40" Margin="38,10,-298,-30" TextWrapping="Wrap"  VerticalAlignment="Top" Width="322" Foreground="#FF15211C" FontSize="22" FontFamily="Calibri"/>
             <TextBlock x:Name="mailKorisnik" HorizontalAlignment="Left" Height="44" Margin="38,91,-178,-115" TextWrapping="Wrap" VerticalAlignment="Top" Width="202" Foreground="#FF0F0F0F" FontSize="26" FontFamily="Calibri" Text="Username:"/>
-            <TextBlock x:Name="usernameKorisnik" Height="33" Margin="38,135,-386,-148" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White" FontSize="26" FontFamily="Calibri">
-            	<Run Foreground="#FF92D9B9" Text="{Binding Path = PisiUserName}"/>
+            <TextBlock x:Name="usernameKorisnik" Height="33" Margin="38,135,-386,-148" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FF518C7D" FontSize="26" FontFamily="Calibri">
+            	<Run Text="{Binding Path = PisiUserName}"/>
             </TextBlock>
-            <TextBlock x:Name="registracijaKorisnik" HorizontalAlignment="Left" Height="44" Margin="38,209,-244,-233" TextWrapping="Wrap" VerticalAlignment="Top" Width="268"  Foreground="#FFFDFDFD" FontSize="26" FontFamily="Segoe Script">
-            	<Run Foreground="#FF8FE5BE" />
-            	<Run Foreground="#FFA2DDC3" />
+            <TextBlock x:Name="registracijaKorisnik" HorizontalAlignment="Left" Height="44" Margin="38,209,-244,-233" TextWrapping="Wrap" VerticalAlignment="Top" Width="268"  Foreground="#FF518C7D" FontSize="26" FontFamily="Segoe Script">
+            	<Run />
+            	<Run />
             </TextBlock>
             <TextBlock x:Name="textBlock5" HorizontalAlignment="Left" Height="36" TextWrapping="Wrap" Text="Datum registracije:" VerticalAlignment="Top" Width="166" Margin="38,173,-142,-189" />
             <TextBlock x:Name="brojKolekcija" HorizontalAlignment="Left" Height="65" TextWrapping="Wrap"  VerticalAlignment="Top" Width="152" Margin="38,286,-128,-331" FontFamily="Calibri"/>
         </RelativePanel>
-        <TextBlock x:Name="textBlock4" HorizontalAlignment="Right" Margin="0,17,29,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="5" Width="382" Height="46" Grid.Column="4" Grid.RowSpan="2">
+        <TextBlock x:Name="textBlock4" HorizontalAlignment="Right" Margin="0,17,87,0" Grid.Row="1" TextWrapping="Wrap" VerticalAlignment="Top" Grid.ColumnSpan="6" Width="429" Height="46" Grid.Column="4" Grid.RowSpan="2">
             <TextBlock.Foreground>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFC58175" Offset="0.383"/>
@@ -90,19 +90,8 @@
         </TextBlock>
         <Button x:Name="button" Command="{Binding IzbrisiKorisnika}" Grid.ColumnSpan="5" Content="Izbriši korisnika" HorizontalAlignment="Left" Height="101" Grid.Row="12" VerticalAlignment="Top" Width="420" Background="#33A30505" Grid.RowSpan="3" Grid.Column="1" FontFamily="Segoe Script" FontSize="25" FontWeight="Bold" Margin="59,25,0,0" Click="button_Click"/>
         <Button x:Name="button_Copy" Grid.ColumnSpan="5" Content="Postavi za admina" HorizontalAlignment="Left" Height="47" Grid.Row="13" VerticalAlignment="Top" Width="421" Grid.Column="7" Background="#332DB3A2" Grid.RowSpan="2" FontFamily="Segoe Script" FontSize="25" FontWeight="Bold" Margin="0,27,0,0"/>
-        <Button x:Name="buttstrelica"  Command="{Binding PrikaziDetaljeKorisnik}" Content="&gt;&gt;" RenderTransformOrigin="10.538,3.906" Margin="78.307,28.698,0,10.46" Width="103.206" Height="70.842" Grid.Column="5" Grid.Row="6" UseLayoutRounding="False" d:LayoutRounding="Auto" FontSize="28" Grid.ColumnSpan="2" Grid.RowSpan="3" FontWeight="Bold">
-            <Button.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFCD9C95" Offset="0"/>
-                    <GradientStop Color="#FFC5FAF9" Offset="1"/>
-                </LinearGradientBrush>
-            </Button.Background>
-            <Button.RenderTransform>
-                <CompositeTransform Rotation="0.418"/>
-            </Button.RenderTransform>
-        </Button>
-        <ListBox x:Name="listaKorisnika" ItemsSource="{Binding Path=Korisnici}" SelectedValue="{Binding Path=OdabraniKorisnik, Mode=TwoWay}" Grid.ColumnSpan="5" Grid.Column="1" HorizontalAlignment="Left" Height="415" Margin="59,31,0,0" Grid.Row="2" Grid.RowSpan="10" VerticalAlignment="Top" Width="420" Background="#FFABD2D6" SelectionChanged="listaKorisnika_SelectionChanged"/>
-        <TextBox x:Name="textBox" Text="{Binding Path=RFID_txb}" Grid.Column="8" HorizontalAlignment="Left" Margin="49,10,0,0" Grid.Row="12" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.ColumnSpan="4" Height="49" Width="349" Grid.RowSpan="2" FontSize="20"/>
+        <ListBox x:Name="listaKorisnika" ItemsSource="{Binding Path=KorisniciAdmin}" DisplayMemberPath="Username"  SelectedValue="{Binding Path=OdabraniKorisnik, Mode=TwoWay}" Grid.ColumnSpan="5" Grid.Column="1" HorizontalAlignment="Left" Height="415" Margin="59,31,0,0" Grid.Row="2" Grid.RowSpan="10" VerticalAlignment="Top" Width="420" Background="#FFABD2D6" SelectionChanged="listaKorisnika_SelectionChanged"/>
+        <TextBox x:Name="textBox" Text="{Binding Path=RFID_txb,Mode=TwoWay}" Grid.Column="8" HorizontalAlignment="Left" Margin="49,10,0,0" Grid.Row="12" TextWrapping="Wrap"  VerticalAlignment="Top" Grid.ColumnSpan="4" Height="49" Width="349" Grid.RowSpan="2" FontSize="20"/>
         <TextBlock x:Name="textBlock" Grid.ColumnSpan="3" Grid.Column="6" HorizontalAlignment="Left" Margin="97,10,0,0" Grid.Row="12" TextWrapping="Wrap" Text="RfID:" VerticalAlignment="Top" Height="42" Width="70" FontSize="20"/>
 
     </Grid>

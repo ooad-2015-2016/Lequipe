@@ -81,7 +81,7 @@
         	<LineBreak/>
         	<Run/>
         </TextBlock>
-        <ListBox x:Name="listBox"  ItemContainerStyleSelector="{Binding Path=OznacenaKolekcijaListe}" ItemsSource="{Binding Path=MojeKolekcije}" DisplayMemberPath="Naziv" SelectedValue="{Binding Path=OdabranaKolekcija, Mode=TwoWay}" Grid.ColumnSpan="6" HorizontalAlignment="Left" Height="175" Margin="10,46,0,0" Grid.Row="1" Grid.RowSpan="3" VerticalAlignment="Top" Width="618" SelectionChanged="listBox_SelectionChanged_1" />
+        <ListBox x:Name="listBox"   ItemsSource="{Binding Path=MojeKolekcije}" DisplayMemberPath="Naziv" SelectedValue="{Binding Path=OdabranaKolekcija, Mode=TwoWay}" Grid.ColumnSpan="6" HorizontalAlignment="Left" Height="175" Margin="10,46,0,0" Grid.Row="1" Grid.RowSpan="3" VerticalAlignment="Top" Width="618" SelectionChanged="listBox_SelectionChanged_1" />
         <ListBox x:Name="listBox1" ItemsSource="{Binding Path=MojiFilmoviIzKolekcije}"  DisplayMemberPath="Naziv" SelectedValue="{Binding Path=OdabraniFilm, Mode=TwoWay}" Grid.ColumnSpan="6" HorizontalAlignment="Left" Height="230" Margin="13,0,0,85" Grid.Row="4" Grid.RowSpan="4" VerticalAlignment="Bottom" Width="618" Background="#FFF5F1F1" Foreground="#FFF5150A" SelectionChanged="listBox1_SelectionChanged">
 
         </ListBox>

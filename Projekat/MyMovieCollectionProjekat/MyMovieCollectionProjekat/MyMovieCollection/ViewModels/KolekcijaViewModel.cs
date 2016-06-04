@@ -79,7 +79,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
         }
 
-        public KolekcijaViewModel(PocetnaViewModel parametar)
+        public  KolekcijaViewModel(PocetnaViewModel parametar)
         {
             NavigationService = new NavigationService();
             korisnik = parametar.Korisnik;
@@ -88,12 +88,17 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
             Naziv = "";
 
+            MojeKolekcije.Clear();
+
            using  (var db = new KolekcijaDbContext())
            {
                foreach (Kolekcija k in db.Kolekcije)
                {
-                   if(k.KorisnikId==korisnik.KorisnikId)
-                   MojeKolekcije.Add(k);
+                    if (k.KorisnikId == korisnik.KorisnikId)
+                    {
+                        MojeKolekcije.Add(k);
+                        
+                    }
                }
            }
            
@@ -124,7 +129,11 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
                 max++;
 
-                kolekcija = new Kolekcija(max);
+                var dialog11 = new MessageDialog(korisnik.KorisnikId.ToString());
+                await dialog11.ShowAsync();
+
+                kolekcija = new Kolekcija();
+                kolekcija.KorisnikId = max;
                 kolekcija.Naziv = Naziv;
                 
 
@@ -172,7 +181,11 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                     foreach (Kolekcija k in db.Kolekcije)
                     {
                         if (k.KorisnikId == korisnik.KorisnikId)
+                        {
                             MojeKolekcije.Add(k);
+                            var dialog11 = new MessageDialog(k.KorisnikId.ToString() + " " + korisnik.KorisnikId.ToString());
+                            await dialog11.ShowAsync();
+                        }
                     }
 
                 }

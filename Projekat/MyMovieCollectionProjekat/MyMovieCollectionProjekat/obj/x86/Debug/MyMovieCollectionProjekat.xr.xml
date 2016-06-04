@@ -5,10 +5,10 @@
     <RootPropertyPathName Name="RegistrujSe" />
     <RootPropertyPathName Name="PrijaviSe" />
     <RootPropertyPathName Name="Ime_txb" />
+    <RootPropertyPathName Name="Username" />
     <RootPropertyPathName Name="RFID_txb" />
-    <RootPropertyPathName Name="Korisnici" />
+    <RootPropertyPathName Name="KorisniciAdmin" />
     <RootPropertyPathName Name="OdabraniKorisnik" />
-    <RootPropertyPathName Name="PrikaziDetaljeKorisnik" />
     <RootPropertyPathName Name="IzbrisiKorisnika" />
     <RootPropertyPathName Name="PisiUserName" />
     <RootPropertyPathName Name="PisiIme" />
@@ -23,7 +23,6 @@
     <RootPropertyPathName Name="IzbrisiFilm" />
     <RootPropertyPathName Name="PrikaziFilmove" />
     <RootPropertyPathName Name="MojiFilmoviIzKolekcije" />
-    <RootPropertyPathName Name="OznacenaKolekcijaListe" />
     <RootPropertyPathName Name="SacuvajKolekciju" />
     <RootPropertyPathName Name="IzbrisiKolekciju" />
     <RootPropertyPathName Name="DodajKolekciju" />
@@ -180,6 +179,7 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.ListBox">
       <RootProperty Name="ItemsSource" />
+      <RootProperty Name="DisplayMemberPath" />
       <RootProperty Name="SelectedValue" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />
@@ -187,8 +187,6 @@
       <RootProperty Name="VerticalAlignment" />
       <RootProperty Name="Width" />
       <RootProperty Name="Background" />
-      <RootProperty Name="ItemContainerStyleSelector" />
-      <RootProperty Name="DisplayMemberPath" />
       <RootProperty Name="Foreground" />
       <RootEvent Name="SelectionChanged" />
     </RootType>

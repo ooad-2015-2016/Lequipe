@@ -49,6 +49,20 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
         public RegistracijaViewModel()
         {
+            NavigationService = new NavigationService();
+            korisnik = new Korisnik();
+            Ime_txb = "";
+            Prezime_txb = "";
+            Username_txb = "";
+            // Mail_txb = "";
+            Sifra_txb = "";
+            SifraPonovo_txb = "";
+            Spol = "Zensko";
+            // Datum_txb 
+
+            ZenskoJe = new RelayCommand<object>(zenskoJe);
+            MuskoJe = new RelayCommand<object>(muskoJe);
+            RegistrujSe = new RelayCommand<object>(registrujSe);
 
         }
 
@@ -69,11 +83,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             MuskoJe = new RelayCommand<object>(muskoJe);
             RegistrujSe = new RelayCommand<object>(registrujSe);
 
-         /*   SviFilmovi = parameter.SviFilmovi;
-            SviKorisnici = parameter.SviKorisnici;
-            SveKolekcije = parameter.SveKolekcije;
-            SviFilmovi = parameter.SviFilmovi;
-            SveOcjene = parameter.SveOcjene;*/
+         
 
         }
 
@@ -105,6 +115,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
                         db.Korisnici.Add(noviKorisnik);
                         db.SaveChanges();
+                        korisnik = noviKorisnik;
 
                         var dialog = new MessageDialog(noviKorisnik.Ime + " " + noviKorisnik.Prezime + ", uspješno ste registrovani!");
                         await dialog.ShowAsync();

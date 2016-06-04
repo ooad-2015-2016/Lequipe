@@ -25,9 +25,9 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         public string PisiUserName { get; set; }
         public string PisiDatumReg { get; set; }
         public string RFID_txb { get; set; }
+        Rfid rfid { get; set; }
 
-
-        public ObservableCollection<Korisnik> Korisnici { get; set; }
+        public ObservableCollection<Korisnik> KorisniciAdmin { get; set; }
         public Korisnik OdabraniKorisnik { get; set; }
 
 
@@ -48,22 +48,23 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         {
             NavigationService = new NavigationService();
 
-            Korisnici = new ObservableCollection<Korisnik>();
-            Korisnici.Clear();
+            KorisniciAdmin = new ObservableCollection<Korisnik>();
+            KorisniciAdmin.Clear();
 
             using (var db = new KorisnikDbContext())
             {
                 foreach (Korisnik k in db.Korisnici)
                 {
-                    Korisnici.Add(k);
+                    KorisniciAdmin.Add(k);
                 }
             }
 
             IzbrisiKorisnika = new RelayCommand<object>(izbrisiKorisnika);
             PostaviZaAdmina = new RelayCommand<object>(postaviZaAdmina);
             PrikaziDetaljeKorisnik = new RelayCommand<object>(prikaziDetaljeKorisnik);
-            
 
+            rfid = new Rfid();
+            rfid.InitializeReader(RfidReadSomething);
 
         }
 
@@ -71,21 +72,24 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         public AdministratorViewModel(PocetnaViewModel parametar)
         {
             NavigationService = new NavigationService();
-            
-            Korisnici = new ObservableCollection<Korisnik>();
+
+            KorisniciAdmin = new ObservableCollection<Korisnik>();
 
             
             using (var db = new KorisnikDbContext())
             {
                 foreach (Korisnik k in db.Korisnici)
                 {
-                    Korisnici.Add(k);
+                    KorisniciAdmin.Add(k);
                 }
             }
 
             IzbrisiKorisnika = new RelayCommand<object>(izbrisiKorisnika);
             PostaviZaAdmina = new RelayCommand<object>(postaviZaAdmina);
             PrikaziDetaljeKorisnik = new RelayCommand<object>(prikaziDetaljeKorisnik);
+
+            rfid = new Rfid();
+            rfid.InitializeReader(RfidReadSomething);
         }
 
         public async void izbrisiKorisnika(object parametar)
@@ -96,14 +100,13 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                 {
                     db.Korisnici.Remove(db.Korisnici.Where(x => x.KorisnikId == OdabraniKorisnik.KorisnikId).FirstOrDefault());
                     db.SaveChanges();
-
-                    Korisnici.Clear();
+                    KorisniciAdmin.Clear();
 
                     using (var dbase = new KorisnikDbContext())
                     {
                         foreach (Korisnik k in dbase.Korisnici)
                         {
-                            Korisnici.Add(k);
+                            KorisniciAdmin.Add(k);
                         }
                     }
                 }
@@ -118,6 +121,11 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                 await dialog1.ShowAsync();
             }
 
+        }
+
+        public void RfidReadSomething(string rfidKod)
+        {
+            RFID_txb = rfidKod;
         }
 
         public async void prikaziDetaljeKorisnik(object parametar)

@@ -22,26 +22,29 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
         {
             Korisnik kor = new Korisnik();
             kor = (Korisnik)listaKorisnika.SelectedItem;
-            imeKorisnika.Text = kor.Ime + " " + kor.Prezime;
-            registracijaKorisnik.Text = kor.DatumRegistracije.ToString();
-            usernameKorisnik.Text = kor.Username;
-
-            int brojac = 0;
-
-            using (var db = new KolekcijaDbContext())
+            if (kor != null)
             {
-                foreach(Kolekcija k in db.Kolekcije)
+              
+                imeKorisnika.Text = kor.Ime + " " + kor.Prezime;
+                registracijaKorisnik.Text = kor.DatumRegistracije.ToString();
+                usernameKorisnik.Text = kor.Username;
+
+                int brojac = 0;
+
+                using (var db = new KolekcijaDbContext())
                 {
-                    if (k.KorisnikId == kor.KorisnikId)
-                        brojac++;
+                    foreach (Kolekcija k in db.Kolekcije)
+                    {
+                        if (k.KorisnikId == kor.KorisnikId)
+                            brojac++;
+                    }
                 }
+
+                brojKolekcija.Text = "Broj kolekcija: " + brojac.ToString();
+
             }
 
-            brojKolekcija.Text = "Broj kolekcija: " + brojac.ToString();
-
         }
-
-       
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
