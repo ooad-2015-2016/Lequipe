@@ -2,12 +2,8 @@
 using MyMovieCollectionProjekat.MyMovieCollection.Models;
 using MyMovieCollectionProjekat.MyMovieCollection.Views;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.UI.Popups;
 using Windows.UI.Xaml.Controls;
@@ -34,6 +30,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         public INavigationService NavigationService { get; set; }
         public ICommand PrijaviSe { get; set; }
         public ICommand RegistrujSe { get; set; }
+        public ICommand HelpButton { get; set; }
         public bool nesto { get; set; }
 
 
@@ -56,12 +53,9 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             Ime_txb = "";
 
 
-
             PrijaviSe = new RelayCommand<object>(prijaviSe);
             RegistrujSe = new RelayCommand<object>(registrujSe);
-
-
-
+            HelpButton = new RelayCommand<object>(helpButton);
         }
 
         public LoginViewModel(PocetnaViewModel parametar)
@@ -70,10 +64,9 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             korisnik = parametar.Korisnik;
 
 
-
             PrijaviSe = new RelayCommand<object>(prijaviSe);
             RegistrujSe = new RelayCommand<object>(registrujSe);
-
+            HelpButton = new RelayCommand<object>(helpButton);
         }
 
         private async void prijaviSe(object parametar)
@@ -118,5 +111,10 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             NavigationService.Navigate(typeof(RegistracijaView), new RegistracijaViewModel(this));
         }
 
+        private void helpButton(object parametar)
+        {
+            var dialog = new MessageDialog("Poštovani korisniče, pozdrav! Ovo je aplikacija My Movie Collection, koju je razvio mladi i uspješni tim inženjera. Sa ove forme se možete ulogovati na svoj profil, ili se registrovati, pri čemu nakon registracije možete pristupiti svom profilu. Na svom profilu, možete uređivati svoje kolekcije, te dodavati u njih nove filmove. Aplikaciju su razvili: Amra Mujčinović, Berina Muhović i Emir Baručija. Nadamo se da će Vam korištenje naše aplikacije biti ugodno :)");
+            dialog.ShowAsync();
+        }
     }
 }

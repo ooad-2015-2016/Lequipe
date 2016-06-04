@@ -2,7 +2,6 @@
 using MyMovieCollectionProjekat.MyMovieCollection.Helper;
 using MyMovieCollectionProjekat.MyMovieCollection.Models;
 using MyMovieCollectionProjekat.MyMovieCollection.ViewModels;
-using MyMovieCollectionProjekat.MyMovieCollection.Views;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;

@@ -1,13 +1,9 @@
 ﻿using MyMovieCollectionProjekat.MyMovieCollection.Helper;
 using MyMovieCollectionProjekat.MyMovieCollection.Models;
-using MyMovieCollectionProjekat.MyMovieCollection.Views;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.UI.Popups;
 
@@ -21,12 +17,14 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         public ICommand IzbrisiKorisnika { get; set; }
         public ICommand PostaviZaAdmina { get; set; }
         public ICommand PrikaziDetaljeKorisnik { get; set; }
+        
         public PocetnaViewModel Parent { get; set; }
         public string PisiIme { get; set; }
         public string PisiMail { get; set; }
         public string PisiPrezime { get; set; }
         public string PisiUserName { get; set; }
         public string PisiDatumReg { get; set; }
+        public string RFID_txb { get; set; }
 
 
         public ObservableCollection<Korisnik> Korisnici { get; set; }
@@ -64,6 +62,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             IzbrisiKorisnika = new RelayCommand<object>(izbrisiKorisnika);
             PostaviZaAdmina = new RelayCommand<object>(postaviZaAdmina);
             PrikaziDetaljeKorisnik = new RelayCommand<object>(prikaziDetaljeKorisnik);
+            
 
 
         }
@@ -139,13 +138,36 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             }
         }
 
-        public void postaviZaAdmina(object parameter)
+        public async void postaviZaAdmina(object parameter)
         {
 
+            if(OdabraniKorisnik!=null)
+            {
+                if (OdabraniKorisnik.RFid.Equals(RFID_txb))
+                {
+                    OdabraniKorisnik.DalijeAdmin = true;
+                    using (var db = new KorisnikDbContext())
+                    {
+                        db.Korisnici.Remove(db.Korisnici.Where(x => x.KorisnikId == OdabraniKorisnik.KorisnikId).FirstOrDefault());
+
+                        db.SaveChanges();
+
+                        db.Korisnici.Add(OdabraniKorisnik);
+                        db.SaveChanges();
+                    }
+                }
+                else
+                {
+                    var dialog11 = new MessageDialog("Unesite ispravan RFID.");
+                    await dialog11.ShowAsync();
+                }
+            }
+            else
+            {
+                var dialog1 = new MessageDialog("Niste oznacili korisnika.");
+                await dialog1.ShowAsync();
+            }
+
         }
-
-
-
-
     }
 }

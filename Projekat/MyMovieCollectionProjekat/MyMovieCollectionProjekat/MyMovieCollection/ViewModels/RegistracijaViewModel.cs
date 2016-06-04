@@ -2,12 +2,8 @@
 using MyMovieCollectionProjekat.MyMovieCollection.Models;
 using MyMovieCollectionProjekat.MyMovieCollection.Views;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.UI.Popups;
 
@@ -83,16 +79,10 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
         public async void registrujSe(object parametar)
         {
-            var dialog1 = new MessageDialog(Ime_txb);
-            await dialog1.ShowAsync();
-
             if (Ime_txb != "" && Prezime_txb != "" && Username_txb != "" && Sifra_txb != "" && Sifra_txb.Equals(SifraPonovo_txb))
             {
-
-
                 using (var db = new KorisnikDbContext())
-                {
-                    
+                {                    
                        korisnik = db.Korisnici.Where(x => x.Username == Username_txb).FirstOrDefault();
                    
                     if (korisnik == null)
@@ -113,10 +103,10 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                         noviKorisnik.Mail = "";
                         noviKorisnik.Spol = Spol;
 
-                       db.Korisnici.Add(noviKorisnik);
-                       db.SaveChanges();
+                        db.Korisnici.Add(noviKorisnik);
+                        db.SaveChanges();
 
-                        var dialog = new MessageDialog("Uspješno ste registrovani!");
+                        var dialog = new MessageDialog(noviKorisnik.Ime + " " + noviKorisnik.Prezime + ", uspješno ste registrovani!");
                         await dialog.ShowAsync();
                         NavigationService.Navigate(typeof(Pocetna), new PocetnaViewModel(this));
                     }
@@ -145,7 +135,5 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         {
             Spol = "zensko";
         }
-
-
     }
 }

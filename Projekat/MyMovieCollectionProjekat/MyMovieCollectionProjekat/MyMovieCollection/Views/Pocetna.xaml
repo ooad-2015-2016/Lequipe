@@ -44,10 +44,10 @@
             <ColumnDefinition Width="*"/>
 
         </Grid.ColumnDefinitions>
-        <Button x:Name="button" Content="Moje Kolekcije" HorizontalAlignment="Left" Margin="89,10,0,35" VerticalAlignment="Stretch" Width="360" Background="#33E86363" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="3" Grid.RowSpan="2" Grid.Row="2" Command="{Binding Path=MojeKolekcije}" Grid.Column="1" Click="button_Click" />
-        <Button x:Name="Pretraga_Filmova" Content="Pretraga filmova" HorizontalAlignment="Left" Height="85" Margin="89,51,0,0" VerticalAlignment="Top" Width="360" Background="#332022DF" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="3" Grid.Row="3" Grid.RowSpan="3" Command="{Binding Path=DodajFilm}" Grid.Column="1" />
-        <Button x:Name="Uredi_Profil" Content="Uredi svoj profil" HorizontalAlignment="Left" Height="87" VerticalAlignment="Top" Width="360" Background="#33CE1CC9" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="3" Grid.Row="6" Grid.RowSpan="2" Command="{Binding Path=UrediProfil}" Margin="89,31,0,0" Grid.Column="1" />
-        <Button x:Name="button_Copy4" Content="Odjavi se" HorizontalAlignment="Left" Height="88" Margin="0,55.333,0,0" VerticalAlignment="Top" Width="360" Background="#3335AE28" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Grid.Row="7" Grid.RowSpan="4" Command="{Binding Path=OdjaviSe}" Grid.Column="3" Click="button_Copy4_Click" />
+        <Button x:Name="button" Content="Moje Kolekcije" HorizontalAlignment="Center" Margin="89,10,0,50" VerticalAlignment="Stretch" Width="360" Background="#33E86363" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="3" Grid.RowSpan="2" Grid.Row="2" Command="{Binding Path=MojeKolekcije}" Grid.Column="1" Click="button_Click" />
+        <Button x:Name="Pretraga_Filmova" Content="Pretraga filmova" HorizontalAlignment="Center" Height="85" Margin="89,68,0,0" VerticalAlignment="Stretch" Width="360" Background="#332022DF" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="3" Grid.Row="3" Grid.RowSpan="3" Command="{Binding Path=DodajFilm}" Grid.Column="1" />
+        <Button x:Name="Uredi_Profil" Content="Uredi svoj profil" HorizontalAlignment="Center" Height="87" VerticalAlignment="Stretch" Width="360" Background="#33CE1CC9" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="3" Grid.Row="6" Grid.RowSpan="2" Command="{Binding Path=UrediProfil}" Margin="89,31,0,0" Grid.Column="1" />
+        <Button x:Name="button_Copy4" Content="Odjavi se" HorizontalAlignment="Left" Height="88" Margin="10,21,0,0" VerticalAlignment="Top" Width="360" Background="#3335AE28" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Grid.ColumnSpan="2" Grid.Row="8" Grid.RowSpan="4" Command="{Binding Path=OdjaviSe}" Grid.Column="3" Click="button_Copy4_Click" />
 
         <TextBlock x:Name="textBlock" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="58" TextWrapping="Wrap" VerticalAlignment="Top" Width="317"  FontFamily="Segoe Script" Foreground="#FFB62424" Grid.Column="2" Margin="144,10,0,0" Grid.Row="1" FontSize="24">
         	<Run Text="&#x9;"/>
@@ -55,5 +55,6 @@
         </TextBlock>
         <TextBlock x:Name="textBlock2" Grid.ColumnSpan="3" HorizontalAlignment="Right" Height="108" Margin="0,0,120,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="373" Foreground="#FFF8FBF7" FontFamily="Script MT Bold" FontSize="38" Text="           MyMovieCollection" Grid.RowSpan="2" Grid.Column="1" FontWeight="Bold"/>
         <Button x:Name="button1" Grid.ColumnSpan="5" Content="Admin Postavke" HorizontalAlignment="Left" Height="85" Margin="0,0.333,0,0" Grid.Row="10" Grid.RowSpan="7" VerticalAlignment="Top" Width="360" FontFamily="Segoe Script" FontSize="22" FontWeight="Bold" Background="#330AE0FF" Visibility="Collapsed"/>
+        <Button x:Name="button2" Command="{Binding Path=JaAdmin}" Content="Administrator" HorizontalAlignment="Left" Margin="51,21,0,0" Grid.Row="8" VerticalAlignment="Top" Width="309" Height="88" Grid.RowSpan="4" Grid.ColumnSpan="2" FontSize="20" Click="button2_Click"/>
     </Grid>
 </Page>

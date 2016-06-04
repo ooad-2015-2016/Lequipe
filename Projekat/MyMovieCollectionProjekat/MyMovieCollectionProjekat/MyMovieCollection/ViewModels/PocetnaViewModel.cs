@@ -4,12 +4,7 @@ using MyMovieCollectionProjekat.MyMovieCollection.Helper;
 using MyMovieCollectionProjekat.MyMovieCollection.Models;
 using MyMovieCollectionProjekat.MyMovieCollection.Views;
 using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 
 namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
@@ -25,17 +20,18 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         public ICommand DodajFilm { get; set; }
         public ICommand OdjaviSe { get; set; }
         public ICommand UrediProfil { get; set; }
+        public ICommand JaAdmin { get; set; }
 
 
         //        ___________________
 
-      /*  public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
-        public ObservableCollection<Kolekcija> SveKolekcije = new ObservableCollection<Kolekcija>();
-        public ObservableCollection<Film> SviFilmovi = new ObservableCollection<Film>();
-        public ObservableCollection<Ocjena> SveOcjene = new ObservableCollection<Ocjena>();
-        //______________
+        /*  public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
+          public ObservableCollection<Kolekcija> SveKolekcije = new ObservableCollection<Kolekcija>();
+          public ObservableCollection<Film> SviFilmovi = new ObservableCollection<Film>();
+          public ObservableCollection<Ocjena> SveOcjene = new ObservableCollection<Ocjena>();
+          //______________
 
-    */
+      */
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -61,14 +57,15 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             DodajFilm = new RelayCommand<object>(dodajFilm);
             OdjaviSe = new RelayCommand<object>(odjaviSe);
             UrediProfil = new RelayCommand<object>(urediProfil);
+            JaAdmin = new RelayCommand<object>(jaAdmin);
 
 
-           /* SviFilmovi = parametar.SviFilmovi;
-            SviKorisnici = parametar.SviKorisnici;
-            SveKolekcije = parametar.SveKolekcije;
-            SviFilmovi = parametar.SviFilmovi;
-            SveOcjene = parametar.SveOcjene;
-            */
+            /* SviFilmovi = parametar.SviFilmovi;
+             SviKorisnici = parametar.SviKorisnici;
+             SveKolekcije = parametar.SveKolekcije;
+             SviFilmovi = parametar.SviFilmovi;
+             SveOcjene = parametar.SveOcjene;
+             */
 
         }
 
@@ -89,7 +86,6 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             SviFilmovi = parametar.SviFilmovi;
             SveOcjene = parametar.SveOcjene;
             */
-
         }
 
         public PocetnaViewModel(FilmViewModel parametar)
@@ -185,6 +181,12 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         {
 
             NavigationService.Navigate(typeof(KorisnikView), new KorisnikViewModel(this));
+        }
+
+        private void jaAdmin(object parametar)
+        {
+            NavigationService.Navigate(typeof(AdministratorView), new AdministratorViewModel(this));
+
         }
     }
 }

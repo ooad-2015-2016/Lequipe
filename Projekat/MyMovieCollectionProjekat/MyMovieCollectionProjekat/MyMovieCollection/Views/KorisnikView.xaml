@@ -45,15 +45,15 @@
                 <CompositeTransform ScaleY="-1" Rotation="-180.607"/>
             </TextBlock.RenderTransform>
         </TextBlock>
-        <TextBlock x:Name="textBlock_Copy5" Height="32" Margin="10,10,169,47" TextWrapping="Wrap" Width="165" Grid.Row="2" FontFamily="Segoe Script" FontSize="18" Grid.Column="1" Grid.ColumnSpan="2">
+        <TextBlock x:Name="textBlock_Copy5" Margin="0,0,73,49" TextWrapping="Wrap" Grid.Row="2" FontFamily="Segoe Script" FontSize="18" Grid.Column="1" Grid.ColumnSpan="2">
         	<Run Text="Stari password:"/>
         	<LineBreak/>
         	<Run/>
         </TextBlock>
-        <TextBlock x:Name="textBlock_Copy6" Height="70" Margin="0,38,19,49.667" TextWrapping="Wrap" Text="Novi password:" Width="153" Grid.Row="3" FontFamily="Segoe Script" FontSize="18" Grid.Column="1" Grid.RowSpan="2"/>
-        <TextBlock x:Name="textBlock_Copy7" Margin="0,34.333,145.667,68.333" TextWrapping="Wrap" Text="Ponovite password:" Width="198" Grid.Row="4" FontFamily="Segoe Script" FontSize="18" Grid.ColumnSpan="2" Grid.Column="1" Grid.RowSpan="2"/>
+        <TextBlock x:Name="textBlock_Copy6" Margin="0,48,19,0" TextWrapping="Wrap" Text="Novi password:" Width="153" Grid.Row="3" FontFamily="Segoe Script" FontSize="18" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock_Copy7" Margin="0,44.333,145.667,68.333" TextWrapping="Wrap" Text="Ponovite password:" Width="198" Grid.Row="4" FontFamily="Segoe Script" FontSize="18" Grid.ColumnSpan="2" Grid.Column="1" Grid.RowSpan="2" SelectionChanged="textBlock_Copy7_SelectionChanged"/>
         <RelativePanel HorizontalAlignment="Left" Height="46" Margin="10,34.333,0,0" Grid.Row="4" VerticalAlignment="Top" Width="479" Grid.ColumnSpan="6" Grid.RowSpan="2">
-            <TextBox x:Name="textBox_Copy3" Text="{Binding Path=StaraSifra,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Height="43" TextWrapping="Wrap" Width="262" Margin="413,-212,-297,169"/>
+            <TextBox x:Name="textBox_Copy3" Text="{Binding Path=StaraSifra,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Height="43" TextWrapping="Wrap" Width="262" Margin="413,-221,-297,178"/>
             <TextBox x:Name="textBox_Copy4"  Text="{Binding Path=NovaSifra,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Height="42" TextWrapping="Wrap" Width="262" Margin="413,-91,-424,49"/>
             <TextBox x:Name="textBox_Copy5" Text="{Binding Path=PonovoNovaSifra,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" TextWrapping="Wrap" Width="262" Margin="413,0,-297,-46"/>
         </RelativePanel>
@@ -65,12 +65,7 @@
                 </LinearGradientBrush>
             </Button.Background>
         </Button>
-        <StackPanel Grid.ColumnSpan="3" Grid.Column="2" HorizontalAlignment="Left" Height="305" Margin="62,11.333,0,0" Grid.Row="1" Grid.RowSpan="5" VerticalAlignment="Top" Width="282"/>
         <RelativePanel Grid.ColumnSpan="2" Grid.Column="3" HorizontalAlignment="Left" Height="10" Margin="122.333,0,0,0" Grid.Row="3" VerticalAlignment="Top" Width="211"/>
-
-
-
-
 
     </Grid>
 </Page>

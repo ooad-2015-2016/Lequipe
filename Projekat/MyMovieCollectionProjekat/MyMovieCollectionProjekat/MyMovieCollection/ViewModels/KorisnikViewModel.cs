@@ -2,12 +2,9 @@
 using MyMovieCollectionProjekat.MyMovieCollection.Models;
 using MyMovieCollectionProjekat.MyMovieCollection.Views;
 using System;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Input;
 using Windows.UI.Popups;
 
@@ -96,8 +93,6 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                     {
                         if (NovaSifra.Equals(PonovoNovaSifra))
                         {
-
-
                             korisnik.Sifra = NovaSifra;
                             
                             db.Korisnici.Remove(db.Korisnici.Where(x => x.KorisnikId == korisnik.KorisnikId && x.Sifra == Sifra_txb).FirstOrDefault());
@@ -110,14 +105,10 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                             var dialog = new MessageDialog("Izmjene sacuvane!");
                             await dialog.ShowAsync();
                         }
-
-
                         else
                         {
                             var dialog = new MessageDialog("Šifre se ne podudaraju!");
                             await dialog.ShowAsync();
-
-
                         }
                     }
                 }
@@ -126,10 +117,9 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             {
                 var dialog = new MessageDialog("Niste unijeli ispravnu šifru.");
                 await dialog.ShowAsync();
-
             }
-
         }
+
 
         private void nazad(object parametar)
         {
