@@ -179,3 +179,33 @@ ________________________________________________________________________________
 
 
 
+
+
+
+
+
+
+
+Dodano na kraju projekta:
+
+ 1. Naša baza je SqlLite baza podataka, dakle koristimo lokalnu bazu, raðenu u Entity Frameworku 7.
+
+ 2. Kao eksterni ureðaj koristimo serial RFID. Kod za ovaj eksterni ureðaj se nalazi u Rfid.cs (https://github.com/ooad-2015-2016/Lequipe/blob/master/Projekat/MyMovieCollectionProjekat/MyMovieCollectionProjekat/MyMovieCollection/Helper/Rfid.cs),
+    a poziva se u klasi AdministratorViewModel.cs (https://github.com/ooad-2015-2016/Lequipe/blob/master/Projekat/MyMovieCollectionProjekat/MyMovieCollectionProjekat/MyMovieCollection/ViewModels/AdministratorViewModel.cs).
+
+ 3. Validacija je raðena pri logovanju na aplikaciju, te pri registraciji na sistem, te je stoga validacija vršena u klasama LoginViewModel.cs (https://github.com/ooad-2015-2016/Lequipe/blob/master/Projekat/MyMovieCollectionProjekat/MyMovieCollectionProjekat/MyMovieCollection/ViewModels/LoginViewModel.cs),
+    te RegistracijaViewModel.cs (https://github.com/ooad-2015-2016/Lequipe/blob/master/Projekat/MyMovieCollectionProjekat/MyMovieCollectionProjekat/MyMovieCollection/ViewModels/LoginViewModel.cs).
+
+ 4. Za eksterni servis smo koristili OMDB online bazu filmova (njihov API), http://www.omdbapi.com/ , a servis je korišten u klasi FilmoviService.cs (https://github.com/ooad-2015-2016/Lequipe/blob/master/Projekat/MyMovieCollectionProjekat/MyMovieCollectionProjekat/MyMovieCollection/Services/FilmoviService.cs).
+
+ 5. Koristimo GPS na mobitelima...
+
+ 6. Za web servis smo...
+
+ 7. Napravljen build igrice, postavljen pod imenom igrica.
+
+ 8. Video...
+
+ 9. Izvještaji rada postavljeni.
+
+ 10. Help prikazan unutar aplikacije, te dodan kao dokument na repozitorij.

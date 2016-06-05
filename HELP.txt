@@ -1,0 +1,20 @@
+Poštovani korisnièe, pozdrav!
+
+Ovo je aplikacija My Movie Collection, koju je razvio mladi i uspješni tim inženjera sa druge godine odsjeka za RI, prestižnog Elektrotehnièkog fakulteta Univerziteta u Sarajevu.
+
+Na poèetnoj formi, vršite login, tj. ulazite u aplikaciju, ukoliko imate korisnièki raèun.
+
+Ukoliko nemate raèun, trebate da ga napravite, te stoga idete na Sign Up.
+Nakon toga, unosite svoje podatke, pri èemu trebate paziti da nijedno polje ne ostavite praznim.
+
+Nakon registrovanja, ulazite u aplikaciju.
+Tu ste u moguænosti da pretražujete filmove putem našeg online web servisa (imajte na umu da ovaj servis pokriva ZAISTA VELIKI BROJ FILMOVA, ali vjerovatno ne baš sve koji su ikad snimljeni).
+Takoðe, možete da pravite svoje kolekcije, zatim da ih ureðujete, brišete, dodajete i sl.
+Omoguæeno Vam je da promijenite svoju šifru, u formi Uredi svoj profil.
+
+
+Ovu aplikaciju su razvili: Amra Mujèinoviæ, Berina Muhoviæ, Emir Baruèija, te Tarik Ahmetoviæ.
+
+Nadamo se da æe Vam korištenje naše aplikacije biti ugodno :)
+
+Za sva pitanja nam se obratite u prostorijama Elektrotehnièkog fakulteta, gdje vrlo èesto obitavamo (osim u ljetnim mjesecima kada smo na kratkom, ali zasluženom odmoru).
