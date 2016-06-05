@@ -25,11 +25,11 @@ MyMovieCollection je aplikacija koja æe omoguæiti korisniku da na neki naèin vod
 filmovima koji su pregledani ili o filmovima koje korisnik želi da pregleda. To znaèi da ovaj sistem ima korisnu namjenu za 
 korisnike koji su ljubitelji filma i kojima je, u svrhu toga, potrebno da vode evidenciju o filmovima.Shodno tome, svrha sistema
 je oèigledna, a ogleda se u tome da æe korisnici moæi da, pomoæu dobro modeliranog sistema, oznaèe filmove koje su pregledali,
-ali i da ocijene sam film, glasanjem (vote) ili izražavanjem sopstvenog mišljenja putem opcije za komentare. Neki od moguæih problema
-koji se mogu javiti je da osobe (ljubitelji filma) zaborave koje su filmove pregledali ili da im je važno da ocijene i ponude svoje 
-mišljenje o filmovima. Takoðer, korisnici æe moæi da ispunjavaju svoju "listu èekanja" filmova koje žele pregledati, a pritome i voditi
-"dnevnik" radi preporuke drugim osobama. Pored toga, potrebno im je omoguæiti prikaz filmova koji su trenutno popularni ili pretragu 
-željenih. Iz tog razloga, MyMovieCollection predstavlja rješenje moguæih problema za korisnike, koji žele kupiti/unajmiti sistem.
+ali i da ocijene sam film, glasanjem (vote). Neki od moguæih problemakoji se mogu javiti je da osobe (ljubitelji filma) zaborave koje 
+su filmove pregledali ili da im je važno da ocijene i ponude svoje mišljenje o filmovima. Takoðer, korisnici æe moæi da ispunjavaju 
+svoju "listu èekanja" filmova koje žele pregledati, a pritome i voditi "dnevnik" radi preporuke drugim osobama. 
+Pored toga, potrebno im je omoguæiti prikaz filmova koji su trenutno popularni ili pretragu željenih.
+Iz tog razloga, MyMovieCollection predstavlja rješenje moguæih problema za korisnike, koji žele kupiti/unajmiti sistem.
 
 
 ______________________________________________________________________________________________________________________________________
@@ -39,14 +39,6 @@ ________________________________________________________________________________
 ###**PROCESI**
 
 
-
-
-- Pregled naslovne stranice (bez registracije ili prijave)
-    
-       Akter, odnosno osoba koja pristupa sistemu ne mora biti logovana. Meðutim, tada su moguænosti pregleda filmova i 
-       funkcionalnosti sistema umanjene. Moguæe je da ta osoba vidi samo najpopularnije filmove, kao i neke dodatne informacije o aplikaciji i 
-       njenoj funkcionalnosti, kako bi se korisnici mogli odluèiti da li da otvore korisnièki raèun i aktivno koriste sve moguænosti koje 
-       MyMovieCollection nudi.
 
 - Registracija/prijava u sistem
 
@@ -58,16 +50,12 @@ ________________________________________________________________________________
        
        Korisnici sistema se mogu odjaviti nakon korištenja aplikacije, prilikom èega se æe svi podaci i aktivnosti prilikom upotrebe 
        biti saèuvani i zabilježeni.
-
-- Pregled popularnih/aktuelnih filmova za trenutni mjesec 
-
-       Odabirom odgovarajuæe opcije korisnik može pregledati aktuelne filmove i prilikom toga ih staviti na "listu èekanja".
                   
 
-- Pretraga filmova po nazivu - dodatne informacije o filmu koji se pretražuje, ocjenjivanje filma i komentari na film.
+- Pretraga filmova po nazivu - dodatne informacije o filmu koji se pretražuje, ocjenjivanje filma.
 
        Korisnik može pomoæu search box-a da pronaðe željeni film, da pogleda informacije o njemu (žanr, glumci, trajanje i sl), te da
-       ga ocijeni, i ostavi svoj komentar (èime se on automatski dodaje u korisnikovu listu pregledanih filmova).
+       ga ocijeni.
 
 - Dodavanje fimova na listu odgledanih filmova
 
@@ -77,15 +65,9 @@ ________________________________________________________________________________
 
 - Odabir filmova za pregled - "Lista èekanja"
 
-       Opcija koja nudi korisniku da doda filmove u vlastitu listu èekanja.
+       Opcija koja nudi korisniku da doda filmove u vlastitu listu èekanja - kolekciju.
        Kada korisnik pregleda film iz liste èekanja, može da ga, sa ili bez ocjenjivanja, prebaci u listu odgledanih 
-       filmova (i, po želji, ostavi komentar).
-
-- Top lista: BestMovies, WorstMovies
-
-       Moguæe je praviti razlièite liste filmova, meðu kojima su liste najboljih, i najgorih filmova.
-       Takoðe, korisnik pored ovih, može napraviti i druge liste, poput liste najboljih filmova snimljenih 
-       po istinitim dogaðajima, liste filmova u kojima glumi odreðeni glumac/glumica i sl.
+       filmova.
 
 - Kolekcija filmova koji su odgledani sortirani po kategorijama i žanru.
 
@@ -111,29 +93,15 @@ ________________________________________________________________________________
 
 - Moguænost ocjenjivanja filmova.
 
-- Moguænost komentarisanja filmova.
-
 - Moguænost pregleda dodatnih informacija o filmu (npr. vrijeme trajanja filma, glumci, reditelj, kratki sadržaj/radnja, ...).
-
-- Moguænost dodavanja filma na "listu èekanja".
-
-- Moguænost dodavanja filma u TopListu(najbolji/najgori filmovi).
 
 - Moguænost pravljenja vlastitih listi filmova.
 
-- Moguænost pregleda aktuelnih filmova za trenutni mjesec.
-
 - Moguænost dodavanja filmova koji su odgledani u kolekciju i to po žanrovima (komedija, akcija, romantièni, horori itd).
-
-- Moguænost da korisnik prilikom pregleda informacija o filmu, u pozadini presluša najavu/trailer filma.
-
-- Moguænost pregleda profila drugih korisnika aplikacije i njihove kolekcije filmova.
-
-- Moguænost ocjenjivanja aplikacije. 
 
 - Moguænost pregleda informacija o aplikaciji i kreatorima iste. 
 
-- Moguænost kontakta kreatora aplikacije.
+- Moguænost pregleda i ureðivanja korisnika od strane admina.
 
 _________________________________________________________________________________________________________
 
@@ -175,11 +143,6 @@ ________________________________________________________________________________
  - EKSTERNI UREÐAJ 
  
       - Cilj je upotpuniti funkcionalnost aplikacije korištenjem nekog od eksternih ureðaja. 
-
-
-
-
-
 
 
 
