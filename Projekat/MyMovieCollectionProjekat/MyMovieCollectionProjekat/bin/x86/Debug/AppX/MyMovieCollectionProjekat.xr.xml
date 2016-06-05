@@ -20,6 +20,9 @@
     <RootPropertyPathName Name="OdabraniFilm" />
     <RootPropertyPathName Name="Search" />
     <RootPropertyPathName Name="NazivFilma_txb" />
+    <RootPropertyPathName Name="TrenutnaLokacija" />
+    <RootPropertyPathName Name="Adresa" />
+    <RootPropertyPathName Name="Lokacija" />
     <RootPropertyPathName Name="IzbrisiFilm" />
     <RootPropertyPathName Name="PrikaziFilmove" />
     <RootPropertyPathName Name="MojiFilmoviIzKolekcije" />
@@ -229,6 +232,11 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Documents.LineBreak" />
     <RootType FullName="MyMovieCollection.MyMovieCollection.Views.FilmView" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.ThemeResourceExtension" />
+    <RootType FullName="Windows.UI.Xaml.Controls.Maps.MapControl">
+      <RootProperty Name="Center" />
+    </RootType>
+    <RootType FullName="MyMovieCollectionProjekat.MyMovieCollection.Views.GPSView" />
     <RootType FullName="Windows.UI.Xaml.Controls.WebView">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="Height" />

@@ -46,8 +46,7 @@
         <ListView x:ConnectionId='5' x:Name="listView" ItemsSource="{Binding Path=FilmoviNet}" DisplayMemberPath="Naziv" SelectedValue="{Binding Path=OdabraniFilm, Mode=TwoWay}" HorizontalAlignment="Left" Height="222" Margin="52,46.333,0,0" VerticalAlignment="Top" Width="541" Grid.RowSpan="4" Background="#FFB68686" Grid.ColumnSpan="3" Grid.Row="2" ScrollViewer.HorizontalScrollBarVisibility="Auto"                                             />
         <RelativePanel HorizontalAlignment="Left" Height="222" Margin="0,47.333,0,0" VerticalAlignment="Top" Width="516" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="4" Background="#FFE5E0E0" Grid.Column="3">
             <TextBlock x:ConnectionId='14' x:Name="textBlockc"     HorizontalAlignment="Left" Height="37" Margin="100,50,-200,-87" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" FontFamily="Segoe Script"/>
-            <TextBlock x:ConnectionId='15' x:Name="nazivLabela" HorizontalAlignment="Left" Height="19" Margin="10,8,-144,-8" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" FontFamily="Segoe Script" >
-            </TextBlock>
+            <TextBlock x:ConnectionId='15' x:Name="nazivLabela" HorizontalAlignment="Left" Height="19" Margin="10,8,-144,-8" VerticalAlignment="Top" Width="196" FontFamily="Segoe Script" />
             <TextBlock x:ConnectionId='16' x:Name="opisLabela" HorizontalAlignment="Left" Height="180" TextWrapping="Wrap"  VerticalAlignment="Top" Width="216" Margin="10,32,-164,-192"/>
         </RelativePanel>
         <TextBlock x:ConnectionId='6' x:Name="textBlock2" HorizontalAlignment="Left" Height="23" Margin="114,4.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" FontFamily="Segoe Script" FontSize="18" Grid.Row="6" RenderTransformOrigin="0.492,0.417" Grid.Column="2">

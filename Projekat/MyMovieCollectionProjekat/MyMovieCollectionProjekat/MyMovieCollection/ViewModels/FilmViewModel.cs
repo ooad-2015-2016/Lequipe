@@ -108,6 +108,9 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
 
                 foreach(Film fl in f.Filmovi)
                 FilmoviNet.Add(fl);
+
+                var dialog = new MessageDialog("Pretraga je vratila: " + f.Filmovi.Count.ToString() + " rezultata");
+                await dialog.ShowAsync();
             }
             catch(Exception e)
                 { }

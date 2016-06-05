@@ -63,7 +63,7 @@
 
 
 
-        <TextBlock x:ConnectionId='5' x:Name="textBlock3" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="61" Margin="10,59,0,0" TextWrapping="Wrap" Text="Moje kolekcije" VerticalAlignment="Top" Width="228"                                                FontFamily="Segoe Script" FontSize="24" Grid.Column="6" Foreground="#FFAA3B3B" Grid.RowSpan="2"/>
+        <TextBlock x:ConnectionId='5' x:Name="textBlock3" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="61" Margin="10,59,0,0" TextWrapping="Wrap" Text="Moje kolekcije" VerticalAlignment="Top" Width="228" FontFamily="Segoe Script" FontSize="24" Grid.Column="6" Foreground="#FFAA3B3B" Grid.RowSpan="2"/>
         <RelativePanel Grid.ColumnSpan="5" Grid.Column="6" HorizontalAlignment="Left" Height="258" Margin="83,44,0,0" Grid.Row="4" Grid.RowSpan="4" VerticalAlignment="Top" Width="431" Background="#FFD4BCBC">
             <WebView HorizontalAlignment="Left" Height="146" VerticalAlignment="Top" Width="184" Margin="0,42,0,-130"/>
             <TextBlock x:ConnectionId='17' x:Name="nazivLabela"  HorizontalAlignment="Left" Height="32" TextWrapping="Wrap"  VerticalAlignment="Top" Width="376" Margin="10,10,-324,-22"/>

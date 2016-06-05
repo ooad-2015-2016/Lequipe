@@ -24,7 +24,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
             this.InitializeComponent();
             OdabraniFilm = new Film();
 
-            DataContext = new MyMovieCollection.ViewModels.KolekcijaViewModel();
+            DataContext = new ViewModels.KolekcijaViewModel(this);
             NavigationCacheMode = NavigationCacheMode.Required;
 
             textBlock2.Visibility = Visibility.Collapsed;
@@ -35,11 +35,6 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             
-        }
-
-        private void textBlock3_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)

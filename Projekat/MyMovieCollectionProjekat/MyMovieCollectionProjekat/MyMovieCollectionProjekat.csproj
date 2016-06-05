@@ -90,6 +90,7 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
+    <None Include="RfidConfig.json" />
     <None Include="project.json" />
   </ItemGroup>
   <ItemGroup>
@@ -138,6 +139,7 @@
     <Compile Include="MyMovieCollection\Services\FilmoviService.cs" />
     <Compile Include="MyMovieCollection\ViewModels\AdministratorViewModel.cs" />
     <Compile Include="MyMovieCollection\ViewModels\FilmViewModel.cs" />
+    <Compile Include="MyMovieCollection\ViewModels\GPSViewModel.cs" />
     <Compile Include="MyMovieCollection\ViewModels\KolekcijaViewModel.cs" />
     <Compile Include="MyMovieCollection\ViewModels\KorisnikViewModel.cs" />
     <Compile Include="MyMovieCollection\ViewModels\LoginViewModel.cs" />
@@ -148,6 +150,9 @@
     </Compile>
     <Compile Include="MyMovieCollection\Views\FilmView.xaml.cs">
       <DependentUpon>FilmView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MyMovieCollection\Views\GPSView.xaml.cs">
+      <DependentUpon>GPSView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MyMovieCollection\Views\KolekcijaView.xaml.cs">
       <DependentUpon>KolekcijaView.xaml</DependentUpon>
@@ -196,6 +201,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="MyMovieCollection\Views\FilmView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MyMovieCollection\Views\GPSView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

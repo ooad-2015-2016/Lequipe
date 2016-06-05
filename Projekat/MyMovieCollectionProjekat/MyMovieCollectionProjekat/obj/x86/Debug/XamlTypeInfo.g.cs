@@ -132,29 +132,31 @@ namespace MyMovieCollectionProjekat.MyMovieCollectionProjekat_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[10];
+            _typeNameTable = new string[11];
             _typeNameTable[0] = "MyMovieCollectionProjekat.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "MyMovieCollectionProjekat.MyMovieCollection.Views.AdministratorView";
             _typeNameTable[4] = "MyMovieCollection.MyMovieCollection.Views.FilmView";
-            _typeNameTable[5] = "MyMovieCollectionProjekat.MyMovieCollection.Views.KolekcijaView";
-            _typeNameTable[6] = "MyMovieCollectionProjekat.MyMovieCollection.Views.KorisnikView";
-            _typeNameTable[7] = "MyMovieCollectionProjekat.MyMovieCollection.Views.LoginView";
-            _typeNameTable[8] = "MyMovieCollectionProjekat.MyMovieCollection.Views.Pocetna";
-            _typeNameTable[9] = "MyMovieCollectionProjekat.MyMovieCollection.Views.RegistracijaView";
+            _typeNameTable[5] = "MyMovieCollectionProjekat.MyMovieCollection.Views.GPSView";
+            _typeNameTable[6] = "MyMovieCollectionProjekat.MyMovieCollection.Views.KolekcijaView";
+            _typeNameTable[7] = "MyMovieCollectionProjekat.MyMovieCollection.Views.KorisnikView";
+            _typeNameTable[8] = "MyMovieCollectionProjekat.MyMovieCollection.Views.LoginView";
+            _typeNameTable[9] = "MyMovieCollectionProjekat.MyMovieCollection.Views.Pocetna";
+            _typeNameTable[10] = "MyMovieCollectionProjekat.MyMovieCollection.Views.RegistracijaView";
 
-            _typeTable = new global::System.Type[10];
+            _typeTable = new global::System.Type[11];
             _typeTable[0] = typeof(global::MyMovieCollectionProjekat.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::MyMovieCollectionProjekat.MyMovieCollection.Views.AdministratorView);
             _typeTable[4] = typeof(global::MyMovieCollection.MyMovieCollection.Views.FilmView);
-            _typeTable[5] = typeof(global::MyMovieCollectionProjekat.MyMovieCollection.Views.KolekcijaView);
-            _typeTable[6] = typeof(global::MyMovieCollectionProjekat.MyMovieCollection.Views.KorisnikView);
-            _typeTable[7] = typeof(global::MyMovieCollectionProjekat.MyMovieCollection.Views.LoginView);
-            _typeTable[8] = typeof(global::MyMovieCollectionProjekat.MyMovieCollection.Views.Pocetna);
-            _typeTable[9] = typeof(global::MyMovieCollectionProjekat.MyMovieCollection.Views.RegistracijaView);
+            _typeTable[5] = typeof(global::MyMovieCollectionProjekat.MyMovieCollection.Views.GPSView);
+            _typeTable[6] = typeof(global::MyMovieCollectionProjekat.MyMovieCollection.Views.KolekcijaView);
+            _typeTable[7] = typeof(global::MyMovieCollectionProjekat.MyMovieCollection.Views.KorisnikView);
+            _typeTable[8] = typeof(global::MyMovieCollectionProjekat.MyMovieCollection.Views.LoginView);
+            _typeTable[9] = typeof(global::MyMovieCollectionProjekat.MyMovieCollection.Views.Pocetna);
+            _typeTable[10] = typeof(global::MyMovieCollectionProjekat.MyMovieCollection.Views.RegistracijaView);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -192,11 +194,12 @@ namespace MyMovieCollectionProjekat.MyMovieCollectionProjekat_XamlTypeInfo
         private object Activate_0_MainPage() { return new global::MyMovieCollectionProjekat.MainPage(); }
         private object Activate_3_AdministratorView() { return new global::MyMovieCollectionProjekat.MyMovieCollection.Views.AdministratorView(); }
         private object Activate_4_FilmView() { return new global::MyMovieCollection.MyMovieCollection.Views.FilmView(); }
-        private object Activate_5_KolekcijaView() { return new global::MyMovieCollectionProjekat.MyMovieCollection.Views.KolekcijaView(); }
-        private object Activate_6_KorisnikView() { return new global::MyMovieCollectionProjekat.MyMovieCollection.Views.KorisnikView(); }
-        private object Activate_7_LoginView() { return new global::MyMovieCollectionProjekat.MyMovieCollection.Views.LoginView(); }
-        private object Activate_8_Pocetna() { return new global::MyMovieCollectionProjekat.MyMovieCollection.Views.Pocetna(); }
-        private object Activate_9_RegistracijaView() { return new global::MyMovieCollectionProjekat.MyMovieCollection.Views.RegistracijaView(); }
+        private object Activate_5_GPSView() { return new global::MyMovieCollectionProjekat.MyMovieCollection.Views.GPSView(); }
+        private object Activate_6_KolekcijaView() { return new global::MyMovieCollectionProjekat.MyMovieCollection.Views.KolekcijaView(); }
+        private object Activate_7_KorisnikView() { return new global::MyMovieCollectionProjekat.MyMovieCollection.Views.KorisnikView(); }
+        private object Activate_8_LoginView() { return new global::MyMovieCollectionProjekat.MyMovieCollection.Views.LoginView(); }
+        private object Activate_9_Pocetna() { return new global::MyMovieCollectionProjekat.MyMovieCollection.Views.Pocetna(); }
+        private object Activate_10_RegistracijaView() { return new global::MyMovieCollectionProjekat.MyMovieCollection.Views.RegistracijaView(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -237,37 +240,44 @@ namespace MyMovieCollectionProjekat.MyMovieCollectionProjekat_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 5:   //  MyMovieCollectionProjekat.MyMovieCollection.Views.KolekcijaView
+            case 5:   //  MyMovieCollectionProjekat.MyMovieCollection.Views.GPSView
                 userType = new global::MyMovieCollectionProjekat.MyMovieCollectionProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_5_KolekcijaView;
+                userType.Activator = Activate_5_GPSView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 6:   //  MyMovieCollectionProjekat.MyMovieCollection.Views.KorisnikView
+            case 6:   //  MyMovieCollectionProjekat.MyMovieCollection.Views.KolekcijaView
                 userType = new global::MyMovieCollectionProjekat.MyMovieCollectionProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_6_KorisnikView;
+                userType.Activator = Activate_6_KolekcijaView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 7:   //  MyMovieCollectionProjekat.MyMovieCollection.Views.LoginView
+            case 7:   //  MyMovieCollectionProjekat.MyMovieCollection.Views.KorisnikView
                 userType = new global::MyMovieCollectionProjekat.MyMovieCollectionProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_7_LoginView;
+                userType.Activator = Activate_7_KorisnikView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 8:   //  MyMovieCollectionProjekat.MyMovieCollection.Views.Pocetna
+            case 8:   //  MyMovieCollectionProjekat.MyMovieCollection.Views.LoginView
                 userType = new global::MyMovieCollectionProjekat.MyMovieCollectionProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_8_Pocetna;
+                userType.Activator = Activate_8_LoginView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
-            case 9:   //  MyMovieCollectionProjekat.MyMovieCollection.Views.RegistracijaView
+            case 9:   //  MyMovieCollectionProjekat.MyMovieCollection.Views.Pocetna
                 userType = new global::MyMovieCollectionProjekat.MyMovieCollectionProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_RegistracijaView;
+                userType.Activator = Activate_9_Pocetna;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  MyMovieCollectionProjekat.MyMovieCollection.Views.RegistracijaView
+                userType = new global::MyMovieCollectionProjekat.MyMovieCollectionProjekat_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_10_RegistracijaView;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

@@ -23,18 +23,14 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
               NavigationCacheMode = NavigationCacheMode.Required;
         }
 
-        private void textBlock1_SelectionChanged(object sender, RoutedEventArgs e)
+        private void gps_Click(object sender, RoutedEventArgs e)
         {
-
+            this.Frame.Navigate(typeof(GPSView));
         }
+
         protected override void OnNavigatedTo(NavigationEventArgs e)
         {
             DataContext = (PocetnaViewModel)e.Parameter;
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
-        {
-
         }
 
         private void ThisPage_BackRequested(object sender, BackRequestedEventArgs e)
@@ -44,16 +40,6 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
                 Frame.GoBack();
                 e.Handled = true;
             }
-        }
-
-        private void button_Copy4_Click(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
-        private void button2_Click(object sender, RoutedEventArgs e)
-        {
-        
         }
     }
 }

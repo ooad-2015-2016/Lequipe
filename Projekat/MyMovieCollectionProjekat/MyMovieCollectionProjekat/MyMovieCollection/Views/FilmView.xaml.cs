@@ -36,10 +36,17 @@ namespace MyMovieCollection.MyMovieCollection.Views
         private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             OdabraniFilm1 = (Film)listView.SelectedItem;
-            
-            nazivLabela.Text = OdabraniFilm1.Naziv;
-            opisLabela.Text = OdabraniFilm1.Opis;
 
+            if (OdabraniFilm1 != null)
+            {
+                nazivLabela.Text = OdabraniFilm1.Naziv;
+                opisLabela.Text = OdabraniFilm1.Opis;
+            }
+            else
+            {
+                nazivLabela.Text = "";
+                opisLabela.Text = "";
+            }
         }
 
         private void listView_ItemClick(object sender, ItemClickEventArgs e)

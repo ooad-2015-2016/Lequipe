@@ -1012,3 +1012,8 @@ C:\Users\Emir\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollecti
 C:\Users\Emir\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\obj\x86\Debug\qualifiers.txt.intermediate
 C:\Users\Emir\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\obj\x86\Debug\MultipleQualifiersPerDimensionFound.txt
 C:\Users\Emir\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\obj\x86\Debug\ProjectArchitectures.txt
+C:\Users\Emir\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\obj\x86\Debug\MyMovieCollection\Views\GPSView.g.i.cs
+C:\Users\Emir\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\obj\x86\Debug\MyMovieCollection\Views\GPSView.g.cs
+C:\Users\Emir\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\obj\x86\Debug\MyMovieCollection\Views\GPSView.xaml
+C:\Users\Emir\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\obj\x86\Debug\MyMovieCollection\Views\GPSView.xbf
+C:\Users\Emir\Desktop\Lequipe\Projekat\MyMovieCollectionProjekat\MyMovieCollectionProjekat\bin\x86\Debug\MyMovieCollection\Views\GPSView.xbf

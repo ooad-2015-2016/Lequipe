@@ -13,6 +13,8 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
     class KolekcijaViewModel
     {
         public Korisnik korisnik { get; set; }
+        public static Korisnik korisnik_iz_pocetne { get; set; }
+        public static KolekcijaView kol_view { get; set; }
         public Kolekcija kolekcija { get; set; }
 
 
@@ -23,7 +25,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         public Film OdabraniFilm { get; set; }
 
 
-        public new string Naziv { get; set; }
+        public string Naziv { get; set; }
 
 
         public INavigationService NavigationService { get; set; }
@@ -36,25 +38,25 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
 
 
-      
-
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void NotifyPropertyChanged(String info)
         {
-            if (PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(info));
-            }
+           PropertyChanged(this, new PropertyChangedEventArgs(info));            
         }
-        public KolekcijaViewModel()
+
+        public KolekcijaViewModel(KolekcijaView parametar)
         {
             NavigationService = new NavigationService();
             korisnik = new Korisnik();
+            korisnik = korisnik_iz_pocetne;
+            if (korisnik_iz_pocetne != null) { var dialog11 = new MessageDialog("pozivas li se katkad" + korisnik.KorisnikId.ToString());
+                dialog11.ShowAsync(); }
 
             MojeKolekcije = new ObservableCollection<Kolekcija>();
             MojiFilmoviIzKolekcije = new ObservableCollection<Film>();
 
+            kol_view = parametar;
 
             Naziv = "";
 
@@ -63,11 +65,11 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
              {
                  foreach (Kolekcija k in db.Kolekcije)
                  {
-                     if(k.KorisnikId==korisnik.KorisnikId)
+                     if(k.KorisnikId == korisnik.KorisnikId)
                      MojeKolekcije.Add(k);
                  }
              }
-       
+            
             DodajKolekciju = new RelayCommand<object>(dodajKolekciju);
             IzbrisiKolekciju = new RelayCommand<object>(izbrisiKolekciju);
             SacuvajKolekciju = new RelayCommand<object>(sacuvajKolekciju);
@@ -75,14 +77,22 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             PrikaziFilmove = new RelayCommand<object>(prikaziFilmove);
             IzbrisiFilm = new RelayCommand<object>(izbrisiFilm);
 
-
-
         }
 
         public  KolekcijaViewModel(PocetnaViewModel parametar)
         {
             NavigationService = new NavigationService();
             korisnik = parametar.Korisnik;
+            korisnik_iz_pocetne = parametar.Korisnik;
+
+
+            var dialog11 = new MessageDialog("staticki: " + korisnik_iz_pocetne.KorisnikId.ToString() + " obicni kor: " + korisnik.KorisnikId.ToString());
+            dialog11.ShowAsync();
+
+
+            if (kol_view != null) kol_view.DataContext = new KolekcijaViewModel(kol_view);
+
+
             MojeKolekcije = new ObservableCollection<Kolekcija>();
             MojiFilmoviIzKolekcije = new ObservableCollection<Film>();
 
@@ -90,31 +100,27 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
             MojeKolekcije.Clear();
 
-           using  (var db = new KolekcijaDbContext())
-           {
-               foreach (Kolekcija k in db.Kolekcije)
-               {
-                    if (k.KorisnikId == korisnik.KorisnikId)
-                    {
-                        MojeKolekcije.Add(k);
-                        
-                    }
-               }
-           }
-           
-
+            using  (var db = new KolekcijaDbContext())
+            {
+                foreach (Kolekcija k in db.Kolekcije)
+                {
+                     if (k.KorisnikId == korisnik.KorisnikId)
+                     {
+                         MojeKolekcije.Add(k);                         
+                     }
+                }
+            }
 
 
             DodajKolekciju = new RelayCommand<object>(dodajKolekciju);
             IzbrisiKolekciju = new RelayCommand<object>(izbrisiKolekciju);
           
-
-
         }
 
         private void dodajKolekciju(object parametar)
         {
-
+            var dialog11 = new MessageDialog(korisnik.KorisnikId.ToString());
+            dialog11.ShowAsync();
         }
 
         private async void sacuvajKolekciju(object parametar)
@@ -143,14 +149,11 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                 db.Kolekcije.Add(kolekcija);
                 db.SaveChanges();
 
-
             }
-
-         
+                 
             var dialog1 = new MessageDialog("Kolekcija sacuvana");
             await dialog1.ShowAsync();
             Naziv = "";
-
 
         }
 
@@ -269,7 +272,5 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             return MojeKolekcije;
 
         }
-
     }
-
 }

@@ -98,8 +98,6 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                     //U ovom slucaju sve je OK, idemo na drugu formu
                     NavigationService.Navigate(typeof(Pocetna), new PocetnaViewModel(this));
 
-                    var dialog1 = new MessageDialog(korisnik.KorisnikId.ToString());
-                    await dialog1.ShowAsync();
                     Ime_txb = "";
                 }
 
@@ -116,7 +114,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
         private void helpButton(object parametar)
         {
-            var dialog = new MessageDialog("Poštovani korisniče, pozdrav! Ovo je aplikacija My Movie Collection, koju je razvio mladi i uspješni tim inženjera. Sa ove forme se možete ulogovati na svoj profil, ili se registrovati, pri čemu nakon registracije možete pristupiti svom profilu. Na svom profilu, možete uređivati svoje kolekcije, te dodavati u njih nove filmove. Aplikaciju su razvili: Amra Mujčinović, Berina Muhović i Emir Baručija. Nadamo se da će Vam korištenje naše aplikacije biti ugodno :)");
+            var dialog = new MessageDialog("Poštovani korisniče, pozdrav!\n\nOvo je aplikacija My Movie Collection, koju je razvio mladi i uspješni tim inženjera sa druge godine odsjeka za RI, prestižnog Elektrotehničkog fakulteta Univerziteta u Sarajevu.\n\nNa početnoj formi, vršite login, tj.ulazite u aplikaciju, ukoliko imate korisnički račun.\n\nUkoliko nemate račun, trebate da ga napravite, te stoga idete na Sign Up.\nNakon toga, unosite svoje podatke, pri čemu trebate paziti da nijedno polje ne ostavite praznim.\n\nNakon registrovanja, ulazite u aplikaciju.\nTu ste u mogućnosti da pretražujete filmove putem našeg online web servisa(imajte na umu da ovaj servis pokriva ZAISTA VELIKI BROJ FILMOVA, ali vjerovatno ne baš sve koji su ikad snimljeni).\nTakođe, možete da pravite svoje kolekcije, zatim da ih uređujete, brišete, dodajete i sl.\nOmogućeno Vam je da promijenite svoju šifru, u formi Uredi svoj profil.\n\nOvu aplikaciju su razvili: Amra Mujčinović, Berina Muhović, Emir Baručija, te Tarik Ahmetović.\n\nNadamo se da će Vam korištenje naše aplikacije biti ugodno:)\n\nZa sva pitanja nam se obratite u prostorijama Elektrotehničkog fakulteta, gdje vrlo često obitavamo (osim u ljetnim mjesecima kada smo na kratkom, ali zasluženom odmoru).");
             dialog.ShowAsync();
         }
     }
