@@ -1,7 +1,7 @@
 
                                             
 #**Naziv teme: MyMovieCollection**
-(Tema: "Sistem za prikaz (odabir odgledanih filmova) (ili ostalog zabavnog sadrzaja)").
+(Tema: "Sistem za prikaz (odabir odgledanih filmova)").
 _____________________________________________________________________________________________________________________________________
 
 
@@ -157,15 +157,16 @@ ________________________________________________________________________________
  3. Validacija je raðena pri logovanju na aplikaciju, te pri registraciji na sistem, te je stoga validacija vršena u klasama LoginViewModel.cs (https://github.com/ooad-2015-2016/Lequipe/blob/master/Projekat/MyMovieCollectionProjekat/MyMovieCollectionProjekat/MyMovieCollection/ViewModels/LoginViewModel.cs),
     te RegistracijaViewModel.cs (https://github.com/ooad-2015-2016/Lequipe/blob/master/Projekat/MyMovieCollectionProjekat/MyMovieCollectionProjekat/MyMovieCollection/ViewModels/LoginViewModel.cs).
 
- 4. Za eksterni servis smo koristili OMDB online bazu filmova (njihov API), http://www.omdbapi.com/ , a servis je korišten u klasi FilmoviService.cs (https://github.com/ooad-2015-2016/Lequipe/blob/master/Projekat/MyMovieCollectionProjekat/MyMovieCollectionProjekat/MyMovieCollection/Services/FilmoviService.cs).
+ 4. Za eksterni servis smo koristili OMDB online bazu filmova (njihov API), http://www.omdbapi.com/ , a servis je korišten u klasi FilmViewModel.cs (https://github.com/ooad-2015-2016/Lequipe/blob/master/Projekat/MyMovieCollectionProjekat/MyMovieCollectionProjekat/MyMovieCollection/ViewModels/FilmViewModel.cs).
 
- 5. Koristimo GPS na mobitelima...
+ 5. Za prilagodljivost mobilnim ureðajima, kod se nalazi u (https://github.com/ooad-2015-2016/Lequipe/tree/master/Projekat/MobileProjekat) , a koristili smo GPS na mobitelima, èiji kod je, pored implementacije u mobilnom projektu, implementiran i u klasi GPSViewModel.cs (https://github.com/ooad-2015-2016/Lequipe/blob/master/Projekat/MyMovieCollectionProjekat/MyMovieCollectionProjekat/MyMovieCollection/ViewModels/GPSViewModel.cs),
+    dok se poziva u klasi Pocetna.xaml.cs (https://github.com/ooad-2015-2016/Lequipe/blob/master/Projekat/MyMovieCollectionProjekat/MyMovieCollectionProjekat/MyMovieCollection/Views/Pocetna.xaml.cs)
 
- 6. Za web servis smo...
+ 6. Klijentima pružamo web servis koji je implementiran u (https://github.com/ooad-2015-2016/Lequipe/tree/master/Projekat/ASPNETMyMovieCollection), i omoguæeno im je da pretražuju bazu podataka korisnika aplikacije.
 
  7. Napravljen build igrice, postavljen pod imenom igrica.
 
- 8. Video...
+ 8. Video postavljen.
 
  9. Izvještaji rada postavljeni.
 

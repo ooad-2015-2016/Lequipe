@@ -1,0 +1,86 @@
+﻿<Page
+    x:Class="MyMovieCollectionProjekat.MyMovieCollection.Views.RegistracijaView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:MyMovieCollectionProjekat.MyMovieCollection.Views"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Height="721.548" Width="1274.333">
+
+    <Grid Margin="0,10,-0.333,0.333">
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="#BF000000" Offset="0"/>
+                <GradientStop Color="#FFF3F3F3" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+
+
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="78*"/>
+            <ColumnDefinition Width="78*"/>
+            <ColumnDefinition Width="78*"/>
+            <ColumnDefinition Width="78*"/>
+            <ColumnDefinition Width="78*"/>
+            <ColumnDefinition Width="77*"/>
+            <ColumnDefinition Width="0*"/>
+
+        </Grid.ColumnDefinitions>
+
+        <TextBlock x:Name="textBlock" Height="65" Margin="65.333,42,0,0" TextWrapping="Wrap" Text="Registracija" Width="206" FontSize="24" FontFamily="Segoe Print" Grid.ColumnSpan="4" Grid.Column="1" Grid.RowSpan="2" Foreground="#FFD83636"/>
+        <TextBlock x:Name="textBlock1" Height="65" Margin="25,10,173,2.917" TextWrapping="Wrap" Text="MyMovieCollection" Width="441" FontFamily="SketchFlow Print" FontSize="36" FontWeight="Bold" Grid.ColumnSpan="3" Grid.Column="2" Foreground="#FFF5EBEB"/>
+        <TextBlock x:Name="textBlock2" Margin="42,59,85,62.889" TextWrapping="Wrap" Text="Ime:" Width="86" Grid.Row="1" RenderTransformOrigin="0.279,-1.906" FontSize="18" Grid.RowSpan="2" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock2_Copy" Margin="42,55.111,85,23.889" TextWrapping="Wrap" Text="Prezime:" Width="86" RenderTransformOrigin="0.576,-0.25" Grid.Row="2" FontSize="18" Grid.RowSpan="2" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock2_Copy3" FontSize="18" Height="55" Margin="42,59.111,65,42.889" TextWrapping="Wrap" Text="Username:" Width="106" RenderTransformOrigin="1.366,7.25" Grid.Row="3" Grid.RowSpan="2" Grid.Column="1"/>
+        <TextBlock x:Name="textBlock2_Copy4" FontSize="18" Margin="42,64.111,65,58.889" TextWrapping="Wrap" Width="106" Grid.Row="4" Grid.RowSpan="2" Grid.Column="1">
+        	<Run Text="Password:"/>
+        	<LineBreak/>
+        	<Run/>
+        </TextBlock>
+        <TextBlock x:Name="textBlock3" Margin="42,46.111,55,43.778" TextWrapping="Wrap" Width="116" Grid.Row="5" Grid.RowSpan="2" Grid.Column="1" HorizontalAlignment="Center">
+        	<Run Text="Ponov"/>
+        	<Run Text="o unesite"/>
+        	<LineBreak/>
+        	<Run/>
+        	<Run Text=" "/>
+        	<Run Text="password:"/>
+        </TextBlock>
+        <TextBlock x:Name="textBlock2_Copy5" FontSize="18" Height="32" Margin="39,29.667,0,0" TextWrapping="Wrap" Width="86" RenderTransformOrigin="0.564,0.33" Grid.ColumnSpan="2" Grid.Row="6" HorizontalAlignment="Center">
+        	<Run Text="Spol:"/>
+        	<LineBreak/>
+        	<Run/>
+        </TextBlock>
+        <TextBox x:Name="prezimeReg" Text="{Binding Path=Prezime_txb,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Height="38" Margin="61,41.167,128,77.833" TextWrapping="Wrap" Width="450" Grid.ColumnSpan="3" Grid.Row="2" Grid.Column="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="UsernameReg" Text="{Binding Path=Username_txb,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Height="38" Margin="61,40.167,128,78.833" TextWrapping="Wrap" Width="450" Grid.ColumnSpan="3" Grid.Row="3" Grid.Column="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="ImeReg" Text="{Binding Path=Ime_txb,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Height="38" Margin="61,59,128,60.889" TextWrapping="Wrap" Width="450" Grid.ColumnSpan="3" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="passwordReg" Text="{Binding Path=Sifra_txb,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" Height="38" Margin="61,41.167,128,77.833" TextWrapping="Wrap" Width="450" Grid.ColumnSpan="3" Grid.Row="4" Grid.Column="2" Grid.RowSpan="2"/>
+        <TextBox x:Name="ponovoPassReg" Text="{Binding Path=SifraPonovo_txb,  UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"  Height="38" Margin="61,46.111,128,71.778" TextWrapping="Wrap" Width="450" Grid.ColumnSpan="3" Grid.Row="5" Grid.Column="2" Grid.RowSpan="2"/>
+        <RelativePanel HorizontalAlignment="Left" Height="86" Margin="24.667,134.667,0,-142" VerticalAlignment="Top" Width="167" Grid.ColumnSpan="3" Grid.Column="2" Grid.Row="7">
+            <RadioButton x:Name="spolMuskoReg" Command="{Binding Path= MuskoJe}" Content="Muško" HorizontalAlignment="Center" Margin="183,-179,-136,146" VerticalAlignment="Stretch" Width="95"/>
+            <RadioButton x:Name="spolZenskoReg" Command="{Binding Path= ZenskoJe}" Content="Žensko" HorizontalAlignment="Center" Height="46" Margin="11,-178,12,132" VerticalAlignment="Stretch" Width="120" IsChecked="True"/>
+        </RelativePanel>
+        <Button x:Name="RegistrujSe" Command="{Binding Path= RegistrujSe}" Content="Registruj se" HorizontalAlignment="Stretch" Height="72" Margin="-1,0,0,0" VerticalAlignment="Stretch" Width="600" Click="button_RegistrujSe" Grid.ColumnSpan="6" Grid.Row="7" FontSize="18" Foreground="#FFF5F0F0">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="Black" Offset="0"/>
+                    <GradientStop Color="#DBEC1D1D" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+
+
+
+
+    </Grid>
+</Page>

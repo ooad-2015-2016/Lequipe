@@ -105,6 +105,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                         noviKorisnik.Sifra = Sifra_txb;
                         noviKorisnik.Mail = "";
                         noviKorisnik.Spol = Spol;
+                        noviKorisnik.DalijeAdmin = true;
                        
 
                         db.Korisnici.Add(noviKorisnik);

@@ -1,0 +1,11 @@
+App.xbf
+MainPage.xbf
+MyMovieCollection\GPS\Views\GPSView.xbf
+MyMovieCollection\Views\AdministratorView.xbf
+MyMovieCollection\Views\FilmView.xbf
+MyMovieCollection\Views\GPSView.xbf
+MyMovieCollection\Views\KolekcijaView.xbf
+MyMovieCollection\Views\KorisnikView.xbf
+MyMovieCollection\Views\LoginView.xbf
+MyMovieCollection\Views\Pocetna.xbf
+MyMovieCollection\Views\RegistracijaView.xbf
