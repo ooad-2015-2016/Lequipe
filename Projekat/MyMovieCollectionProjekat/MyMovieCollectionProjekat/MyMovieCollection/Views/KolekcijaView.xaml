@@ -65,9 +65,8 @@
 
         <TextBlock x:Name="textBlock3" Grid.ColumnSpan="3" HorizontalAlignment="Left" Height="61" Margin="10,59,0,0" TextWrapping="Wrap" Text="Moje kolekcije" VerticalAlignment="Top" Width="228" FontFamily="Segoe Script" FontSize="24" Grid.Column="6" Foreground="#FFAA3B3B" Grid.RowSpan="2"/>
         <RelativePanel Grid.ColumnSpan="5" Grid.Column="6" HorizontalAlignment="Left" Height="258" Margin="83,44,0,0" Grid.Row="4" Grid.RowSpan="4" VerticalAlignment="Top" Width="431" Background="#FFD4BCBC">
-            <WebView HorizontalAlignment="Left" Height="146" VerticalAlignment="Top" Width="184" Margin="0,42,0,-130"/>
-            <TextBlock x:Name="nazivLabela"  HorizontalAlignment="Left" Height="32" TextWrapping="Wrap"  VerticalAlignment="Top" Width="376" Margin="10,10,-324,-22"/>
-            <TextBlock x:Name="opisLabela" HorizontalAlignment="Left" Height="141" TextWrapping="Wrap"  VerticalAlignment="Top" Width="218" RenderTransformOrigin="4.371,6.8" Margin="203,47,-359,-168"/>
+            <TextBlock x:Name="nazivLabela"  HorizontalAlignment="Left" Height="32" TextWrapping="Wrap"  VerticalAlignment="Top" Width="376" Margin="10,10,-324,-22" Foreground="#FF010F9C"/>
+            <TextBlock x:Name="opisLabela" HorizontalAlignment="Left" Height="141" TextWrapping="Wrap"  VerticalAlignment="Top" Width="411" RenderTransformOrigin="4.371,6.8" Margin="10,47,-359,-168"/>
             <TextBlock x:Name="godinaLabela" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap"  VerticalAlignment="Top" Width="62" Margin="10,203,-10,-203"/>
             <TextBlock x:Name="textBlock6" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap"  VerticalAlignment="Top" Width="62" Margin="342,212,-342,-212"/>
             <TextBlock x:Name="ocjenaLabela" HorizontalAlignment="Left" Height="20" TextWrapping="Wrap"  VerticalAlignment="Bottom" Width="62" Margin="10,0,-10,-248"/>

@@ -21,6 +21,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
             SystemNavigationManager.GetForCurrentView().BackRequested += ThisPage_BackRequested;
             // DataContext = new MyMovieCollection.ViewModels.PocetnaViewModel();
               NavigationCacheMode = NavigationCacheMode.Required;
+           
         }
 
         private void gps_Click(object sender, RoutedEventArgs e)

@@ -9,17 +9,17 @@ using Windows.UI.Popups;
 
 namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 {
-    class RegistracijaViewModel
+    class RegistracijaViewModel: INotifyPropertyChanged
     {
         public Korisnik korisnik { get; set; }
         public string Ime_txb { get; set; }
         public string Prezime_txb { get; set; }
         public string Username_txb { get; set; }
-        //public string Mail_txb { get; set; }
+        
         public string Sifra_txb { get; set; }
         public string SifraPonovo_txb { get; set; }
         public string Spol { get; set; }
-        //public DateTime Datum_txb { get; set; }
+      
 
         public INavigationService NavigationService { get; set; }
         public ICommand RegistrujSe { get; set; }
@@ -27,14 +27,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         public ICommand ZenskoJe { get; set; }
 
 
-     /*   //        ___________________
-
-        public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
-        public ObservableCollection<Kolekcija> SveKolekcije = new ObservableCollection<Kolekcija>();
-        public ObservableCollection<Film> SviFilmovi = new ObservableCollection<Film>();
-        public ObservableCollection<Ocjena> SveOcjene = new ObservableCollection<Ocjena>();
-        //______________*/
-
+    
         public event PropertyChangedEventHandler PropertyChanged;
         public string Poruka { get; set; }
 
@@ -54,11 +47,11 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             Ime_txb = "";
             Prezime_txb = "";
             Username_txb = "";
-            // Mail_txb = "";
+          
             Sifra_txb = "";
             SifraPonovo_txb = "";
             Spol = "Zensko";
-            // Datum_txb 
+     
 
             ZenskoJe = new RelayCommand<object>(zenskoJe);
             MuskoJe = new RelayCommand<object>(muskoJe);
@@ -73,11 +66,11 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             Ime_txb = "";
             Prezime_txb = "";
             Username_txb = "";
-            // Mail_txb = "";
+          
             Sifra_txb = "";
             SifraPonovo_txb = "";
             Spol = "Zensko";
-            // Datum_txb 
+          
 
             ZenskoJe = new RelayCommand<object>(zenskoJe);
             MuskoJe = new RelayCommand<object>(muskoJe);
@@ -112,6 +105,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                         noviKorisnik.Sifra = Sifra_txb;
                         noviKorisnik.Mail = "";
                         noviKorisnik.Spol = Spol;
+                       
 
                         db.Korisnici.Add(noviKorisnik);
                         db.SaveChanges();

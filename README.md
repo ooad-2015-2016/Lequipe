@@ -63,13 +63,13 @@ ________________________________________________________________________________
        Meðutim, korisnik je u moguænosti da sam doda neki film, u svoju listu pregledanih filmova, bez da mora ostavljati komentar 
        ili ocjenjivati taj film. 
 
-- Odabir filmova za pregled - "Lista èekanja"
+- Odabir filmova za pregled
 
        Opcija koja nudi korisniku da doda filmove u vlastitu listu èekanja - kolekciju.
        Kada korisnik pregleda film iz liste èekanja, može da ga, sa ili bez ocjenjivanja, prebaci u listu odgledanih 
        filmova.
 
-- Kolekcija filmova koji su odgledani sortirani po kategorijama i žanru.
+- Kolekcija filmova koji su odgledani sortirani po kategorijama.
 
        Svaka ocjena, svakog korisnika, se spašava u bazu podataka, te je svakom korisniku omoguæeno da vidi koji su to 
        filmovi sa najboljim i najlošijim ocjenama, u svakoj kategoriji i žanru.
@@ -101,7 +101,7 @@ ________________________________________________________________________________
 
 - Moguænost pregleda informacija o aplikaciji i kreatorima iste. 
 
-- Moguænost pregleda i ureðivanja korisnika od strane admina.
+- Moguænost pregleda i brisanja korisnika od strane admina.
 
 _________________________________________________________________________________________________________
 
@@ -120,8 +120,6 @@ ________________________________________________________________________________
        to su: 
           - Kontrola korisnika koji se registruju na sistem, kao i onih koji su veæ 
              prijavljeni na sistem.
-          - Imaju privilegiju da korisniku dopuste korištenje aplikacije i da im dodijele
-            odgovarajuæi ID.
           - Upravljanje bazom podataka - korisnici, kolekcija filmova..
           - Upravljanje stanjem aktuelnih filmova, tj. ažuriranje.
           - Moguænost posjedovanja posebnog interfejsa za admine, a sa druge strane posebnog
@@ -149,7 +147,7 @@ ________________________________________________________________________________
 
 
 
-Dodano na kraju projekta:
+###**Dodano na kraju projekta:**
 
  1. Naša baza je SqlLite baza podataka, dakle koristimo lokalnu bazu, raðenu u Entity Frameworku 7.
 

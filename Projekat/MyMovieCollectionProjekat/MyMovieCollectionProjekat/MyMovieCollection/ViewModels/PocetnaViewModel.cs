@@ -6,13 +6,14 @@ using MyMovieCollectionProjekat.MyMovieCollection.Views;
 using System;
 using System.ComponentModel;
 using System.Windows.Input;
+using Windows.UI.Popups;
 
 namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 {
-    class PocetnaViewModel
+    class PocetnaViewModel: INotifyPropertyChanged
     {
-        public Korisnik Korisnik;
-
+        public static Korisnik Korisnik1 { get; set; }
+        public  Korisnik Korisnik { get; set; }
 
 
         public INavigationService NavigationService { get; set; }
@@ -23,16 +24,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
         public ICommand JaAdmin { get; set; }
 
 
-        //        ___________________
-
-        /*  public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
-          public ObservableCollection<Kolekcija> SveKolekcije = new ObservableCollection<Kolekcija>();
-          public ObservableCollection<Film> SviFilmovi = new ObservableCollection<Film>();
-          public ObservableCollection<Ocjena> SveOcjene = new ObservableCollection<Ocjena>();
-          //______________
-
-      */
-
+      
         public event PropertyChangedEventHandler PropertyChanged;
 
         private void NotifyPropertyChanged(String info)
@@ -50,7 +42,9 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
         public PocetnaViewModel(LoginViewModel parametar)
         {
-            Korisnik = parametar.korisnik;
+            
+            Korisnik1 = parametar.korisnik;
+            Korisnik = Korisnik1;
             NavigationService = new NavigationService();
 
             MojeKolekcije = new RelayCommand<object>(mojeKolekcije);
@@ -60,18 +54,13 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             JaAdmin = new RelayCommand<object>(jaAdmin);
 
 
-            /* SviFilmovi = parametar.SviFilmovi;
-             SviKorisnici = parametar.SviKorisnici;
-             SveKolekcije = parametar.SveKolekcije;
-             SviFilmovi = parametar.SviFilmovi;
-             SveOcjene = parametar.SveOcjene;
-             */
 
         }
 
         public PocetnaViewModel(RegistracijaViewModel parametar)
         {
-            Korisnik = parametar.korisnik;
+            Korisnik1 = parametar.korisnik;
+            Korisnik = Korisnik1;
             NavigationService = new NavigationService();
 
             MojeKolekcije = new RelayCommand<object>(mojeKolekcije);
@@ -80,17 +69,12 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             UrediProfil = new RelayCommand<object>(urediProfil);
 
 
-           /* SviFilmovi = parametar.SviFilmovi;
-            SviKorisnici = parametar.SviKorisnici;
-            SveKolekcije = parametar.SveKolekcije;
-            SviFilmovi = parametar.SviFilmovi;
-            SveOcjene = parametar.SveOcjene;
-            */
         }
 
         public PocetnaViewModel(FilmViewModel parametar)
         {
-            Korisnik = parametar.Korisnik;
+            
+            Korisnik = Korisnik1;
             NavigationService = new NavigationService();
 
             MojeKolekcije = new RelayCommand<object>(mojeKolekcije);
@@ -99,17 +83,12 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             UrediProfil = new RelayCommand<object>(urediProfil);
 
 
-           /* SviFilmovi = parametar.SviFilmovi;
-            SviKorisnici = parametar.SviKorisnici;
-            SveKolekcije = parametar.SveKolekcije;
-            SviFilmovi = parametar.SviFilmovi;
-            SveOcjene = parametar.SveOcjene;
-            */
         }
 
         public PocetnaViewModel(KolekcijaViewModel parametar)
         {
-            Korisnik = parametar.korisnik;
+            Korisnik1 = parametar.korisnik;
+            Korisnik = Korisnik1;
             NavigationService = new NavigationService();
 
             MojeKolekcije = new RelayCommand<object>(mojeKolekcije);
@@ -117,18 +96,13 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             OdjaviSe = new RelayCommand<object>(odjaviSe);
             UrediProfil = new RelayCommand<object>(urediProfil);
 
-           /* SviFilmovi = parametar.SviFilmovi;
-            SviKorisnici = parametar.SviKorisnici;
-            SveKolekcije = parametar.SveKolekcije;
-            SviFilmovi = parametar.SviFilmovi;
-            SveOcjene = parametar.SveOcjene;
-            */
 
         }
 
         public PocetnaViewModel(KorisnikViewModel parameter)
         {
-            Korisnik = parameter.korisnik;
+            Korisnik1 = parameter.korisnik;
+            Korisnik = Korisnik1;
             NavigationService = new NavigationService();
 
             MojeKolekcije = new RelayCommand<object>(mojeKolekcije);
@@ -137,17 +111,12 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             UrediProfil = new RelayCommand<object>(urediProfil);
 
 
-           /* SviFilmovi = parameter.SviFilmovi;
-            SviKorisnici = parameter.SviKorisnici;
-            SveKolekcije = parameter.SveKolekcije;
-            SviFilmovi = parameter.SviFilmovi;
-            SveOcjene = parameter.SveOcjene;
-            */
-
         }
 
         public PocetnaViewModel(AdministratorViewModel parametar)
         {
+            
+            Korisnik = Korisnik1;
             NavigationService = new NavigationService();
 
             MojeKolekcije = new RelayCommand<object>(mojeKolekcije);
@@ -183,9 +152,17 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             NavigationService.Navigate(typeof(KorisnikView), new KorisnikViewModel(this));
         }
 
-        private void jaAdmin(object parametar)
+        private async void jaAdmin(object parametar)
         {
+            if (Korisnik.DalijeAdmin == true)
+            { 
             NavigationService.Navigate(typeof(AdministratorView), new AdministratorViewModel(this));
+            }
+            else
+            {
+                var dialog1 = new MessageDialog("Pristup dozvoljen samo administratorima.");
+                await dialog1.ShowAsync();
+            }
 
         }
     }

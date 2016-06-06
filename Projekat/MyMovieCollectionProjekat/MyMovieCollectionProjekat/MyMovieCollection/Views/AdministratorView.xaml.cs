@@ -14,7 +14,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
         public AdministratorView()
         {
             this.InitializeComponent();
-            DataContext = new MyMovieCollection.ViewModels.AdministratorViewModel();
+            DataContext = new MyMovieCollection.ViewModels.AdministratorViewModel(this);
         }
 
 

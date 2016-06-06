@@ -1,4 +1,5 @@
 ﻿using MyMovieCollection.MyMovieCollection.Services;
+using MyMovieCollection.MyMovieCollection.Views;
 using MyMovieCollectionProjekat.MyMovieCollection.Helper;
 using MyMovieCollectionProjekat.MyMovieCollection.Models;
 using MyMovieCollectionProjekat.MyMovieCollection.ViewModels;
@@ -10,17 +11,17 @@ using Windows.UI.Popups;
 
 namespace MyMovieCollection.MyMovieCollection.ViewModels
 {
-    class FilmViewModel
+    class FilmViewModel: INotifyPropertyChanged
     {
         public Film OdabraniFilm { get; set; }
-        public Korisnik Korisnik { get; set; }
-
-
+        public  Korisnik Korisnik { get; set; }
         public string NazivFilma_txb { get; set; }
 
         public ObservableCollection<Film> FilmoviNet { get; set; }
         public ObservableCollection<Kolekcija> MojeKolekcije { get; set; }
         public Kolekcija OdabranaKolekcija { get; set; }
+        public static Korisnik Korisnik_iz_pocetne { get; set; }
+        public static FilmView film_view { get; set; }
 
         public INavigationService NavigationService { get; set; }
         public Kolekcija KolekcijaUKojuSeDodajeFilm { get; set; }
@@ -28,15 +29,6 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
         public ICommand Search { get; set; }
         public ICommand DodajFilm { get; set; }
        
-
-        //        ___________________
-
-      /*  public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
-        public ObservableCollection<Kolekcija> SveKolekcije = new ObservableCollection<Kolekcija>();
-        public ObservableCollection<Film> SviFilmovi = new ObservableCollection<Film>();
-        public ObservableCollection<Ocjena> SveOcjene = new ObservableCollection<Ocjena>();
-        //______________*/
-
 
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -49,10 +41,12 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
             }
         }
 
-        public FilmViewModel()
+        public FilmViewModel(FilmView p)
         {
             NavigationService = new NavigationService();
             Korisnik = new Korisnik();
+            Korisnik = Korisnik_iz_pocetne;
+            film_view = p;
 
             NazivFilma_txb = "";
 
@@ -80,7 +74,7 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
             MojeKolekcije = new ObservableCollection<Kolekcija>();
             FilmoviNet = new ObservableCollection<Film>();
             Korisnik = new Korisnik();
-
+            Korisnik_iz_pocetne= parametar.Korisnik;
             Korisnik = parametar.Korisnik;
 
             NazivFilma_txb = "";
@@ -106,11 +100,14 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
                 FilmoviService f = new FilmoviService();
                 await f.getFilmovi(NazivFilma_txb);
 
-                foreach(Film fl in f.Filmovi)
-                FilmoviNet.Add(fl);
 
-                var dialog = new MessageDialog("Pretraga je vratila: " + f.Filmovi.Count.ToString() + " rezultata");
-                await dialog.ShowAsync();
+                foreach (Film fl in f.Filmovi)
+                {
+                    FilmoviNet.Add(fl);
+                    if (FilmoviNet.Count > 12) break;
+                }
+
+                
             }
             catch(Exception e)
                 { }
@@ -150,7 +147,8 @@ namespace MyMovieCollection.MyMovieCollection.ViewModels
             }
             else
             {
-                //prvo oznacite filmi/ili kolekciju
+                var dialog = new MessageDialog("Oznacite film ili kolekciju.");
+                await dialog.ShowAsync();
             }
         }
 

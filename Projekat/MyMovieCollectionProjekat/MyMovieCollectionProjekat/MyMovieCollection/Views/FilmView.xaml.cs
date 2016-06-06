@@ -19,8 +19,12 @@ namespace MyMovieCollection.MyMovieCollection.Views
             this.InitializeComponent();
             
 
-           DataContext = new ViewModels.FilmViewModel();
+           DataContext = new ViewModels.FilmViewModel(this);
             OdabraniFilm1 = new Film();
+            opisLabela.Text = "";
+            nazivLabela.Text = "";
+
+
         }
 
       /*  protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -28,10 +32,7 @@ namespace MyMovieCollection.MyMovieCollection.Views
             DataContext = (FilmViewModel)e.Parameter;
         }*/
 
-        private void textBlockd_SelectionChanged(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
 
         private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {

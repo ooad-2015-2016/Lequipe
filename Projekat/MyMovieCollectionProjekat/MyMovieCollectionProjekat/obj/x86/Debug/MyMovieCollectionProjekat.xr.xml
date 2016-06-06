@@ -237,13 +237,6 @@
       <RootProperty Name="Center" />
     </RootType>
     <RootType FullName="MyMovieCollectionProjekat.MyMovieCollection.Views.GPSView" />
-    <RootType FullName="Windows.UI.Xaml.Controls.WebView">
-      <RootProperty Name="HorizontalAlignment" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="VerticalAlignment" />
-      <RootProperty Name="Width" />
-      <RootProperty Name="Margin" />
-    </RootType>
     <RootType FullName="MyMovieCollectionProjekat.MyMovieCollection.Views.KolekcijaView" />
     <RootType FullName="MyMovieCollectionProjekat.MyMovieCollection.Views.KorisnikView" />
     <RootType FullName="MyMovieCollectionProjekat.MyMovieCollection.Views.LoginView" />

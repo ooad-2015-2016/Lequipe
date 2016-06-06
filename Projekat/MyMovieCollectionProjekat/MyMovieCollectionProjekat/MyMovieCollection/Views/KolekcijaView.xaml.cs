@@ -51,19 +51,19 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
 
         private void button_Click(object sender, RoutedEventArgs e)
         {
+            textBlock2.Text = "";
             textBlock2.Visibility = Visibility.Visible;
             textBox.Visibility = Visibility.Visible;
             button3.Visibility = Visibility.Visible;
         }
 
-        private void KolekcijeIS_Loaded(object sender, RoutedEventArgs e)
-        {
-
-        }
+       
 
         private void listBox1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            opisLabela.Text = "";
+            nazivLabela.Text = "";
+            ocjenaLabela.Text = "";
         }
 
         
@@ -78,8 +78,10 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
 
         private void listBox_SelectionChanged_1(object sender, SelectionChangedEventArgs e)
         {
-            
-            
+
+            opisLabela.Text = "";
+            nazivLabela.Text = "";
+            ocjenaLabela.Text = "";
         }
 
         private void button2_Click(object sender, RoutedEventArgs e)
@@ -98,7 +100,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
 
                 opisLabela.Text = novi.Opis;
 
-                ocjenaLabela.Text = OdabraniFilm.ProsjecnaOcjena.ToString();
+                ocjenaLabela.Text = "Ocjena: " + OdabraniFilm.ProsjecnaOcjena.ToString();
                 //godinaLabela.Text = OdabraniFilm.god;
 
             }

@@ -1,5 +1,6 @@
 ﻿using MyMovieCollectionProjekat.MyMovieCollection.Helper;
 using MyMovieCollectionProjekat.MyMovieCollection.Models;
+using MyMovieCollectionProjekat.MyMovieCollection.Views;
 using System;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -9,10 +10,9 @@ using Windows.UI.Popups;
 
 namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 {
-    class AdministratorViewModel
+    class AdministratorViewModel: INotifyPropertyChanged
     {
-        //ListBox vidjeti 
-        //prkazi detalje dugme impl
+    
         
         public ICommand IzbrisiKorisnika { get; set; }
         public ICommand PostaviZaAdmina { get; set; }
@@ -29,7 +29,8 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
         public ObservableCollection<Korisnik> KorisniciAdmin { get; set; }
         public Korisnik OdabraniKorisnik { get; set; }
-
+        public static Korisnik Korisnik_iz_pocetne { get; set; }
+        public static AdministratorView admin_view { get; set; }
 
         public INavigationService NavigationService { get; set; }
 
@@ -44,10 +45,10 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             }
         }
 
-        public AdministratorViewModel()
+        public AdministratorViewModel(AdministratorView p)
         {
             NavigationService = new NavigationService();
-
+            admin_view = p;
             KorisniciAdmin = new ObservableCollection<Korisnik>();
             KorisniciAdmin.Clear();
 
@@ -55,6 +56,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             {
                 foreach (Korisnik k in db.Korisnici)
                 {
+                    if(k.KorisnikId!=Korisnik_iz_pocetne.KorisnikId)
                     KorisniciAdmin.Add(k);
                 }
             }
@@ -74,13 +76,16 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             NavigationService = new NavigationService();
 
             KorisniciAdmin = new ObservableCollection<Korisnik>();
+            Korisnik_iz_pocetne = new Korisnik();
+            Korisnik_iz_pocetne = parametar.Korisnik;
 
-            
+
             using (var db = new KorisnikDbContext())
             {
                 foreach (Korisnik k in db.Korisnici)
                 {
-                    KorisniciAdmin.Add(k);
+                    if (k.KorisnikId != Korisnik_iz_pocetne.KorisnikId)
+                        KorisniciAdmin.Add(k);
                 }
             }
 
@@ -106,7 +111,8 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                     {
                         foreach (Korisnik k in dbase.Korisnici)
                         {
-                            KorisniciAdmin.Add(k);
+                            if (k.KorisnikId != Korisnik_iz_pocetne.KorisnikId)
+                                KorisniciAdmin.Add(k);
                         }
                     }
                 }
@@ -125,7 +131,8 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
         public void RfidReadSomething(string rfidKod)
         {
-            RFID_txb = rfidKod;
+              RFID_txb = rfidKod;
+
         }
 
         public async void prikaziDetaljeKorisnik(object parametar)

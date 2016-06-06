@@ -10,7 +10,7 @@ using Windows.UI.Popups;
 
 namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 {
-    class KolekcijaViewModel
+    class KolekcijaViewModel: INotifyPropertyChanged
     {
         public Korisnik korisnik { get; set; }
         public static Korisnik korisnik_iz_pocetne { get; set; }
@@ -50,8 +50,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             NavigationService = new NavigationService();
             korisnik = new Korisnik();
             korisnik = korisnik_iz_pocetne;
-            if (korisnik_iz_pocetne != null) { var dialog11 = new MessageDialog("pozivas li se katkad" + korisnik.KorisnikId.ToString());
-                dialog11.ShowAsync(); }
+           
 
             MojeKolekcije = new ObservableCollection<Kolekcija>();
             MojiFilmoviIzKolekcije = new ObservableCollection<Film>();
@@ -86,9 +85,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             korisnik_iz_pocetne = parametar.Korisnik;
 
 
-            var dialog11 = new MessageDialog("staticki: " + korisnik_iz_pocetne.KorisnikId.ToString() + " obicni kor: " + korisnik.KorisnikId.ToString());
-            dialog11.ShowAsync();
-
+            
 
             if (kol_view != null) kol_view.DataContext = new KolekcijaViewModel(kol_view);
 
@@ -119,8 +116,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
         private void dodajKolekciju(object parametar)
         {
-            var dialog11 = new MessageDialog(korisnik.KorisnikId.ToString());
-            dialog11.ShowAsync();
+            
         }
 
         private async void sacuvajKolekciju(object parametar)
@@ -135,8 +131,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
                 max++;
 
-                var dialog11 = new MessageDialog(korisnik.KorisnikId.ToString());
-                await dialog11.ShowAsync();
+                
 
                 kolekcija = new Kolekcija();
                 kolekcija.KorisnikId = max;
@@ -179,15 +174,14 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
                     db.SaveChanges();
 
                     MojeKolekcije.Clear();
-                   // MojiFilmoviIzKolekcije.Clear();
+                   
                     
                     foreach (Kolekcija k in db.Kolekcije)
                     {
                         if (k.KorisnikId == korisnik.KorisnikId)
                         {
                             MojeKolekcije.Add(k);
-                            var dialog11 = new MessageDialog(k.KorisnikId.ToString() + " " + korisnik.KorisnikId.ToString());
-                            await dialog11.ShowAsync();
+                            
                         }
                     }
 
@@ -205,7 +199,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 
         }
 
-        private void izbrisiFilm(object parametar)
+        private async void izbrisiFilm(object parametar)
         {
             int kolekcijaID = OdabraniFilm.KolekcijaId;
 
@@ -229,7 +223,8 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             }
             else
             {
-                //nije obrisano
+                var dialog = new MessageDialog("Niste odabrali film.");
+                await dialog.ShowAsync();
             }
         }
 

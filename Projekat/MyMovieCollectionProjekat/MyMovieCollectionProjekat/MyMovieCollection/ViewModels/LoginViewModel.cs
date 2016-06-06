@@ -10,17 +10,9 @@ using Windows.UI.Xaml.Controls;
 
 namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 {
-    class LoginViewModel
+    class LoginViewModel: INotifyPropertyChanged
     {
-       /* //naše sve liste....__________________________________________
-
-        public ObservableCollection<Korisnik> SviKorisnici = new ObservableCollection<Korisnik>();
-        public ObservableCollection<Kolekcija> SveKolekcije = new ObservableCollection<Kolekcija>();
-        public ObservableCollection<Film> SviFilmovi = new ObservableCollection<Film>();
-        public ObservableCollection<Ocjena> SveOcjene = new ObservableCollection<Ocjena>();
-
-        //..._________________________________________________________
-        */
+       
 
         public Korisnik korisnik { get; set; }
 

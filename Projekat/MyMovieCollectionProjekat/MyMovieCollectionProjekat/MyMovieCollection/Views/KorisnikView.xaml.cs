@@ -17,7 +17,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.Views
 
             this.InitializeComponent();
            
-            DataContext = new MyMovieCollection.ViewModels.KorisnikViewModel();
+            DataContext = new MyMovieCollection.ViewModels.KorisnikViewModel(this);
             NavigationCacheMode = NavigationCacheMode.Required;
 
         }

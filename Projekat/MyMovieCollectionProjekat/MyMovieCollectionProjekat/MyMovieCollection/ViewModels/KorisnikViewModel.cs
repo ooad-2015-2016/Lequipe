@@ -10,9 +10,11 @@ using Windows.UI.Popups;
 
 namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
 {
-    class KorisnikViewModel
+    class KorisnikViewModel: INotifyPropertyChanged
     {
         public Korisnik korisnik { get; set; }
+        public static Korisnik korisnik_iz_pocetne { get; set; }
+        public static KorisnikView korisnik_view { get; set; }
 
         public string Ime_txb { get; set; }
         public string Prezime_txb { get; set; }
@@ -50,8 +52,16 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             }
         }
 
-        public KorisnikViewModel()
+        public KorisnikViewModel(KorisnikView p)
         {
+            NavigationService = new NavigationService();
+            korisnik = new Korisnik();
+            korisnik = korisnik_iz_pocetne;
+            korisnik_view = p;
+            
+
+            SacuvajIzmjene = new RelayCommand<object>(sacuvajIzmjene);
+            Nazad = new RelayCommand<object>(nazad);
 
         }
 
@@ -60,6 +70,7 @@ namespace MyMovieCollectionProjekat.MyMovieCollection.ViewModels
             NavigationService = new NavigationService();
             korisnik = new Korisnik();
             korisnik = parametar.Korisnik;
+            korisnik_iz_pocetne = parametar.Korisnik;
             Ime_txb = parametar.Korisnik.Ime;
             Prezime_txb = parametar.Korisnik.Prezime;
             Datum_txb = parametar.Korisnik.DatumRodjenja.ToString();

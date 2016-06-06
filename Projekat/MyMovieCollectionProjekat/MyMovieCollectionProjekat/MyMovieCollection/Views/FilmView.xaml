@@ -6,7 +6,7 @@
     xmlns:viewmodels="using:MyMovieCollection.MyMovieCollection.ViewModels"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-    mc:Ignorable="d" Width="1297.31" Height="645.333">
+    mc:Ignorable="d" Width="1297.31" Height="728.548">
 
     <Grid Margin="10,10,10,0">
         <Grid.Background>
@@ -45,9 +45,9 @@
         <Button x:Name="button" Command="{Binding Path=Search}" Content="Search&#xD;&#xA;" HorizontalAlignment="Left" Height="40" Margin="71,42,0,0" VerticalAlignment="Top" Width="142" FontFamily="Segoe Script" Grid.Row="1" Grid.Column="2" Grid.RowSpan="2"/>
         <ListView x:Name="listView" ItemsSource="{Binding Path=FilmoviNet}" DisplayMemberPath="Naziv" SelectedValue="{Binding Path=OdabraniFilm, Mode=TwoWay}" HorizontalAlignment="Left" Height="222" Margin="52,46.333,0,0" VerticalAlignment="Top" Width="541" Grid.RowSpan="4" Background="#FFB68686" Grid.ColumnSpan="3" Grid.Row="2" ScrollViewer.HorizontalScrollBarVisibility="Auto" SelectionChanged="listView_SelectionChanged"/>
         <RelativePanel HorizontalAlignment="Left" Height="222" Margin="0,47.333,0,0" VerticalAlignment="Top" Width="516" Grid.ColumnSpan="3" Grid.Row="2" Grid.RowSpan="4" Background="#FFE5E0E0" Grid.Column="3">
-            <TextBlock x:Name="textBlockc"     HorizontalAlignment="Left" Height="37" Margin="100,50,-200,-87" TextWrapping="Wrap" VerticalAlignment="Top" Width="196" FontFamily="Segoe Script"/>
-            <TextBlock x:Name="nazivLabela" HorizontalAlignment="Left" Height="19" Margin="10,8,-144,-8" VerticalAlignment="Top" Width="196" FontFamily="Segoe Script" />
-            <TextBlock x:Name="opisLabela" HorizontalAlignment="Left" Height="180" TextWrapping="Wrap"  VerticalAlignment="Top" Width="216" Margin="10,32,-164,-192"/>
+           
+            <TextBlock x:Name="nazivLabela" HorizontalAlignment="Left" Height="19" Margin="10,8,-144,-8" VerticalAlignment="Top" Width="196" FontFamily="Segoe Script" Foreground="#FF020A59" />
+            <TextBlock x:Name="opisLabela" HorizontalAlignment="Left" Height="180" TextWrapping="Wrap"  VerticalAlignment="Top" Width="496" Margin="10,32,-444,-192"/>
         </RelativePanel>
         <TextBlock x:Name="textBlock2" HorizontalAlignment="Left" Height="23" Margin="114,4.333,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="89" FontFamily="Segoe Script" FontSize="18" Grid.Row="6" RenderTransformOrigin="0.492,0.417" Grid.Column="2">
         	<Run Text="Ocjena:"/>
